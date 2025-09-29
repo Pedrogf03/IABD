@@ -1,0 +1,255 @@
+\documentclass{../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Big Data Aplicado}
+\renewcommand{\tituloTrabajo}{Apache NiFi}
+\renewcommand{\imagenPortada}{image.png}
+
+\begin{document}
+
+\maketitle
+
+% --------------------
+% Actividad 1: Instalación de Lubuntu
+% --------------------
+\section{Lubuntu 24.04}
+En esta práctica instalaremos y configuraremos el sistema operativo \textbf{Lubuntu 24.04} en \textbf{VirtualBox}.
+Para ello debemos descargar la ISO desde la \href{https://cdimage.ubuntu.com/lubuntu/releases/noble/release/lubuntu-24.04.3-desktop-amd64.iso}{página oficial}.  
+
+Una vez descargada, creamos la máquina virtual en VirtualBox. En este caso, se le asignaron 8 GB de RAM, 4 procesadores y 50 GB de disco reservado dinámicamente.  
+Es recomendable activar la opción \textbf{EFI} y habilitar el \textbf{PAE/NX} en la configuración del sistema:
+
+\fig{P1/4.png}
+
+Tras esto, iniciamos la máquina e instalamos el sistema de manera habitual:
+
+\fig{P1/6.png}
+
+Finalmente, instalamos las \textbf{Guest Additions} y tendremos la máquina lista para trabajar:
+
+\fig{P1/7.png}
+
+\newpage
+
+% --------------------
+% Actvidad 2: Instalación y configuración de Apache NiFi
+% --------------------
+\section{Preparación del entorno}
+En esta sección prepararemos el entorno para instalar y configurar \textbf{Apache NiFi} en la máquina virtual con Lubuntu 24.04.  
+
+El primer paso consiste en instalar la \textbf{JDK}:
+
+\fig{P2/1.png}
+
+Comprobamos que la instalación se ha realizado correctamente verificando la versión instalada:
+
+\fig{P2/2.png}
+
+A continuación, configuramos las variables de entorno de \textbf{Java}. Desde el directorio \textbf{home}, editamos el archivo \path{.bashrc} y añadimos las siguientes líneas al final:
+
+\fig{P2/3.png}
+
+\newpage
+
+En paralelo, instalamos la versión \textbf{JDK 21} para que NiFi utilice esta versión, manteniendo la JDK 11 como predeterminada en el sistema:
+
+\fig{P2/4.png}
+
+Posteriormente comprobamos las rutas de instalación y configuramos \textbf{Java 11} como versión predeterminada:
+
+\fig{P2/5.png}
+
+\textit{Nota: seleccionar el número correspondiente a la versión 11.}
+
+\fig{P2/6.png}
+
+A continuación descargamos \textbf{Apache NiFi} desde la \href{https://nifi.apache.org/}{página oficial}:
+
+\fig{P2/7.png}
+\fig{P2/8.png}
+
+Una vez descargado, lo descomprimimos:
+
+\fig{P2/9.png}
+
+Y lo movemos a un directorio más adecuado:
+
+\fig{P2/10.png}
+
+Definimos también las variables de entorno de NiFi, editando nuevamente el archivo \path{.bashrc} y añadiendo lo siguiente:
+
+\fig{P2/11.png}
+
+Ahora intentamos arrancar NiFi:
+
+\fig{P2/12.png}
+
+Observamos que aparece un error, ya que la versión 11 de Java no es compatible con esta versión de NiFi.
+
+\newpage
+
+Para solucionarlo, editamos el archivo \path{nifi-env.sh} e indicamos que NiFi utilice la JDK 21:
+
+\fig{P2/13.png}
+\fig{P2/14.png}
+
+Como se aprecia, ahora NiFi arranca sin problemas. Lo detenemos con \path{nifi.sh stop} y configuramos un usuario y contraseña:
+
+\fig{P2/16.png}
+
+Si lo iniciamos nuevamente y accedemos a \textbf{https://localhost:8443}, llegamos al panel de inicio de sesión de NiFi, donde podemos entrar con las credenciales configuradas:
+
+\fig{P2/17.png}
+
+\newpage
+
+Para facilitar la gestión y el acceso desde el host, modificamos el archivo \path{nifi.properties}, ubicado en \path{/opt/nifi/conf}, de la siguiente forma:
+
+\fig{P2/19.png}
+\fig{P2/20.png}
+\fig{P2/21.png}
+
+Dado que la máquina virtual está configurada en modo \textbf{NAT}, no es posible acceder directamente desde el exterior. Para solucionarlo, configuramos un reenvío de puertos en VirtualBox, redirigiendo el puerto 8081 de la máquina virtual al 8080 de la máquina anfitriona:
+
+\fig{P2/23.png}
+\fig{P2/24.png}
+
+\textit{Nota: el puerto anfitrión corresponde al host, mientras que el puerto invitado corresponde al servicio de NiFi en la máquina virtual.}
+
+\newpage
+
+Tras configurar esto, arrancamos NiFi y ya podemos acceder fácilmente desde el host:
+
+\fig{P2/22.png}
+
+\newpage
+
+% --------------------
+% Actividad 3: Manejo de ficheros con Apache NiFi
+% --------------------
+\section{Manejo de ficheros}
+A continuación aprenderemos a manejar ficheros de forma sencilla con NiFi, creando un par de flujos para generar, renombrar y mover archivos.  
+
+Primero creamos los directorios de trabajo en la máquina:
+
+\fig{P3/1.png}
+
+Accedemos a NiFi y comenzamos con el primer flujo. Arrastramos un proceso al área de trabajo:
+
+\fig[0.5\textwidth]{P3/2.png}
+
+Seleccionamos el tipo de proceso. En este caso, \textbf{GenerateFlowFile}, que genera archivos:
+
+\fig{P3/3.png}
+
+\newpage
+
+Hacemos doble clic en el proceso y lo configuramos. En la pestaña \textit{Scheduling}, establecemos que se ejecute cada 20 segundos:
+
+\fig{P3/4.png}
+
+En la pestaña \textit{Properties}, en el campo \textit{Custom Text}, escribimos lo siguiente:
+
+\fig{P3/5.png}
+
+Esto hará que cada archivo generado contenga dicho texto junto con la fecha y hora de creación.  
+
+Luego añadimos otro proceso, \textbf{UpdateAttribute}, para modificar atributos del fichero creado:
+
+\fig{P3/6.png}
+
+\newpage
+
+En sus propiedades, añadimos un nuevo atributo haciendo clic en el icono \textbf{+}:
+
+\fig{P3/7.png}
+
+Lo nombramos \path{filename} (atributo del nombre de archivo) y le damos el siguiente contenido:
+
+\fig{P3/8.png}
+
+De esta manera, el nombre del archivo estará compuesto por la fecha y hora actuales.  
+Conectamos ambos procesos arrastrando la flecha desde el primero hacia el segundo:
+
+\fig{P3/9.png}
+\fig{P3/10.png}
+
+En la configuración de la conexión seleccionamos la prioridad \textbf{FIFO (First In First Out)}:
+
+\fig{P3/11.png}
+
+Así obtenemos un flujo como el siguiente:
+
+\fig{P3/12.png}
+
+Después añadimos un proceso \textbf{PutFile}, que colocará el fichero en el directorio de entrada:
+
+\fig{P3/13.png}
+
+\newpage
+
+En sus propiedades configuramos los campos \textbf{Directory} y \textbf{Conflict Resolution Strategy}:
+
+\fig{P3/14.png}
+
+Para validar los resultados, añadimos dos \textbf{Funnel}: uno para los ficheros exitosos (marcando \textit{Success}) y otro para los fallidos (marcando \textit{Failure}):
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.1\textwidth}  % Primera imagen pequeña a la izquierda
+        \fig[1\linewidth]{P3/15.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.8\textwidth}   % Segunda imagen más grande a la derecha
+        \fig[1\linewidth]{P3/16.png}
+    \end{minipage}
+\end{figure}
+
+
+\newpage
+
+El resultado debería ser similar a este:
+
+\fig{P3/17.png}
+
+Ya tenemos el primer flujo listo. Lo seleccionamos completo (con \textbf{Shift}) y lo arrancamos:
+
+\fig{P3/18.png}
+
+Los procesos comenzarán a ejecutarse automáticamente:
+
+\fig{P3/19.png}
+
+En el directorio configurado de entrada se irán generando ficheros:
+
+\fig{P3/20.png}
+
+\newpage
+
+Podemos comprobar también la cola de \textit{Success}:
+
+\fig{P3/21.png}
+\fig{P3/22.png}
+
+Vamos a parar el flujo y limpiar las colas para comenzar con el siguiente:
+
+\fig[0.2\textwidth]{P3/23.png}
+
+El segundo flujo consistirá en mover los archivos del directorio de entrada a uno de salida. Para ello, creamos un proceso \textbf{GetFile}:
+
+\fig{P3/24.png}
+
+\newpage
+
+En sus propiedades establecemos el directorio de entrada:
+
+\fig{P3/25.png}
+
+Luego añadimos un proceso \textbf{PutFile}, indicando el directorio de salida, conectamos ambos procesos y añadimos \textbf{Funnels} para controlar los flujos de éxito y fallo.
+El flujo final debe quedar de la siguiente manera:
+
+\fig{P3/26.png}
+
+Al ejecutarlo, los ficheros se mueven del directorio de entrada al de salida:
+
+\fig{P3/27.png}
+
+\end{document}

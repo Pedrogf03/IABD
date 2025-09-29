@@ -1,0 +1,30 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Enunciado}{2}{section.1}%
+\contentsline {section}{\numberline {2}Desarrollo}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Casos de COVID en Singapur}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Análisis}{2}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Proximidad:}{2}{section*.2}%
+\contentsline {paragraph}{Semejanza:}{2}{section*.3}%
+\contentsline {paragraph}{Figura - Fondo:}{3}{section*.4}%
+\contentsline {paragraph}{Simetría y orden:}{3}{section*.5}%
+\contentsline {subsubsection}{\numberline {2.1.2}Mejoras}{3}{subsubsection.2.1.2}%
+\contentsline {paragraph}{Continuidad:}{3}{section*.6}%
+\contentsline {paragraph}{Conectividad:}{3}{section*.7}%
+\contentsline {subsection}{\numberline {2.2}Jóvenes frente a 'Boomers'}{4}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Análisis}{4}{subsubsection.2.2.1}%
+\contentsline {paragraph}{Semejanza:}{4}{section*.8}%
+\contentsline {paragraph}{Continuidad:}{4}{section*.9}%
+\contentsline {paragraph}{Conectividad:}{4}{section*.10}%
+\contentsline {subsubsection}{\numberline {2.2.2}Mejoras}{4}{subsubsection.2.2.2}%
+\contentsline {paragraph}{Figura - Fondo:}{4}{section*.11}%
+\contentsline {paragraph}{Cercamiento:}{5}{section*.12}%
+\contentsline {subsection}{\numberline {2.3}¿Nos sentimos abrumados por las noticias?}{6}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Análisis}{6}{subsubsection.2.3.1}%
+\contentsline {paragraph}{Proximidad:}{6}{section*.13}%
+\contentsline {paragraph}{Semejanza:}{6}{section*.14}%
+\contentsline {paragraph}{Figura - Fondo:}{6}{section*.15}%
+\contentsline {paragraph}{Conectividad:}{7}{section*.16}%
+\contentsline {paragraph}{Simetría y orden:}{7}{section*.17}%
+\contentsline {subsubsection}{\numberline {2.3.2}Mejoras}{7}{subsubsection.2.3.2}%
+\contentsline {paragraph}{Cercamiento:}{7}{section*.18}%
+\contentsline {paragraph}{Simetría y orden:}{7}{section*.19}%

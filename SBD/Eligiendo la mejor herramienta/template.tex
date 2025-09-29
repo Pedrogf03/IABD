@@ -1,0 +1,126 @@
+\documentclass{../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Sistemas de Big Data}
+\renewcommand{\tituloTrabajo}{Eligiendo la mejor herramienta}
+\renewcommand{\imagenPortada}{portada.png}
+
+\usepackage{bookmark}
+
+\begin{document}
+
+\maketitle
+
+\section{Investigar herramientas}
+En este apartado vamos a investigar diferentes herramientas para análisis y visualización de datos. Nos centraremos en tres tipos principales:
+\begin{itemize}
+    \item Herramientas estadísticas de código abierto (Sofa Statistics, PSPP, JASP).
+    \item Librerías de programación para visualización (Pandas, Matplotlib, Plotly, R).
+    \item Herramientas online de visualización (Infogram, Piktochart, Flourish, RawGraphs, Datawrapper, Canva).
+\end{itemize}
+
+\subsection{Herramientas estadísticas de código abierto}
+
+\subsubsection{SOFA Statistics}
+Se trata de un software de análisis estadístico sencillo con interfaz gráfica. Nos permite realizar análisis descriptivos,
+pruebas básicas y generar gráficos de barras, sectores o lineas. Está orientado a crear reportes fáciles de interpretar.
+Es multiplataforma y de uso gratuito, aunque sis capacidades estadísticas son limitadas.
+
+
+\subsubsection{PSPP}
+Es un proyecto de GNU como alternativa libre de SPSS (Software estadístico de IBM). Ofrece pruebas estadísticas como ANOVA
+(Prueba estadística para comparar las medias de tres o más grupos), regresión (Permite modelar la relación entre variables),
+correlaciones (Permite medir la fuerza y dirección de la relación lineal entre dos variables numéricas) y test no paramétricos
+(Métodos estadísticos de hipótesis que no requieren que los datos provengan de una distribución específica, como la normalidad).
+Tiene interfaz gráfica y lenguaje de sintaxis, soporta grandes volumenes de datos sin limitaciones artificiales y, aunque sus 
+gráficos son básicos, cumple bien en análisis estadísticos en ciencias sociales y educación.
+
+\subsubsection{JASP}
+Es un programa de análisis estadístico con diseño moderno y centrado en la facilidad de uso. Usa métodos clásicos y bayesianos,
+y presenta los resultados de forma clara y visual. Incluye plantillas de informes y opciones de personalización, aunque son mínimas.
+Destaca en entornos educativos y académicos.
+
+\newpage
+
+\subsection{Librerías de programación para visualización}
+
+\subsubsection{Pandas (Python)}
+Es una librería orientada a la manipulación y análisis de datos en estructuras tipo tablas, como DataFrames. Permite realizar
+operaciones estadísticas, de limpieza y transformación de datos. Incluye funciones básicas de visualización integradas, aunque
+normalmente se combina con Matblotlib o Seaborn para gráficos más avanzados. Es muy popular en ciencia de datos y análisis estadístico.
+
+\subsubsection{Matplotlib (Python)}
+Es una librería estándar de visualización en Python. Soporta gráficos de líneas, barras, dispersión, histogramas, etc. Ofrece un gran
+nivel de personalización en ejes, colores y estilos. Es la base sobre la que se han construido librerías más avanzadas como Seaborn.
+Es muy utilizada en ciencia de datos, ingeniería y análisis estadístico.
+
+\subsubsection{Plotly (Python/R/JS)}
+Es una herramienta para generar gráficos interactivos que permite exportar visualizaciones que pueden integrarse en páginas web. Soporta
+gráficos en 2D y 3D, así como mapas y dashboards. Es útil en entornos donde la interactividad es clave, como presentaciones y análisis exploratorios.
+
+\subsubsection{R}
+Es un lenguaje de programación estadístico con un gran ecosistema para análisis y visualización de datos. Su librería más destacada es ggplot2,
+que implementa la 'gramática de gráficos'. Está muy orientado a análisis avanzado y visualización de datos. Es ampliamente utilizado en estadística,
+bioinformática y análisis académico.
+
+\newpage
+
+\subsection{Herramientas online de visualización}
+
+\subsubsection{Infogram}
+Se trata de una plataforma online para crear gráficos interactivos, infografías y dashboards. Ofrece plantillas prediseñadas y soporte
+para importación de datos. Se usa en entornos de comunicación visual y marketing.
+
+\subsubsection{Piktochart}
+Es una herramienta enfocada en la creación de infografías y presentaciones. Permite diseñar elementos visuales atractivos con plantillas personalizables.
+Está mas orientada al diseño gráfico que al análisis de datos profundo. Es popular en marketing y educación.
+
+\subsubsection{Flourish}
+Es una aplicación online que permite crear visualizaciones animadas y narrativas. Contiene plantillas interactivas listas para usar que
+se adaptan a presentaciones y storytelling con datos. Es muy empleada en periodismo de datos.
+
+\subsubsection{RawGraphs}
+Es una aplicación web de código abierto para transformar datos en gráficos vectoriales. Ofrece diagramas menos comunes (como treemaps, Sankey, etc.)
+y exporta en formatos editables como SVG. Está orientada a usuarios con experiencia en diseño gráfico y visualización avanzada.
+
+\subsubsection{Datawrapper}
+Es una plataforma usada habitualmente en medios de comunicación para crear gráficos y mapas interactivos. Permite crear gráficos y mapas
+interactivos de foram sencilla. Se enfoca en la claridad y en la comunicación visual efectiva.
+
+\subsubsection{Canva}
+Es una herramienta web de diseño gráfico que permite generar gráficos sencillos a partir de datos. Su punto fuerte es el aspecto visual y
+la integración con otros elementos gráficos, más que en el análisis de datos. Es muy popular en marketing y redes sociales.
+
+\newpage
+
+\section{Probar herramientas}
+En este apartado vamos a probar dos herramientas de cada tipo con un conjunto de datos sencillo y generaremos al menos un gráfico en cada caso.
+
+\newpage
+
+\section{Comparar herramientas}
+En este apartado vamos a comparar las herramientas usando criterios como:
+\begin{itemize}
+    \item Facilidad de uso.
+    \item Capacidades de análisis o personalización.
+    \item Calidad estética de las visualizaciones.
+    \item Exportación y difusión de resultados.
+    \item Coste/licencia.
+    \item Comunidad y documentación.
+\end{itemize}
+
+\newpage
+
+\section{Informe comparativo}
+Y finalmente, vamos a elaborar un informe comparativo (3-4 páginas) que incluya:
+\begin{itemize}
+    \item Tabla comparativa de las herramientas analizadas.
+    \item Capturas de las visualizaciones realizadas.
+    \item Reflexión final: ¿qué herramienta elegirías en estos contextos y por qué?
+        \begin{itemize}
+            \item Un investigador en ciencias sociales.
+            \item Una empresa que quiere difundir resultados en redes sociales.
+            \item Un analista de datos que trabaja en Python.
+        \end{itemize}
+\end{itemize}
+
+\end{document}
