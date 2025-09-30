@@ -203,7 +203,6 @@ Para validar los resultados, añadimos dos \textbf{Funnel}: uno para los fichero
     \end{minipage}
 \end{figure}
 
-
 \newpage
 
 El resultado debería ser similar a este:
@@ -251,5 +250,102 @@ El flujo final debe quedar de la siguiente manera:
 Al ejecutarlo, los ficheros se mueven del directorio de entrada al de salida:
 
 \fig{P3/27.png}
+
+\newpage
+
+% --------------------
+% Actividad 4: Practicando con plantillas
+% --------------------
+\section{Uso de plantillas en NiFi}
+En este apartado vamos a aprender a crear y usar \textbf{plantillas} en NiFi, reutilizando uno de los flujos creados anteriormente.
+
+Seleccionamos todo el flujo y, con clic derecho, escogemos la opción de crear un grupo:
+
+\fig{P4/1.png}
+
+Creamos el grupo, le ponemos el nombre que queramos y veremos cómo el flujo se representa ahora como un único elemento. Con clic derecho sobre él, seleccionamos la opción de descarga:
+
+\fig{P4/2.png}
+
+Esto nos descargará un fichero \texttt{.json} que contiene el grupo creado:
+
+\fig{P4/3.png}
+
+A continuación, borramos todo el flujo y dejamos el área de trabajo vacía. Una vez hecho, añadimos un \textbf{Process Group} y, en la ventana que aparece, seleccionamos la opción de importar un archivo:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.1\textwidth}
+        \fig[1\linewidth]{P4/4.1.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.8\textwidth}
+        \fig[1\linewidth]{P4/4.2.png}
+    \end{minipage}
+\end{figure}
+
+Seleccionamos el archivo \texttt{.json} creado y lo añadimos:
+
+\fig{P4/5.png}
+
+Como podemos ver en el flujo, tenemos de vuelta el grupo creado anteriormente. Si damos doble clic, podemos entrar y ver el flujo original:
+
+\fig{P4/6.png}
+
+\newpage
+
+\section{Practicando con grupos}
+Ahora que sabemos crear grupos, vamos a usarlos para crear flujos. Vamos borrar todo lo que teniamos hasta ahora y empezar de 0.
+
+Primero vamos a crear un flujo que genere y renombre los archivos, y lo agrupamos:
+
+\fig{P5/1.png}
+
+Entramos con doble clic al grupo y añadimos un \textbf{Output Port}:
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.1\textwidth}
+        \fig[1\linewidth]{P5/3.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.8\textwidth}
+        \fig[1\linewidth]{P5/4.png}
+    \end{minipage}
+\end{figure}
+
+El flujo final deberia quedar tal que así:
+
+\fig{P5/5.png}
+
+Ahora salimos del grupo y vamos a enlazar la salida con un flujo que coloque los archivos en un directorio:
+
+\fig{P5/7.png}
+\fig{P5/6.png}
+
+Finalmente, vamos a arrancar todo el flujo y comprobar el resultado:
+
+\fig{P5/8.png}
+
+\newpage
+
+Ahora vamos a crear otro flujo que mueva los archivos a un directorio, y lo agrupamos. A este flujo le vamos a poner un
+\textbf{Input Port}:
+
+\fig{P5/9.png}
+
+Salimos del grupo, creamos un proceso para obtener ficheros y lo enlazamos al grupo, seleccionando de entrada el puerto que hemos
+añadido:
+
+\fig{P5/11.png}
+\fig{P5/10.png}
+
+El resultado final de todo el flujo debería ser el siguiente:
+
+\fig{P5/12.png}
+
+\newpage
+
+Si lo probamos, veremos que los ficheros se crean en la entrada pero luego se mueven a la salida:
+
+\fig{P5/13.png}
 
 \end{document}
