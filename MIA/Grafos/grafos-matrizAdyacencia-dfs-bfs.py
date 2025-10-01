@@ -5,7 +5,7 @@ class Grafo:
 
   def agregar_arista(self, u, v):
     self.grafo[u][v] = 1
-    # self.grafo[v][u] = 1  # Para grafos no dirigidos
+    self.grafo[v][u] = 1  # Para grafos no dirigidos
 
   def dfs_util(self, v, visitados):
     visitados[v] = True
@@ -44,4 +44,3 @@ if __name__ == "__main__":
   g.dfs(2)
   print("\nRecorrido en anchura (comenzando en el vértice 2):")
   g.bfs(2)
-    
