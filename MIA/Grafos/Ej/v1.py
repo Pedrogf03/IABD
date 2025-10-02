@@ -104,8 +104,16 @@ class Grafo:
             nodo = prev[nodo] # Viajamos a la ciudad previa para continuar.
         camino.reverse() # Invertimos el camino
         
-        print(f"Distancia mínima de {origen} a {destino}: {distancias[destino]} km")
-        print("Camino:", " -> ".join(camino))
+        print(f"Camino más corto de {origen} a {destino}:")
+        total = 0
+        for i in range(len(camino) - 1):
+            ciudad1 = camino[i]
+            ciudad2 = camino[i + 1]
+            distancia = self.adyacencia[ciudad1][ciudad2]
+            total += distancia
+            print(f"  {ciudad1} -> {ciudad2}: {distancia} km")
+        
+        print(f"Distancia total: {total} km")
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 

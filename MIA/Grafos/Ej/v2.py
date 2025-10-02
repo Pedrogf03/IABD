@@ -20,7 +20,18 @@ print("\nRecorrido BFS desde Cádiz:", bfs_recorrido)
 # DFS
 dfs_recorrido = list(nx.dfs_tree(G, source="Cádiz").nodes())
 print("Recorrido DFS desde Cádiz:", dfs_recorrido)
-    
-dijkstra_recorrido = list(nx.dijkstra_path(G, source="Cádiz", target="Vejer", weight="distancia"))
-dijkstra_recorrido_distancia = nx.dijkstra_path_length(G, source="Cádiz", target="Vejer", weight="distancia")
-print("Recorrido Dijkstra desde Cádiz hasta Vejer:", dijkstra_recorrido ," - ", dijkstra_recorrido_distancia)
+
+# Dijkstra
+camino = nx.dijkstra_path(G, source="Cádiz", target="Vejer", weight="distancia")
+print("Recorrido Dijkstra desde Cádiz a Vejer:", camino)
+
+distancia_total = 0
+print("\nDistancia tramo a tramo:")
+for i in range(len(camino)-1):
+    origen = camino[i]
+    destino = camino[i+1]
+    distancia = G[origen][destino]['distancia']
+    distancia_total += distancia
+    print(f"{origen} -> {destino}: {distancia} km")
+
+print("\nDistancia total del camino:", distancia_total, "km")
