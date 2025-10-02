@@ -13,23 +13,14 @@ G.add_edge("Vejer", "Medina Sidonia", distancia=20)
 G.add_edge("Medina Sidonia", "Jerez", distancia=34)
 G.add_edge("Jerez", "Arcos", distancia=31)
 
-while True:
-  ciudad = input("Introduce una ciudad de Cádiz ('fin' para terminar): ")
-  if ciudad.lower() == "fin":
-    break
-  if not G.has_node(ciudad):
-    print("La ciudad no existe en el grafo. Intenta de nuevo.")
-    continue
+# BFS
+bfs_recorrido = list(nx.bfs_tree(G, source="Cádiz").nodes())
+print("\nRecorrido BFS desde Cádiz:", bfs_recorrido)
 
-  print(f"\nDesde {ciudad} se puede llegar a:")
-  for vecino in G.neighbors(ciudad):
-    distancia = G[ciudad][vecino]["distancia"]
-    print(f"  - {vecino}: {distancia} km")
-
-  # BFS
-  bfs_recorrido = list(nx.bfs_tree(G, source="Chiclana").nodes())
-  print("\nRecorrido BFS desde Chiclana:", bfs_recorrido)
-
-  # DFS
-  dfs_recorrido = list(nx.dfs_tree(G, source="Chiclana").nodes())
-  print("Recorrido DFS desde Chiclana:", dfs_recorrido)
+# DFS
+dfs_recorrido = list(nx.dfs_tree(G, source="Cádiz").nodes())
+print("Recorrido DFS desde Cádiz:", dfs_recorrido)
+    
+dijkstra_recorrido = list(nx.dijkstra_path(G, source="Cádiz", target="Vejer", weight="distancia"))
+dijkstra_recorrido_distancia = nx.dijkstra_path_length(G, source="Cádiz", target="Vejer", weight="distancia")
+print("Recorrido Dijkstra desde Cádiz hasta Vejer:", dijkstra_recorrido ," - ", dijkstra_recorrido_distancia)

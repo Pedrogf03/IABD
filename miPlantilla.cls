@@ -17,6 +17,13 @@
 \RequirePackage{float}
 \RequirePackage{subfigure}
 \RequirePackage{url}
+\RequirePackage{tabularx}
+\RequirePackage{longtable}
+\RequirePackage{pdflscape}
+\RequirePackage{booktabs}
+\RequirePackage[table,xcdraw]{xcolor}
+\RequirePackage{makecell}
+\renewcommand{\arraystretch}{1.3} % mejora la legibilidad
 
 % Configuración de hyperref
 \hypersetup{
@@ -33,7 +40,7 @@
 \setlength{\parindent}{0pt}   % Sin sangría
 \setlength{\parskip}{0.5em}   % Espacio entre párrafos
 
-\usepackage{sectsty}           % Cambiar tamaño de títulos
+\RequirePackage{sectsty}           % Cambiar tamaño de títulos
 \sectionfont{\large}           
 \subsectionfont{\normalsize}  
 \subsubsectionfont{\small}    
