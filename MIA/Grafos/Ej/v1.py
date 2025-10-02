@@ -49,10 +49,10 @@ class Grafo:
     def dijkstra(self, origen, destino):
         if origen not in self.adyacencia:
             print(f"{origen} no está en el grafo.")
-            return None
+            return False
         if destino not in self.adyacencia:
             print(f"{destino} no está en el grafo.")
-            return None
+            return False
         
         # En Dijkstra, las dintancias siempre empiezan en infinito.
         distancias = {ciudad: float('inf') for ciudad in self.adyacencia} # Diccionario ciudad - distancia.
@@ -94,7 +94,7 @@ class Grafo:
         # En caso de que la distancia sea infinita:
         if distancias[destino] == float('inf'):
             print(f"No existe camino de {origen} a {destino}.")
-            return None
+            return False
 
         # Se reconstruye el camino en orden inverso.
         camino = []
@@ -106,7 +106,6 @@ class Grafo:
         
         print(f"Distancia mínima de {origen} a {destino}: {distancias[destino]} km")
         print("Camino:", " -> ".join(camino))
-        return distancias[destino], camino
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------
 
