@@ -23,118 +23,163 @@ específicas que las hacen más adecuadas según el contexto de uso y el perfil 
     \item \textbf{Herramientas estadísticas de código abierto:}  
     Este tipo de software está diseñado para realizar análisis estadísticos completos y generar visualizaciones básicas o
     avanzadas a partir de los datos. Son opciones gratuitas que permiten procesar grandes volúmenes de información y aplicar
-    métodos estadísticos sin necesidad de pagar licencias comerciales. Entre las más conocidas se encuentran:  
-    \begin{itemize}
-        \item \textbf{SOFA Statistics:} orientada a usuarios que buscan un entorno sencillo y amigable para análisis descriptivos,
-        con gráficos automáticos y exportación fácil.  
-        \item \textbf{PSPP:} alternativa libre a SPSS, permite realizar análisis estadísticos complejos, incluyendo regresiones y
-        pruebas de hipótesis, con gráficos básicos.  
-        \item \textbf{JASP:} combina un enfoque intuitivo con análisis estadísticos avanzados; ofrece tanto resultados clásicos
-        como Bayesianos y visualizaciones listas para presentación.
-    \end{itemize}
+    métodos estadísticos sin necesidad de pagar licencias comerciales.
+
+    \begin{table}[H]
+        \centering
+        \scriptsize % letra más pequeña
+        \setlength{\tabcolsep}{4pt} % reducir espacio horizontal
+        \renewcommand{\arraystretch}{1.3} % espacio vertical
+        \begin{tabularx}{\textwidth}{
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+        }
+            \toprule
+            \rowcolor[HTML]{C0C0C0}
+            \textbf{Criterio} & \textbf{SOFA Statistics} & \textbf{JASP} \\ \midrule
+            Facilidad de uso & Interfaz intuitiva y sencilla, ideal para usuarios sin experiencia en programación. La navegación entre opciones y creación de gráficos es rápida y directa. & Muy accesible para principiantes, con menús claros y asistente para análisis estadísticos. Permite generar gráficos básicos y complejos sin conocimientos de código. \\
+            \midrule
+            Análisis/Personalización & Permite análisis estadísticos fundamentales (frecuencias, tablas cruzadas, gráficos de barras y pastel), pero las opciones de personalización de gráficos son limitadas. & Ofrece análisis más avanzados, incluyendo pruebas estadísticas y modelos. La personalización de gráficos es mayor que SOFA, aunque aún más sencilla que en herramientas de programación. \\
+            \midrule
+            Estética & Gráficos correctos y claros, pero con apariencia algo básica. Adecuados para informes internos o análisis preliminares. & Visualmente más pulido que SOFA, con gráficos que se pueden exportar listos para presentaciones simples, aunque todavía limitados frente a librerías gráficas avanzadas. \\
+            \midrule
+            Exportación & Permite guardar gráficos en PNG o PDF para informes o presentaciones. No ofrece exportación interactiva. & Exportación a PNG y PDF. No incluye opciones interactivas, pero mantiene buena calidad para documentos y presentaciones. \\
+            \midrule
+            Coste & Totalmente gratuito, software de código abierto. & Gratuito, código abierto, sin restricciones de uso. \\
+            \midrule
+            Comunidad/Doc. & Documentación básica disponible, con foros y tutoriales online. Comunidad activa pero pequeña. & Comunidad creciente, con tutoriales y manuales en línea. Soporte limitado pero suficiente para principiantes y usuarios intermedios. \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+    \newpage
 
     \item \textbf{Librerías de programación para visualización:}  
     Estas librerías requieren conocimientos de programación, pero ofrecen un control total sobre la forma de procesar y representar
-    los datos. Son ideales para análisis reproducibles, automatización de gráficos y personalización completa. Algunas de las más
-    utilizadas son:  
-    \begin{itemize}
-        \item \textbf{Pandas:} librería de Python orientada al manejo de datos en estructuras tipo tabla; permite generar gráficos
-        básicos integrados y preparar los datos para visualización más avanzada.  
-        \item \textbf{Matplotlib:} proporciona gráficos 2D altamente personalizables, desde simples líneas hasta diagramas complejos,
-        siendo una de las librerías más estables y consolidadas.  
-        \item \textbf{Plotly:} permite crear gráficos interactivos en Python, R o JavaScript; útil para dashboards y visualizaciones
-        dinámicas que se pueden integrar en aplicaciones web.  
-        \item \textbf{R (ggplot2):} librería de R basada en la gramática de gráficos, que permite construir visualizaciones
-        complejas y estéticamente consistentes a partir de datos estadísticos.
-    \end{itemize}
+    los datos. Son ideales para análisis reproducibles, automatización de gráficos y personalización completa.
+
+    \begin{table}[H]
+        \centering
+        \scriptsize % letra más pequeña
+        \setlength{\tabcolsep}{4pt} % reducir espacio horizontal
+        \renewcommand{\arraystretch}{1.3} % espacio vertical
+        \begin{tabularx}{\textwidth}{
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+        }
+            \toprule
+            \rowcolor[HTML]{C0C0C0}
+            \textbf{Criterio} & \textbf{Plotly} & \textbf{Matplotlib} \\ \midrule
+            Facilidad de uso & Librería de Python para gráficos interactivos. Permite crear visualizaciones de manera intuitiva, aunque requiere conocer la API de Plotly. & Librería de Python para gráficos. Más compleja que Plotly para principiantes, requiere conocer sintaxis y parámetros para personalizar gráficos. \\
+            \midrule
+            Análisis/Personalización & Muy flexible, permite gráficos estáticos e interactivos, con soporte para DataFrames y diversas combinaciones de gráficos. Ideal para análisis rápido y visualizaciones atractivas. & Muy potente para personalización de gráficos. Permite controlar colores, estilos, etiquetas, ejes, anotaciones y gráficos combinados. Ideal para análisis avanzado y visualizaciones precisas. \\
+            \midrule
+            Estética & Visualmente atractivos por defecto, con interactividad incorporada. Excelente para dashboards y presentaciones. & Estéticamente aceptables por defecto; se puede mejorar con estilos y configuraciones avanzadas. Más flexibles para presentaciones profesionales que Pandas. \\
+            \midrule
+            Exportación & Exporta gráficos a HTML, PNG, PDF, SVG y otros. Interactividad preservada en HTML. & Exportación a PNG, PDF, SVG y otros formatos. Sin interactividad nativa, pero compatible con herramientas externas para gráficos interactivos. \\
+            \midrule
+            Coste & Gratuito, código abierto. Parte del ecosistema Python y compatible con Jupyter Notebooks. & Gratuito, código abierto. Muy popular en la comunidad científica y de datos. \\
+            \midrule
+            Comunidad/Doc. & Excelente documentación oficial, tutoriales, libros y comunidad muy activa en Python y Jupyter Notebooks. & Comunidad muy grande, abundante documentación, tutoriales y ejemplos. Integración con otros paquetes de Python ampliamente documentada. \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
+    \newpage
 
     \item \textbf{Herramientas online de visualización:}  
     Estas plataformas están diseñadas principalmente para la creación rápida de gráficos atractivos y la difusión de resultados
     en medios digitales o presentaciones. Suelen ofrecer plantillas, gráficos interactivos y opciones de exportación sencilla.
-    Algunas de las más populares son:  
-    \begin{itemize}
-        \item \textbf{Infogram:} permite crear gráficos, mapas e infografías interactivas con plantillas listas y
-        funcionalidades colaborativas.  
-        \item \textbf{Piktochart:} enfocado en la comunicación visual de datos para presentaciones y redes sociales,
-        con diseño intuitivo y muchas opciones de personalización.  
-        \item \textbf{Flourish:} orientado a visualizaciones interactivas avanzadas, muy usado en periodismo de datos
-        y dashboards online.  
-        \item \textbf{RawGraphs:} herramienta libre que convierte datos tabulares en gráficos vectoriales exportables
-        (SVG, PNG) de manera rápida.  
-        \item \textbf{Datawrapper:} permite generar gráficos interactivos y mapas, con integración fácil para
-        publicaciones web y prensa.  
-        \item \textbf{Canva:} aunque es más conocida como herramienta de diseño, incluye opciones para gráficos y
-        tablas, ideal para infografías atractivas y material de difusión visual.
-    \end{itemize}
+    
+    \begin{table}[H]
+        \centering
+        \scriptsize % letra más pequeña
+        \setlength{\tabcolsep}{4pt} % reducir espacio horizontal
+        \renewcommand{\arraystretch}{1.3} % espacio vertical
+        \begin{tabularx}{\textwidth}{
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+            >{\centering\arraybackslash}X
+        }
+            \toprule
+            \rowcolor[HTML]{C0C0C0}
+            \textbf{Criterio} & \textbf{Canva} & \textbf{Piktochart} \\ \midrule
+            Facilidad de uso & Interfaz extremadamente intuitiva, arrastrar y soltar elementos. No requiere conocimientos de programación ni diseño previo. & Muy fácil de usar, con plantillas prediseñadas y editor visual. Requiere mínima curva de aprendizaje para crear gráficos e infografías atractivas. \\
+            \midrule
+            Análisis/Personalización & Personalización limitada a elementos visuales, colores, fuentes y disposición de gráficos. No permite análisis estadístico avanzado. & Permite personalización de plantillas, colores y disposición, así como agregar datos de forma sencilla. Menos flexible que herramientas de programación, pero suficiente para infografías y presentaciones. \\
+            \midrule
+            Estética & Gráficos muy atractivos visualmente, listos para redes sociales o presentaciones. Énfasis en diseño y estética. & Estéticamente profesional, con plantillas visuales modernas. Ideal para presentaciones y difusión de información de forma visualmente impactante. \\
+            \midrule
+            Exportación & Exporta a PNG, PDF, JPEG y enlaces compartibles. No es interactivo por defecto, salvo versión web embebida. & Exporta a PNG, PDF y enlaces compartibles. No ofrece interactividad avanzada, pero permite compartir visualizaciones fácilmente online. \\
+            \midrule
+            Coste & Freemium: versión gratuita con funciones básicas, opción de pago para recursos premium. & Freemium: versión gratuita limitada, opción de pago para funciones avanzadas y plantillas premium. \\
+            \midrule
+            Comunidad/Doc. & Documentación en línea, tutoriales, foros y videos. Comunidad activa enfocada en diseño y marketing. & Tutoriales y documentación oficial, comunidad creciente de usuarios que comparten plantillas y consejos. Soporte básico en versión gratuita. \\
+            \bottomrule
+        \end{tabularx}
+    \end{table}
+
 \end{itemize}
 
 \newpage
 
-\section{Prueba de herramientas}
-
-Para las pruebas se utilizó un conjunto de datos abierto del portal \texttt{datos.gob.es}, que incluye información
-básica sobre población y servicios en distintas ciudades. Se generó al menos un gráfico en cada herramienta y se
-incluyen capturas representativas.
+\section{Probando las herramientas}
+Para las pruebas se utilizó un conjunto de datos abierto sacado de \href{https://gist.github.com/slopp/ce3b90b9168f2f921784de84fa445651}{GitHub},
+que incluye información básica sobre especies de pinguinos y sus características básicas según sexo o isla en la que viven por cada año.
+En estos gráficos que se van a mostrar a continuación, se hace una comparativa de la media del largo del pico de los pingüinos según la especie.
 
 \subsection{Herramientas estadísticas de código abierto}
-% \begin{itemize}
-%     \item \textbf{SOFA Statistics:} gráfico de barras de población por ciudad.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/sofa.png}
-%         \caption{Gráfico de barras realizado en SOFA Statistics.}
-%     \end{figure}
 
-%     \item \textbf{JASP:} gráfico de pastel mostrando proporción de servicios por ciudad.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/jasp.png}
-%         \caption{Gráfico de pastel realizado en JASP.}
-%     \end{figure}
-% \end{itemize}
+\begin{itemize}
+    \item \textbf{SOFA Statistics:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{1.png}
+    \end{figure}
+
+    \item \textbf{JASP:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{2.png}
+    \end{figure}
+\end{itemize}
 
 \subsection{Librerías de programación}
-% \begin{itemize}
-%     \item \textbf{Matplotlib (Python):} gráfico de líneas con evolución de población.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/matplotlib.png}
-%         \caption{Gráfico de líneas realizado en Matplotlib.}
-%     \end{figure}
+\begin{itemize}
+    \item \textbf{Matplotlib (Python):}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{3.png}
+    \end{figure}
 
-%     \item \textbf{Plotly (Python):} gráfico interactivo de dispersión.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/plotly.png}
-%         \caption{Gráfico de dispersión interactivo realizado en Plotly.}
-%     \end{figure}
-% \end{itemize}
-
-\subsection{Herramientas online}
-% \begin{itemize}
-%     \item \textbf{Datawrapper:} mapa interactivo de distribución de población.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/datawrapper.png}
-%         \caption{Mapa interactivo realizado en Datawrapper.}
-%     \end{figure}
-
-%     \item \textbf{Canva:} infografía combinando gráfico de barras y datos textuales.
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=0.7\textwidth]{capturas/canva.png}
-%         \caption{Infografía realizada en Canva.}
-%     \end{figure}
-% \end{itemize}
+    \item \textbf{Plotly (Python):}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{4.png}
+    \end{figure}
+\end{itemize}
 
 \newpage
 
+\subsection{Herramientas online}
+Hay que tener en cuenta que estas herramientas no suelen tener herramientas de calculo, por lo que se deben introducir los datos ya resumidos.
+\begin{itemize}
+    \item \textbf{Datawrapper:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{5.png}
+    \end{figure}
 
+    \item \textbf{Canva:}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{6.png}
+    \end{figure}
+\end{itemize}
 
-
-\section{Comparativa de herramientas}
-
-
+\newpage
 
 \section{Reflexión final}
 

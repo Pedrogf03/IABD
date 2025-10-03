@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  1 OCT 2025 21:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  3 OCT 2025 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,7 +441,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<portada.png, id=39, 564.60938pt x 341.02406pt>
+<portada.png, id=35, 564.60938pt x 341.02406pt>
 File: portada.png Graphic file (type png)
 <use portada.png>
 Package pdftex.def Info: portada.png  used on input line 9.
@@ -477,8 +477,47 @@ l.9 \maketitle
 [3]
 
 [4]
+<1.png, id=76, 1143.27126pt x 886.31125pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 139.
+(pdftex.def)             Requested size: 292.77629pt x 226.97334pt.
+<2.png, id=77, 381.2644pt x 300.9644pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 145.
+(pdftex.def)             Requested size: 292.77629pt x 231.11873pt.
+<3.png, id=78, 469.0323pt x 342.5598pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 154.
+(pdftex.def)             Requested size: 292.77629pt x 213.8432pt.
 
-[5] (template.aux
+
+[5 <./1.png> <./2.png>]
+<4.png, id=84, 1911.14pt x 904.37875pt>
+File: 4.png Graphic file (type png)
+<use 4.png>
+Package pdftex.def Info: 4.png  used on input line 160.
+(pdftex.def)             Requested size: 292.77629pt x 138.5351pt.
+
+
+[6 <./3.png> <./4.png>]
+<5.png, id=92, 466.74374pt x 317.68687pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 172.
+(pdftex.def)             Requested size: 292.77629pt x 199.28577pt.
+<6.png, id=93, 770.88pt x 578.16pt>
+File: 6.png Graphic file (type png)
+<use 6.png>
+Package pdftex.def Info: 6.png  used on input line 178.
+(pdftex.def)             Requested size: 292.77629pt x 219.57957pt.
+
+
+[7 <./5.png> <./6.png (PNG copy)>]
+
+[8] (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -487,20 +526,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 71AF67BFB7980AE8EBE8FE543E3BF58A;1505.
+(rerunfilecheck)             Checksum: 4D03E4EC9FC701180DEC964456A86E69;1336.
  ) 
 Here is how much of TeX's memory you used:
- 12422 strings out of 468133
- 196699 string characters out of 5430712
- 629615 words of memory out of 5000000
- 40854 multiletter control sequences out of 15000+600000
- 636380 words of font info for 59 fonts, out of 8000000 for 9000
+ 12472 strings out of 468133
+ 197373 string characters out of 5430712
+ 634615 words of memory out of 5000000
+ 40902 multiletter control sequences out of 15000+600000
+ 637270 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,11n,93p,407b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
-Output written on template.pdf (6 pages, 201748 bytes).
+ 90i,11n,93p,505b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
+Output written on template.pdf (9 pages, 355200 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 

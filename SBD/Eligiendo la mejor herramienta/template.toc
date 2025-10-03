@@ -1,10 +1,9 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Introducción}{2}{section.1}%
 \contentsline {section}{\numberline {2}Clasificación de herramientas}{2}{section.2}%
-\contentsline {section}{\numberline {3}Prueba de herramientas}{4}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Herramientas estadísticas de código abierto}{4}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Librerías de programación}{4}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Herramientas online}{4}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Comparativa de herramientas}{5}{section.4}%
-\contentsline {section}{\numberline {5}Reflexión final}{5}{section.5}%
-\contentsline {section}{\numberline {6}Conclusión}{5}{section.6}%
+\contentsline {section}{\numberline {3}Probando las herramientas}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Herramientas estadísticas de código abierto}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Librerías de programación}{6}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Herramientas online}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Reflexión final}{8}{section.4}%
+\contentsline {section}{\numberline {5}Conclusión}{8}{section.5}%
