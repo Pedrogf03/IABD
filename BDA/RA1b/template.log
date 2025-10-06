@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  30 SEP 2025 16:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  6 OCT 2025 18:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,8 +249,98 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.cfg)
 \subfig@top=\skip70
 \subfig@bottom=\skip71
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box55
+\extrarowheight=\dimen167
+\NC@list=\toks25
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box56
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 27.
+\TX@col@width=\dimen168
+\TX@old@table=\dimen169
+\TX@old@col=\dimen170
+\TX@target=\dimen171
+\TX@delta=\dimen172
+\TX@cols=\count306
+\TX@ftn=\toks26
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
+\LTleft=\skip74
+\LTright=\skip75
+\LTpre=\skip76
+\LTpost=\skip77
+\LTchunksize=\count307
+\LTcapwidth=\dimen173
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count308
+\LT@rows=\count309
+\c@LT@tables=\count310
+\c@LT@chunks=\count311
+\LT@p@ftn=\toks27
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen174
+\lightrulewidth=\dimen175
+\cmidrulewidth=\dimen176
+\belowrulesep=\dimen177
+\belowbottomsep=\dimen178
+\aboverulesep=\dimen179
+\abovetopsep=\dimen180
+\cmidrulesep=\dimen181
+\cmidrulekern=\dimen182
+\defaultaddspace=\dimen183
+\@cmidla=\count312
+\@cmidlb=\count313
+\@aboverulesep=\dimen184
+\@belowrulesep=\dimen185
+\@thisruleclass=\count314
+\@lastruleclass=\count315
+\@thisrulewidth=\dimen186
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks28
+\minrowclearance=\skip78
+\rownum=\count316
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen187
+\c@nlinenum=\count317
+\TeXr@lab=\toks29
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
  (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
 
@@ -264,7 +354,7 @@ LaTeX Warning: Command \underline  has changed.
 
 )) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
+\l__color_backend_stack_int=\count318
 ) (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -293,13 +383,6 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
- (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
- (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 7.
  (template.out) (template.out)
 \@outlinefile=\write3
@@ -307,17 +390,17 @@ Package hyperref Info: Link coloring ON on input line 7.
 
  (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen166
-\scratchbox=\box55
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen167
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count319
+\scratchdimen=\dimen188
+\scratchbox=\box62
+\nofMPsegments=\count320
+\nofMParguments=\count321
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count322
+\MPscratchDim=\dimen189
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
+\everyMPtoPDFconversion=\toks31
 ) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -358,7 +441,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<image.png, id=23, 1505.625pt x 635.37375pt>
+<image.png, id=31, 1505.625pt x 635.37375pt>
 File: image.png Graphic file (type png)
 <use image.png>
 Package pdftex.def Info: image.png  used on input line 9.
@@ -382,17 +465,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.9 \maketitle
                [1]
-<P1/4.png, id=47, 613.54219pt x 359.84438pt>
+<P1/4.png, id=57, 613.54219pt x 359.84438pt>
 File: P1/4.png Graphic file (type png)
 <use P1/4.png>
 Package pdftex.def Info: P1/4.png  used on input line 21.
 (pdftex.def)             Requested size: 292.77629pt x 171.71303pt.
-<P1/6.png, id=48, 961.34157pt x 602.25pt>
+<P1/6.png, id=58, 961.34157pt x 602.25pt>
 File: P1/6.png Graphic file (type png)
 <use P1/6.png>
 Package pdftex.def Info: P1/6.png  used on input line 25.
 (pdftex.def)             Requested size: 292.77629pt x 183.41489pt.
-<P1/7.png, id=49, 602.25pt x 91.84312pt>
+<P1/7.png, id=59, 602.25pt x 91.84312pt>
 File: P1/7.png Graphic file (type png)
 <use P1/7.png>
 Package pdftex.def Info: P1/7.png  used on input line 29.
@@ -400,12 +483,12 @@ Package pdftex.def Info: P1/7.png  used on input line 29.
 
 
 [2 <./P1/4.png> <./P1/6.png> <./P1/7.png>]
-<P2/1.png, id=57, 605.26125pt x 477.28313pt>
+<P2/1.png, id=67, 605.26125pt x 477.28313pt>
 File: P2/1.png Graphic file (type png)
 <use P2/1.png>
 Package pdftex.def Info: P2/1.png  used on input line 41.
 (pdftex.def)             Requested size: 292.77629pt x 230.87029pt.
-<P2/2.png, id=58, 587.94656pt x 365.11406pt>
+<P2/2.png, id=68, 587.94656pt x 365.11406pt>
 File: P2/2.png Graphic file (type png)
 <use P2/2.png>
 Package pdftex.def Info: P2/2.png  used on input line 45.
@@ -416,7 +499,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 47.
-<P2/3.png, id=59, 471.26062pt x 48.93282pt>
+<P2/3.png, id=69, 471.26062pt x 48.93282pt>
 File: P2/3.png Graphic file (type png)
 <use P2/3.png>
 Package pdftex.def Info: P2/3.png  used on input line 49.
@@ -424,27 +507,27 @@ Package pdftex.def Info: P2/3.png  used on input line 49.
 
 
 [3 <./P2/1.png> <./P2/2.png> <./P2/3.png>]
-<P2/4.png, id=68, 831.105pt x 236.38312pt>
+<P2/4.png, id=78, 831.105pt x 236.38312pt>
 File: P2/4.png Graphic file (type png)
 <use P2/4.png>
 Package pdftex.def Info: P2/4.png  used on input line 55.
 (pdftex.def)             Requested size: 292.77629pt x 83.26915pt.
-<P2/5.png, id=69, 828.09375pt x 432.11438pt>
+<P2/5.png, id=79, 828.09375pt x 432.11438pt>
 File: P2/5.png Graphic file (type png)
 <use P2/5.png>
 Package pdftex.def Info: P2/5.png  used on input line 59.
 (pdftex.def)             Requested size: 292.77629pt x 152.77858pt.
-<P2/6.png, id=70, 772.38562pt x 67.0003pt>
+<P2/6.png, id=80, 772.38562pt x 67.0003pt>
 File: P2/6.png Graphic file (type png)
 <use P2/6.png>
 Package pdftex.def Info: P2/6.png  used on input line 63.
 (pdftex.def)             Requested size: 292.77629pt x 25.39699pt.
-<P2/7.png, id=72, 965.10562pt x 646.66594pt>
+<P2/7.png, id=82, 965.10562pt x 646.66594pt>
 File: P2/7.png Graphic file (type png)
 <use P2/7.png>
 Package pdftex.def Info: P2/7.png  used on input line 67.
 (pdftex.def)             Requested size: 292.77629pt x 196.17207pt.
-<P2/8.png, id=73, 959.08313pt x 513.41812pt>
+<P2/8.png, id=83, 959.08313pt x 513.41812pt>
 File: P2/8.png Graphic file (type png)
 <use P2/8.png>
 Package pdftex.def Info: P2/8.png  used on input line 68.
@@ -452,22 +535,22 @@ Package pdftex.def Info: P2/8.png  used on input line 68.
 
 
 [4 <./P2/4.png> <./P2/5.png> <./P2/6.png> <./P2/7.png>]
-<P2/9.png, id=83, 429.10312pt x 243.15843pt>
+<P2/9.png, id=93, 429.10312pt x 243.15843pt>
 File: P2/9.png Graphic file (type png)
 <use P2/9.png>
 Package pdftex.def Info: P2/9.png  used on input line 72.
 (pdftex.def)             Requested size: 292.77629pt x 165.9095pt.
-<P2/10.png, id=84, 553.31718pt x 123.46124pt>
+<P2/10.png, id=94, 553.31718pt x 123.46124pt>
 File: P2/10.png Graphic file (type png)
 <use P2/10.png>
 Package pdftex.def Info: P2/10.png  used on input line 76.
 (pdftex.def)             Requested size: 292.77629pt x 65.32675pt.
-<P2/11.png, id=85, 299.61937pt x 45.92157pt>
+<P2/11.png, id=95, 299.61937pt x 45.92157pt>
 File: P2/11.png Graphic file (type png)
 <use P2/11.png>
 Package pdftex.def Info: P2/11.png  used on input line 80.
 (pdftex.def)             Requested size: 292.77629pt x 44.87599pt.
-<P2/12.png, id=86, 576.65437pt x 59.47218pt>
+<P2/12.png, id=96, 576.65437pt x 59.47218pt>
 File: P2/12.png Graphic file (type png)
 <use P2/12.png>
 Package pdftex.def Info: P2/12.png  used on input line 84.
@@ -475,22 +558,22 @@ Package pdftex.def Info: P2/12.png  used on input line 84.
 
 
 [5 <./P2/8.png> <./P2/9.png> <./P2/10.png> <./P2/11.png> <./P2/12.png>]
-<P2/13.png, id=96, 384.6872pt x 44.41594pt>
+<P2/13.png, id=106, 384.6872pt x 44.41594pt>
 File: P2/13.png Graphic file (type png)
 <use P2/13.png>
 Package pdftex.def Info: P2/13.png  used on input line 92.
 (pdftex.def)             Requested size: 292.77629pt x 33.80592pt.
-<P2/14.png, id=97, 408.02437pt x 103.13531pt>
+<P2/14.png, id=107, 408.02437pt x 103.13531pt>
 File: P2/14.png Graphic file (type png)
 <use P2/14.png>
 Package pdftex.def Info: P2/14.png  used on input line 93.
 (pdftex.def)             Requested size: 292.77629pt x 74.00713pt.
-<P2/16.png, id=98, 700.86844pt x 115.93312pt>
+<P2/16.png, id=108, 700.86844pt x 115.93312pt>
 File: P2/16.png Graphic file (type png)
 <use P2/16.png>
 Package pdftex.def Info: P2/16.png  used on input line 97.
 (pdftex.def)             Requested size: 292.77629pt x 48.42976pt.
-<P2/17.png, id=99, 456.20438pt x 350.81062pt>
+<P2/17.png, id=109, 456.20438pt x 350.81062pt>
 File: P2/17.png Graphic file (type png)
 <use P2/17.png>
 Package pdftex.def Info: P2/17.png  used on input line 101.
@@ -498,27 +581,27 @@ Package pdftex.def Info: P2/17.png  used on input line 101.
 
 
 [6 <./P2/13.png> <./P2/14.png> <./P2/16.png> <./P2/17.png>]
-<P2/19.png, id=109, 409.53pt x 173.14688pt>
+<P2/19.png, id=119, 409.53pt x 173.14688pt>
 File: P2/19.png Graphic file (type png)
 <use P2/19.png>
 Package pdftex.def Info: P2/19.png  used on input line 107.
 (pdftex.def)             Requested size: 292.77629pt x 123.79115pt.
-<P2/20.png, id=110, 663.22781pt x 213.04594pt>
+<P2/20.png, id=120, 663.22781pt x 213.04594pt>
 File: P2/20.png Graphic file (type png)
 <use P2/20.png>
 Package pdftex.def Info: P2/20.png  used on input line 108.
 (pdftex.def)             Requested size: 292.77629pt x 94.04607pt.
-<P2/21.png, id=111, 322.95656pt x 53.44969pt>
+<P2/21.png, id=121, 322.95656pt x 53.44969pt>
 File: P2/21.png Graphic file (type png)
 <use P2/21.png>
 Package pdftex.def Info: P2/21.png  used on input line 109.
 (pdftex.def)             Requested size: 292.77629pt x 48.4574pt.
-<P2/23.png, id=112, 607.51968pt x 353.82187pt>
+<P2/23.png, id=122, 607.51968pt x 353.82187pt>
 File: P2/23.png Graphic file (type png)
 <use P2/23.png>
 Package pdftex.def Info: P2/23.png  used on input line 113.
 (pdftex.def)             Requested size: 292.77629pt x 170.51822pt.
-<P2/24.png, id=113, 472.76625pt x 59.47218pt>
+<P2/24.png, id=123, 472.76625pt x 59.47218pt>
 File: P2/24.png Graphic file (type png)
 <use P2/24.png>
 Package pdftex.def Info: P2/24.png  used on input line 114.
@@ -526,7 +609,7 @@ Package pdftex.def Info: P2/24.png  used on input line 114.
 
 
 [7 <./P2/19.png> <./P2/20.png> <./P2/21.png> <./P2/23.png> <./P2/24.png>]
-<P2/22.png, id=123, 837.88031pt x 526.21594pt>
+<P2/22.png, id=133, 837.88031pt x 526.21594pt>
 File: P2/22.png Graphic file (type png)
 <use P2/22.png>
 Package pdftex.def Info: P2/22.png  used on input line 122.
@@ -534,17 +617,17 @@ Package pdftex.def Info: P2/22.png  used on input line 122.
 
 
 [8 <./P2/22.png>]
-<P3/1.png, id=129, 706.89093pt x 241.65282pt>
+<P3/1.png, id=139, 706.89093pt x 241.65282pt>
 File: P3/1.png Graphic file (type png)
 <use P3/1.png>
 Package pdftex.def Info: P3/1.png  used on input line 134.
 (pdftex.def)             Requested size: 292.77629pt x 100.08493pt.
-<P3/2.png, id=130, 506.6428pt x 419.31656pt>
+<P3/2.png, id=140, 506.6428pt x 419.31656pt>
 File: P3/2.png Graphic file (type png)
 <use P3/2.png>
 Package pdftex.def Info: P3/2.png  used on input line 138.
 (pdftex.def)             Requested size: 209.12683pt x 173.07898pt.
-<P3/3.png, id=131, 571.38469pt x 436.63126pt>
+<P3/3.png, id=141, 571.38469pt x 436.63126pt>
 File: P3/3.png Graphic file (type png)
 <use P3/3.png>
 Package pdftex.def Info: P3/3.png  used on input line 142.
@@ -552,17 +635,17 @@ Package pdftex.def Info: P3/3.png  used on input line 142.
 
 
 [9 <./P3/1.png> <./P3/2.png> <./P3/3.png>]
-<P3/4.png, id=139, 489.32813pt x 272.51813pt>
+<P3/4.png, id=149, 489.32813pt x 272.51813pt>
 File: P3/4.png Graphic file (type png)
 <use P3/4.png>
 Package pdftex.def Info: P3/4.png  used on input line 148.
 (pdftex.def)             Requested size: 292.77629pt x 163.05472pt.
-<P3/5.png, id=140, 517.935pt x 300.3722pt>
+<P3/5.png, id=150, 517.935pt x 300.3722pt>
 File: P3/5.png Graphic file (type png)
 <use P3/5.png>
 Package pdftex.def Info: P3/5.png  used on input line 152.
 (pdftex.def)             Requested size: 292.77629pt x 169.79767pt.
-<P3/6.png, id=141, 779.91376pt x 261.97874pt>
+<P3/6.png, id=151, 779.91376pt x 261.97874pt>
 File: P3/6.png Graphic file (type png)
 <use P3/6.png>
 Package pdftex.def Info: P3/6.png  used on input line 158.
@@ -570,22 +653,22 @@ Package pdftex.def Info: P3/6.png  used on input line 158.
 
 
 [10 <./P3/4.png> <./P3/5.png> <./P3/6.png>]
-<P3/7.png, id=149, 523.20468pt x 325.96782pt>
+<P3/7.png, id=159, 523.20468pt x 325.96782pt>
 File: P3/7.png Graphic file (type png)
 <use P3/7.png>
 Package pdftex.def Info: P3/7.png  used on input line 164.
 (pdftex.def)             Requested size: 292.77629pt x 182.4114pt.
-<P3/8.png, id=150, 540.51938pt x 276.28218pt>
+<P3/8.png, id=160, 540.51938pt x 276.28218pt>
 File: P3/8.png Graphic file (type png)
 <use P3/8.png>
 Package pdftex.def Info: P3/8.png  used on input line 168.
 (pdftex.def)             Requested size: 292.77629pt x 149.65387pt.
-<P3/9.png, id=151, 310.91156pt x 139.27031pt>
+<P3/9.png, id=161, 310.91156pt x 139.27031pt>
 File: P3/9.png Graphic file (type png)
 <use P3/9.png>
 Package pdftex.def Info: P3/9.png  used on input line 173.
 (pdftex.def)             Requested size: 292.77629pt x 131.14786pt.
-<P3/10.png, id=152, 673.01437pt x 172.39406pt>
+<P3/10.png, id=162, 673.01437pt x 172.39406pt>
 File: P3/10.png Graphic file (type png)
 <use P3/10.png>
 Package pdftex.def Info: P3/10.png  used on input line 174.
@@ -593,17 +676,17 @@ Package pdftex.def Info: P3/10.png  used on input line 174.
 
 
 [11 <./P3/7.png> <./P3/8.png> <./P3/9.png> <./P3/10.png>]
-<P3/11.png, id=161, 562.35094pt x 466.74374pt>
+<P3/11.png, id=171, 562.35094pt x 466.74374pt>
 File: P3/11.png Graphic file (type png)
 <use P3/11.png>
 Package pdftex.def Info: P3/11.png  used on input line 178.
 (pdftex.def)             Requested size: 292.77629pt x 243.00014pt.
-<P3/12.png, id=162, 915.42pt x 228.855pt>
+<P3/12.png, id=172, 915.42pt x 228.855pt>
 File: P3/12.png Graphic file (type png)
 <use P3/12.png>
 Package pdftex.def Info: P3/12.png  used on input line 182.
 (pdftex.def)             Requested size: 292.77629pt x 73.19318pt.
-<P3/13.png, id=163, 880.79062pt x 344.03531pt>
+<P3/13.png, id=173, 880.79062pt x 344.03531pt>
 File: P3/13.png Graphic file (type png)
 <use P3/13.png>
 Package pdftex.def Info: P3/13.png  used on input line 186.
@@ -611,17 +694,17 @@ Package pdftex.def Info: P3/13.png  used on input line 186.
 
 
 [12 <./P3/11.png> <./P3/12.png> <./P3/13.png>]
-<P3/14.png, id=172, 506.6428pt x 179.16937pt>
+<P3/14.png, id=182, 506.6428pt x 179.16937pt>
 File: P3/14.png Graphic file (type png)
 <use P3/14.png>
 Package pdftex.def Info: P3/14.png  used on input line 192.
 (pdftex.def)             Requested size: 292.77629pt x 103.53828pt.
-<P3/15.png, id=173, 79.04532pt x 97.11281pt>
+<P3/15.png, id=183, 79.04532pt x 97.11281pt>
 File: P3/15.png Graphic file (type png)
 <use P3/15.png>
 Package pdftex.def Info: P3/15.png  used on input line 199.
 (pdftex.def)             Requested size: 41.82791pt x 51.38951pt.
-<P3/16.png, id=174, 391.4625pt x 289.08pt>
+<P3/16.png, id=184, 391.4625pt x 289.08pt>
 File: P3/16.png Graphic file (type png)
 <use P3/16.png>
 Package pdftex.def Info: P3/16.png  used on input line 202.
@@ -629,22 +712,22 @@ Package pdftex.def Info: P3/16.png  used on input line 202.
 
 
 [13 <./P3/14.png> <./P3/15.png> <./P3/16.png>]
-<P3/17.png, id=182, 862.72313pt x 409.53pt>
+<P3/17.png, id=192, 862.72313pt x 409.53pt>
 File: P3/17.png Graphic file (type png)
 <use P3/17.png>
 Package pdftex.def Info: P3/17.png  used on input line 210.
 (pdftex.def)             Requested size: 292.77629pt x 138.97589pt.
-<P3/18.png, id=183, 1221.06187pt x 565.36218pt>
+<P3/18.png, id=193, 1221.06187pt x 565.36218pt>
 File: P3/18.png Graphic file (type png)
 <use P3/18.png>
 Package pdftex.def Info: P3/18.png  used on input line 214.
 (pdftex.def)             Requested size: 292.77629pt x 135.56029pt.
-<P3/19.png, id=184, 886.06032pt x 407.27156pt>
+<P3/19.png, id=194, 886.06032pt x 407.27156pt>
 File: P3/19.png Graphic file (type png)
 <use P3/19.png>
 Package pdftex.def Info: P3/19.png  used on input line 218.
 (pdftex.def)             Requested size: 292.77629pt x 134.57402pt.
-<P3/20.png, id=185, 757.32938pt x 201.00093pt>
+<P3/20.png, id=195, 757.32938pt x 201.00093pt>
 File: P3/20.png Graphic file (type png)
 <use P3/20.png>
 Package pdftex.def Info: P3/20.png  used on input line 222.
@@ -652,22 +735,22 @@ Package pdftex.def Info: P3/20.png  used on input line 222.
 
 
 [14 <./P3/17.png> <./P3/18.png> <./P3/19.png> <./P3/20.png>]
-<P3/21.png, id=194, 360.59718pt x 241.65282pt>
+<P3/21.png, id=204, 360.59718pt x 241.65282pt>
 File: P3/21.png Graphic file (type png)
 <use P3/21.png>
 Package pdftex.def Info: P3/21.png  used on input line 228.
 (pdftex.def)             Requested size: 292.77629pt x 196.2023pt.
-<P3/22.png, id=195, 1414.53468pt x 237.13594pt>
+<P3/22.png, id=205, 1414.53468pt x 237.13594pt>
 File: P3/22.png Graphic file (type png)
 <use P3/22.png>
 Package pdftex.def Info: P3/22.png  used on input line 229.
 (pdftex.def)             Requested size: 292.77629pt x 49.07994pt.
-<P3/23.png, id=196, 241.65282pt x 356.83313pt>
+<P3/23.png, id=206, 241.65282pt x 356.83313pt>
 File: P3/23.png Graphic file (type png)
 <use P3/23.png>
 Package pdftex.def Info: P3/23.png  used on input line 233.
 (pdftex.def)             Requested size: 83.64944pt x 123.52136pt.
-<P3/24.png, id=197, 465.23813pt x 216.81pt>
+<P3/24.png, id=207, 465.23813pt x 216.81pt>
 File: P3/24.png Graphic file (type png)
 <use P3/24.png>
 Package pdftex.def Info: P3/24.png  used on input line 237.
@@ -675,17 +758,17 @@ Package pdftex.def Info: P3/24.png  used on input line 237.
 
 
 [15 <./P3/21.png> <./P3/22.png> <./P3/23.png> <./P3/24.png>]
-<P3/25.png, id=206, 498.36188pt x 280.04625pt>
+<P3/25.png, id=216, 498.36188pt x 280.04625pt>
 File: P3/25.png Graphic file (type png)
 <use P3/25.png>
 Package pdftex.def Info: P3/25.png  used on input line 243.
 (pdftex.def)             Requested size: 292.77629pt x 164.52504pt.
-<P3/26.png, id=207, 1053.1847pt x 193.47281pt>
+<P3/26.png, id=217, 1053.1847pt x 193.47281pt>
 File: P3/26.png Graphic file (type png)
 <use P3/26.png>
 Package pdftex.def Info: P3/26.png  used on input line 248.
 (pdftex.def)             Requested size: 292.77629pt x 53.78233pt.
-<P3/27.png, id=208, 763.35187pt x 493.0922pt>
+<P3/27.png, id=218, 763.35187pt x 493.0922pt>
 File: P3/27.png Graphic file (type png)
 <use P3/27.png>
 Package pdftex.def Info: P3/27.png  used on input line 252.
@@ -693,17 +776,17 @@ Package pdftex.def Info: P3/27.png  used on input line 252.
 
 
 [16 <./P3/25.png> <./P3/26.png> <./P3/27.png>]
-<P4/1.png, id=216, 899.61093pt x 359.84438pt>
+<P4/1.png, id=226, 899.61093pt x 359.84438pt>
 File: P4/1.png Graphic file (type png)
 <use P4/1.png>
 Package pdftex.def Info: P4/1.png  used on input line 264.
 (pdftex.def)             Requested size: 292.77629pt x 117.10725pt.
-<P4/2.png, id=217, 768.62157pt x 511.15968pt>
+<P4/2.png, id=227, 768.62157pt x 511.15968pt>
 File: P4/2.png Graphic file (type png)
 <use P4/2.png>
 Package pdftex.def Info: P4/2.png  used on input line 268.
 (pdftex.def)             Requested size: 292.77629pt x 194.71066pt.
-<P4/3.png, id=218, 1176.64594pt x 727.96968pt>
+<P4/3.png, id=228, 1176.64594pt x 727.96968pt>
 File: P4/3.png Graphic file (type png)
 <use P4/3.png>
 Package pdftex.def Info: P4/3.png  used on input line 272.
@@ -711,22 +794,22 @@ Package pdftex.def Info: P4/3.png  used on input line 272.
 
 
 [17 <./P4/1.png> <./P4/2.png> <./P4/3.png>]
-<P4/4.1.png, id=226, 91.84312pt x 94.85437pt>
+<P4/4.1.png, id=236, 91.84312pt x 94.85437pt>
 File: P4/4.1.png Graphic file (type png)
 <use P4/4.1.png>
 Package pdftex.def Info: P4/4.1.png  used on input line 279.
 (pdftex.def)             Requested size: 41.82791pt x 43.19933pt.
-<P4/4.2.png, id=227, 384.6872pt x 232.61906pt>
+<P4/4.2.png, id=237, 384.6872pt x 232.61906pt>
 File: P4/4.2.png Graphic file (type png)
 <use P4/4.2.png>
 Package pdftex.def Info: P4/4.2.png  used on input line 282.
 (pdftex.def)             Requested size: 334.60422pt x 202.34854pt.
-<P4/5.png, id=228, 373.395pt x 264.99pt>
+<P4/5.png, id=238, 373.395pt x 264.99pt>
 File: P4/5.png Graphic file (type png)
 <use P4/5.png>
 Package pdftex.def Info: P4/5.png  used on input line 288.
 (pdftex.def)             Requested size: 292.77629pt x 207.78712pt.
-<P4/6.png, id=229, 1444.64719pt x 691.08188pt>
+<P4/6.png, id=239, 1444.64719pt x 691.08188pt>
 File: P4/6.png Graphic file (type png)
 <use P4/6.png>
 Package pdftex.def Info: P4/6.png  used on input line 292.
@@ -734,22 +817,22 @@ Package pdftex.def Info: P4/6.png  used on input line 292.
 
 
 [18 <./P4/4.1.png> <./P4/4.2.png> <./P4/5.png> <./P4/6.png>]
-<P5/1.png, id=239, 337.26pt x 181.42781pt>
+<P5/1.png, id=249, 337.26pt x 181.42781pt>
 File: P5/1.png Graphic file (type png)
 <use P5/1.png>
 Package pdftex.def Info: P5/1.png  used on input line 301.
 (pdftex.def)             Requested size: 292.77629pt x 157.50041pt.
-<P5/3.png, id=240, 74.52844pt x 90.3375pt>
+<P5/3.png, id=250, 74.52844pt x 90.3375pt>
 File: P5/3.png Graphic file (type png)
 <use P5/3.png>
 Package pdftex.def Info: P5/3.png  used on input line 308.
 (pdftex.def)             Requested size: 41.82791pt x 50.70029pt.
-<P5/4.png, id=241, 335.75438pt x 236.38312pt>
+<P5/4.png, id=251, 335.75438pt x 236.38312pt>
 File: P5/4.png Graphic file (type png)
 <use P5/4.png>
 Package pdftex.def Info: P5/4.png  used on input line 311.
 (pdftex.def)             Requested size: 334.60422pt x 235.57458pt.
-<P5/5.png, id=242, 886.06032pt x 368.87813pt>
+<P5/5.png, id=252, 886.06032pt x 368.87813pt>
 File: P5/5.png Graphic file (type png)
 <use P5/5.png>
 Package pdftex.def Info: P5/5.png  used on input line 317.
@@ -757,17 +840,17 @@ Package pdftex.def Info: P5/5.png  used on input line 317.
 
 
 [19 <./P5/1.png> <./P5/3.png> <./P5/4.png> <./P5/5.png>]
-<P5/7.png, id=251, 666.99188pt x 450.9347pt>
+<P5/7.png, id=261, 666.99188pt x 450.9347pt>
 File: P5/7.png Graphic file (type png)
 <use P5/7.png>
 Package pdftex.def Info: P5/7.png  used on input line 321.
 (pdftex.def)             Requested size: 292.77629pt x 197.94398pt.
-<P5/6.png, id=252, 585.68813pt x 259.7203pt>
+<P5/6.png, id=262, 585.68813pt x 259.7203pt>
 File: P5/6.png Graphic file (type png)
 <use P5/6.png>
 Package pdftex.def Info: P5/6.png  used on input line 322.
 (pdftex.def)             Requested size: 292.77629pt x 129.83604pt.
-<P5/8.png, id=253, 556.32843pt x 203.25937pt>
+<P5/8.png, id=263, 556.32843pt x 203.25937pt>
 File: P5/8.png Graphic file (type png)
 <use P5/8.png>
 Package pdftex.def Info: P5/8.png  used on input line 326.
@@ -775,22 +858,22 @@ Package pdftex.def Info: P5/8.png  used on input line 326.
 
 
 [20 <./P5/7.png> <./P5/6.png> <./P5/8.png>]
-<P5/9.png, id=261, 694.09312pt x 347.79938pt>
+<P5/9.png, id=271, 694.09312pt x 347.79938pt>
 File: P5/9.png Graphic file (type png)
 <use P5/9.png>
 Package pdftex.def Info: P5/9.png  used on input line 333.
 (pdftex.def)             Requested size: 292.77629pt x 146.71158pt.
-<P5/11.png, id=262, 995.21812pt x 328.22626pt>
+<P5/11.png, id=272, 995.21812pt x 328.22626pt>
 File: P5/11.png Graphic file (type png)
 <use P5/11.png>
 Package pdftex.def Info: P5/11.png  used on input line 338.
 (pdftex.def)             Requested size: 292.77629pt x 96.56046pt.
-<P5/10.png, id=263, 572.89032pt x 215.30438pt>
+<P5/10.png, id=273, 572.89032pt x 215.30438pt>
 File: P5/10.png Graphic file (type png)
 <use P5/10.png>
 Package pdftex.def Info: P5/10.png  used on input line 339.
 (pdftex.def)             Requested size: 292.77629pt x 110.03374pt.
-<P5/12.png, id=264, 1148.03906pt x 465.23813pt>
+<P5/12.png, id=274, 1148.03906pt x 465.23813pt>
 File: P5/12.png Graphic file (type png)
 <use P5/12.png>
 Package pdftex.def Info: P5/12.png  used on input line 343.
@@ -798,14 +881,231 @@ Package pdftex.def Info: P5/12.png  used on input line 343.
 
 
 [21 <./P5/9.png> <./P5/11.png> <./P5/10.png> <./P5/12.png>]
-<P5/13.png, id=273, 561.59813pt x 554.82281pt>
+<P5/13.png, id=283, 561.59813pt x 554.82281pt>
 File: P5/13.png Graphic file (type png)
 <use P5/13.png>
 Package pdftex.def Info: P5/13.png  used on input line 349.
 (pdftex.def)             Requested size: 292.77629pt x 289.2376pt.
+<P6/1.png, id=284, 510.40688pt x 298.86656pt>
+File: P6/1.png Graphic file (type png)
+<use P6/1.png>
+Package pdftex.def Info: P6/1.png  used on input line 360.
+(pdftex.def)             Requested size: 292.77629pt x 171.44106pt.
 
 
-[22 <./P5/13.png>] (template.aux
+[22 <./P5/13.png> <./P6/1.png>]
+<P6/2.png, id=291, 1012.5328pt x 621.82312pt>
+File: P6/2.png Graphic file (type png)
+<use P6/2.png>
+Package pdftex.def Info: P6/2.png  used on input line 366.
+(pdftex.def)             Requested size: 292.77629pt x 179.80223pt.
+<P6/3.png, id=292, 777.65532pt x 522.45187pt>
+File: P6/3.png Graphic file (type png)
+<use P6/3.png>
+Package pdftex.def Info: P6/3.png  used on input line 367.
+(pdftex.def)             Requested size: 292.77629pt x 196.70021pt.
+
+
+[23 <./P6/2.png> <./P6/3.png>]
+<P6/4.png, id=299, 874.76813pt x 405.76593pt>
+File: P6/4.png Graphic file (type png)
+<use P6/4.png>
+Package pdftex.def Info: P6/4.png  used on input line 384.
+(pdftex.def)             Requested size: 292.77629pt x 135.80396pt.
+<P6/5.png, id=300, 622.57594pt x 166.37157pt>
+File: P6/5.png Graphic file (type png)
+<use P6/5.png>
+Package pdftex.def Info: P6/5.png  used on input line 388.
+(pdftex.def)             Requested size: 292.77629pt x 78.24033pt.
+<P6/6.png, id=301, 578.16pt x 204.01219pt>
+File: P6/6.png Graphic file (type png)
+<use P6/6.png>
+Package pdftex.def Info: P6/6.png  used on input line 392.
+(pdftex.def)             Requested size: 292.77629pt x 103.31017pt.
+<P6/7.png, id=302, 526.21594pt x 24.09pt>
+File: P6/7.png Graphic file (type png)
+<use P6/7.png>
+Package pdftex.def Info: P6/7.png  used on input line 397.
+(pdftex.def)             Requested size: 292.77629pt x 13.40353pt.
+<P6/8.png, id=303, 596.98032pt x 94.10156pt>
+File: P6/8.png Graphic file (type png)
+<use P6/8.png>
+Package pdftex.def Info: P6/8.png  used on input line 398.
+(pdftex.def)             Requested size: 292.77629pt x 46.15036pt.
+
+
+[24 <./P6/4.png> <./P6/5.png> <./P6/6.png> <./P6/7.png> <./P6/8.png>]
+<P6/9.png, id=314, 938.00438pt x 295.1025pt>
+File: P6/9.png Graphic file (type png)
+<use P6/9.png>
+Package pdftex.def Info: P6/9.png  used on input line 404.
+(pdftex.def)             Requested size: 292.77629pt x 92.10672pt.
+<P6/10.png, id=315, 708.39656pt x 278.54062pt>
+File: P6/10.png Graphic file (type png)
+<use P6/10.png>
+Package pdftex.def Info: P6/10.png  used on input line 408.
+(pdftex.def)             Requested size: 292.77629pt x 115.12042pt.
+<P6/11.png, id=316, 566.115pt x 328.97906pt>
+File: P6/11.png Graphic file (type png)
+<use P6/11.png>
+Package pdftex.def Info: P6/11.png  used on input line 413.
+(pdftex.def)             Requested size: 292.77629pt x 170.14143pt.
+
+
+[25 <./P6/9.png> <./P6/10.png> <./P6/11.png>]
+<P6/12.png, id=324, 647.41875pt x 554.07pt>
+File: P6/12.png Graphic file (type png)
+<use P6/12.png>
+Package pdftex.def Info: P6/12.png  used on input line 419.
+(pdftex.def)             Requested size: 292.77629pt x 250.56354pt.
+<P6/13.png, id=325, 1215.03937pt x 578.91281pt>
+File: P6/13.png Graphic file (type png)
+<use P6/13.png>
+Package pdftex.def Info: P6/13.png  used on input line 423.
+(pdftex.def)             Requested size: 292.77629pt x 139.48958pt.
+
+
+[26 <./P6/12.png> <./P6/13.png>]
+<P6/14.png, id=332, 657.2053pt x 471.26062pt>
+File: P6/14.png Graphic file (type png)
+<use P6/14.png>
+Package pdftex.def Info: P6/14.png  used on input line 429.
+(pdftex.def)             Requested size: 292.77629pt x 209.94402pt.
+<P6/15.png, id=333, 666.99188pt x 188.20313pt>
+File: P6/15.png Graphic file (type png)
+<use P6/15.png>
+Package pdftex.def Info: P6/15.png  used on input line 433.
+(pdftex.def)             Requested size: 292.77629pt x 82.61433pt.
+<P6/16.png, id=334, 1028.34187pt x 132.495pt>
+File: P6/16.png Graphic file (type png)
+<use P6/16.png>
+Package pdftex.def Info: P6/16.png  used on input line 434.
+(pdftex.def)             Requested size: 292.77629pt x 37.72304pt.
+
+Overfull \hbox (12.76045pt too wide) in paragraph at lines 436--437
+\T1/cmr/m/n/12 mos por un pro-ce-so que ha-ga con-sul-tas a una ba-se de da-tos (\T1/cmr/bx/n/12 QueryDatabaseTable\T1/cmr/m/n/12 ). 
+ []
+
+<P6/17.png, id=335, 560.0925pt x 204.01219pt>
+File: P6/17.png Graphic file (type png)
+<use P6/17.png>
+Package pdftex.def Info: P6/17.png  used on input line 438.
+(pdftex.def)             Requested size: 292.77629pt x 106.64728pt.
+<P6/18.png, id=336, 506.6428pt x 243.15843pt>
+File: P6/18.png Graphic file (type png)
+<use P6/18.png>
+Package pdftex.def Info: P6/18.png  used on input line 442.
+(pdftex.def)             Requested size: 292.77629pt x 140.51625pt.
+<P6/19.png, id=337, 555.57562pt x 219.06844pt>
+File: P6/19.png Graphic file (type png)
+<use P6/19.png>
+Package pdftex.def Info: P6/19.png  used on input line 443.
+(pdftex.def)             Requested size: 292.77629pt x 115.44385pt.
+
+
+[27 <./P6/14.png> <./P6/15.png> <./P6/16.png> <./P6/17.png>]
+<P6/20.png, id=346, 755.82375pt x 283.81032pt>
+File: P6/20.png Graphic file (type png)
+<use P6/20.png>
+Package pdftex.def Info: P6/20.png  used on input line 447.
+(pdftex.def)             Requested size: 292.77629pt x 109.93637pt.
+<P6/21.png, id=347, 1443.14156pt x 194.97844pt>
+File: P6/21.png Graphic file (type png)
+<use P6/21.png>
+Package pdftex.def Info: P6/21.png  used on input line 448.
+(pdftex.def)             Requested size: 292.77629pt x 39.5543pt.
+<P6/23.png, id=348, 515.67656pt x 217.5628pt>
+File: P6/23.png Graphic file (type png)
+<use P6/23.png>
+Package pdftex.def Info: P6/23.png  used on input line 452.
+(pdftex.def)             Requested size: 292.77629pt x 123.52408pt.
+
+
+[28 <./P6/18.png> <./P6/19.png> <./P6/20.png> <./P6/21.png> <./P6/23.png>]
+<P6/24.png, id=358, 280.04625pt x 193.47281pt>
+File: P6/24.png Graphic file (type png)
+<use P6/24.png>
+Package pdftex.def Info: P6/24.png  used on input line 458.
+(pdftex.def)             Requested size: 292.77629pt x 202.27565pt.
+<P6/25.png, id=359, 507.39563pt x 243.91125pt>
+File: P6/25.png Graphic file (type png)
+<use P6/25.png>
+Package pdftex.def Info: P6/25.png  used on input line 462.
+(pdftex.def)             Requested size: 292.77629pt x 140.74286pt.
+<P6/26.png, id=360, 619.56468pt x 224.33812pt>
+File: P6/26.png Graphic file (type png)
+<use P6/26.png>
+Package pdftex.def Info: P6/26.png  used on input line 466.
+(pdftex.def)             Requested size: 292.77629pt x 106.01059pt.
+
+
+[29 <./P6/24.png> <./P6/25.png> <./P6/26.png>]
+<P6/28.png, id=368, 471.26062pt x 184.43906pt>
+File: P6/28.png Graphic file (type png)
+<use P6/28.png>
+Package pdftex.def Info: P6/28.png  used on input line 473.
+(pdftex.def)             Requested size: 292.77629pt x 114.58461pt.
+<P6/29.png, id=369, 406.51875pt x 438.8897pt>
+File: P6/29.png Graphic file (type png)
+<use P6/29.png>
+Package pdftex.def Info: P6/29.png  used on input line 474.
+(pdftex.def)             Requested size: 292.77629pt x 316.1008pt.
+<P6/30.png, id=370, 555.57562pt x 180.675pt>
+File: P6/30.png Graphic file (type png)
+<use P6/30.png>
+Package pdftex.def Info: P6/30.png  used on input line 478.
+(pdftex.def)             Requested size: 292.77629pt x 95.21143pt.
+<P6/31.png, id=371, 508.90125pt x 237.13594pt>
+File: P6/31.png Graphic file (type png)
+<use P6/31.png>
+Package pdftex.def Info: P6/31.png  used on input line 482.
+(pdftex.def)             Requested size: 292.77629pt x 136.4317pt.
+<P6/32.png, id=372, 1420.55719pt x 132.495pt>
+File: P6/32.png Graphic file (type png)
+<use P6/32.png>
+Package pdftex.def Info: P6/32.png  used on input line 483.
+(pdftex.def)             Requested size: 292.77629pt x 27.3072pt.
+
+
+[30 <./P6/28.png> <./P6/29.png> <./P6/30.png>]
+<P6/33.png, id=381, 493.845pt x 322.95656pt>
+File: P6/33.png Graphic file (type png)
+<use P6/33.png>
+Package pdftex.def Info: P6/33.png  used on input line 487.
+(pdftex.def)             Requested size: 292.77629pt x 191.46423pt.
+<P6/34.png, id=382, 915.42pt x 357.58594pt>
+File: P6/34.png Graphic file (type png)
+<use P6/34.png>
+Package pdftex.def Info: P6/34.png  used on input line 488.
+(pdftex.def)             Requested size: 292.77629pt x 114.36435pt.
+
+
+[31 <./P6/31.png> <./P6/32.png> <./P6/33.png> <./P6/34.png>]
+<P6/35.png, id=391, 545.78906pt x 259.7203pt>
+File: P6/35.png Graphic file (type png)
+<use P6/35.png>
+Package pdftex.def Info: P6/35.png  used on input line 494.
+(pdftex.def)             Requested size: 292.77629pt x 139.31952pt.
+<P6/36.png, id=392, 508.14844pt x 258.21469pt>
+File: P6/36.png Graphic file (type png)
+<use P6/36.png>
+Package pdftex.def Info: P6/36.png  used on input line 498.
+(pdftex.def)             Requested size: 292.77629pt x 148.7796pt.
+<P6/37.png, id=393, 1172.12906pt x 479.54156pt>
+File: P6/37.png Graphic file (type png)
+<use P6/37.png>
+Package pdftex.def Info: P6/37.png  used on input line 502.
+(pdftex.def)             Requested size: 292.77629pt x 119.77533pt.
+<P6/38.png, id=394, 573.64313pt x 189.70876pt>
+File: P6/38.png Graphic file (type png)
+<use P6/38.png>
+Package pdftex.def Info: P6/38.png  used on input line 506.
+(pdftex.def)             Requested size: 292.77629pt x 96.82544pt.
+
+
+[32 <./P6/35.png> <./P6/36.png> <./P6/37.png> <./P6/38.png>]
+
+[33] (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -814,20 +1114,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: D3CCC430FF5A8CD2A440BE18502C97AC;756.
+(rerunfilecheck)             Checksum: 29EA50F2AB6AE32DE7D0E9728E17F5D4;1136.
  ) 
 Here is how much of TeX's memory you used:
- 11904 strings out of 468133
- 188568 string characters out of 5430712
- 599839 words of memory out of 5000000
- 40357 multiletter control sequences out of 15000+600000
+ 13197 strings out of 468133
+ 208221 string characters out of 5430712
+ 624590 words of memory out of 5000000
+ 41604 multiletter control sequences out of 15000+600000
  635959 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,11n,93p,358b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
-Output written on template.pdf (23 pages, 3089759 bytes).
+Output written on template.pdf (34 pages, 4722747 bytes).
 PDF statistics:
- 565 PDF objects out of 1000 (max. 8388607)
- 29 named destinations out of 1000 (max. 500000)
- 401 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 42 named destinations out of 1000 (max. 500000)
+ 597 words of extra memory for PDF output out of 10000 (max. 10000000)
 

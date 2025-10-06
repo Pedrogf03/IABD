@@ -348,4 +348,168 @@ Si lo probamos, veremos que los ficheros se crean en la entrada pero luego se mu
 
 \fig{P5/13.png}
 
+% --------------------
+% Actividad 6: Practicando la ingesta de datos en Batch.
+% --------------------
+\section{Ingesta de datos en Batch}
+En este apartado vamos a ver cómo funciona la ingesta de datos en batch, es decir, la carga y procesamiento de grandes volúmenes
+de datos en bloques o lotes.
+
+Primero vamos a instalat MySQL:
+
+\fig{P6/1.png}
+
+\newpage
+
+Lo configuramos de la siguiente forma:
+
+\fig{P6/2.png}
+\fig{P6/3.png}
+
+Durante la configuración hemos indicado lo siguiente:
+\begin{itemize}
+    \item Hemos activado el componente de validación de contraseñas.
+    \item Hemos puesto el nivel de validación en bajo (LOW = 0).
+    \item Hemos borrado los usuarios anónimos.
+    \item Hemos desactivado la conexión remota del root.
+    \item Hemos borrado las bases de datos de prueba y quitado el acceso a las mismas.
+    \item Hemos recargado los privilegios de MySQL.
+\end{itemize}
+
+\newpage
+
+Actualmente podemos seguir accediendo a MySQL como root, usando sudo. Vamos a definir una contraseña
+de root para localhost:
+
+\fig{P6/4.png}
+
+Y vamos a crear un usuario para acceder de forma remota (en mi caso también se llamará root).
+
+\fig{P6/5.png}
+
+Ahora que hemos creado el usuario, vamos a ver la dirección de enlace usando \path{netstat}.
+
+\fig{P6/6.png}
+
+Vemos que apunta a la dirección de loopback (\path{127.0.0.1}) y al puerto de MySQL (\path{3306}).
+Vamos a cambiar esto para poder acceder de forma remota:
+
+\fig{P6/7.png}
+\fig{P6/8.png}
+
+\newpage
+
+Una vez hecho, vamos a reiniciar MySQL para aplicar los cambios:
+
+\fig{P6/9.png}
+
+Y accedemos a MySQL como el usuario que hemos creado, indicando la dirección ip para emular que entramos de forma remota:
+
+\fig{P6/10.png}
+
+Ahora vamos a crear la base de datos, usando el script proporcionado. Pero antes vamos a cambiar las variables globales de validación
+de contraseñas. Para ello hacemos lo siguiente:
+
+\fig{P6/11.png}
+
+\newpage
+
+Ahora ejecutamos el script de creación de la base de datos:
+
+\fig{P6/12.png}
+
+\textit{* La contraseña del usuario que crea es posible que sea neesario cambiarla para cumplir las politicas.}
+
+\fig{P6/13.png}
+
+\newpage
+
+Ya tenemos todo lo necesario en MySQL, ahora vamos a empezar a configurar NiFi. Tenemos que descargar la librería necesaria para trabajar con bases de datos:
+
+\fig{P6/14.png}
+
+Lo descomprimimos y movemos a la carpeta de drivers (tenemos que crearla) de NiFi:
+
+\fig{P6/15.png}
+\fig{P6/16.png}
+
+Ahora vamos a la interfaz de NiFi, vamos a crear un nuevo flujo desde 0. Empezamos por un proceso que haga consultas a una base de datos (\textbf{QueryDatabaseTable}).
+
+\fig{P6/17.png}
+
+En las propiedades, tenemos que indicar el servicio que se va a usar. Como actualmente no existe ninguno, vamos a crearlo:
+
+\fig{P6/18.png}
+\fig{P6/19.png}
+
+Y una vez creado, vamos al mismo a configurarlo:
+
+\fig{P6/20.png}
+\fig{P6/21.png}
+
+En las propiedades, indicamos la url, la clase, la ruta dónde descargamos la librería y el usuario y contraseña de la base de datos (este se ha creado en el script).
+
+\fig{P6/23.png}
+
+\newpage
+
+Una vez hecho, habilitamos el servicio:
+
+\fig{P6/24.png}
+
+Y terminamos de configurar el proceso de consulta a la base de datos, indicando parámetros como la tabla o el tipo de sistema de base de datos que tenemos:
+
+\fig{P6/25.png}
+
+Vamos a probar el proceso creando un funnel y activando el flujo:
+
+\fig{P6/26.png}
+
+
+\newpage
+
+En la cola podemos ver las consultas que se han hecho y ver su contenido en formato json:
+
+\fig{P6/28.png}
+\fig{P6/29.png}
+
+Ahora vamos a continuar con el flujo creando un proceso que transforme el contenido de \textbf{Avro} (lenguaje original con el que trabaja NiFi) a \textbf{JSON}.
+
+\fig{P6/30.png}
+
+En las propiedades, le tenemos que indicar dos servicios, el lector (que será de avro) y el escritor (que será de json). Los creamos y los habilitamos:
+
+\fig{P6/31.png}
+\fig{P6/32.png}
+
+Finalmente, vamos a acabar el flujo con un proceso de cambio de nombre y de colocación de archivo:
+
+\fig{P6/33.png}
+\fig{P6/34.png}
+
+\newpage
+
+En el directorio de salida podemos ver el resultado:
+
+\fig{P6/35.png}
+
+Finalmente, vamos a convertir de JSON a csv con otro \textbf{ConvertRecord}, que tenga un lector de JSON y un escritor de csv:
+
+\fig{P6/36.png}
+
+El flujo final quedaría así:
+
+\fig{P6/37.png}
+
+Si lo probamos y vamos a la salida, veremos los archivos que se han generado:
+
+\fig{P6/38.png}
+
+% --------------------
+% Actividad 7: Practicando la ingesta de datos en Streaming.
+% --------------------
+\section{Ingesta de datos en Streaming}
+En este apartado vamos a ver cómo funciona la ingesta de datos en streaming, es decir, la capacidad de procesar y analizar datos en tiempo
+real a medida que estos van llegando.
+
 \end{document}
