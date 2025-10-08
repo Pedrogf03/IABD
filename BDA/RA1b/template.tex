@@ -1,7 +1,7 @@
 \documentclass{../../miPlantilla}
 
 \renewcommand{\miAsignatura}{Big Data Aplicado}
-\renewcommand{\tituloTrabajo}{Apache NiFi}
+\renewcommand{\tituloTrabajo}{Apache NiFi: Configuración y Flujos de Datos}
 \renewcommand{\imagenPortada}{image.png}
 
 \begin{document}
@@ -11,32 +11,32 @@
 % --------------------
 % Actividad 1: Instalación de Lubuntu
 % --------------------
-\section{Lubuntu 24.04}
+\section{Lubuntu 24.04: Preparación de la Máquina Virtual}
 En esta práctica instalaremos y configuraremos el sistema operativo \textbf{Lubuntu 24.04} en \textbf{VirtualBox}.
-Para ello debemos descargar la ISO desde la \href{https://cdimage.ubuntu.com/lubuntu/releases/noble/release/lubuntu-24.04.3-desktop-amd64.iso}{página oficial}.  
+Para ello, debemos descargar la imagen ISO desde la \href{https://cdimage.ubuntu.com/lubuntu/releases/noble/release/lubuntu-24.04.3-desktop-amd64.iso}{página oficial}.  
 
-Una vez descargada, creamos la máquina virtual en VirtualBox. En este caso, se le asignaron 8 GB de RAM, 4 procesadores y 50 GB de disco reservado dinámicamente.  
-Es recomendable activar la opción \textbf{EFI} y habilitar el \textbf{PAE/NX} en la configuración del sistema:
+Una vez descargada, creamos la máquina virtual en VirtualBox. En este caso, se le asignaron \textbf{8 GB de RAM}, \textbf{4 procesadores} y \textbf{50 GB de disco} reservado dinámicamente.  
+Es recomendable activar la opción \textbf{EFI} y habilitar el \textbf{PAE/NX} en la configuración del sistema para mejorar el rendimiento y la compatibilidad:
 
 \fig{P1/4.png}
 
-Tras esto, iniciamos la máquina e instalamos el sistema de manera habitual:
+Tras esto, iniciamos la máquina e instalamos el sistema de forma habitual:
 
 \fig{P1/6.png}
 
-Finalmente, instalamos las \textbf{Guest Additions} y tendremos la máquina lista para trabajar:
+Finalmente, instalamos las \textbf{Guest Additions} para optimizar la integración con el host. Con esto, la máquina estará lista para trabajar:
 
 \fig{P1/7.png}
 
 \newpage
 
 % --------------------
-% Actvidad 2: Instalación y configuración de Apache NiFi
+% Actividad 2: Instalación y configuración de Apache NiFi
 % --------------------
-\section{Preparación del entorno}
-En esta sección prepararemos el entorno para instalar y configurar \textbf{Apache NiFi} en la máquina virtual con Lubuntu 24.04.  
+\section{Preparación del entorno y configuración de Apache NiFi}
+En esta sección prepararemos el entorno para instalar y configurar \textbf{Apache NiFi} en la máquina virtual con Lubuntu 24.04.  
 
-El primer paso consiste en instalar la \textbf{JDK}:
+El primer paso consiste en instalar la \textbf{Java Development Kit (JDK)}:
 
 \fig{P2/1.png}
 
@@ -44,17 +44,17 @@ Comprobamos que la instalación se ha realizado correctamente verificando la ver
 
 \fig{P2/2.png}
 
-A continuación, configuramos las variables de entorno de \textbf{Java}. Desde el directorio \textbf{home}, editamos el archivo \path{.bashrc} y añadimos las siguientes líneas al final:
+A continuación, configuramos las \textbf{variables de entorno de Java}. Desde el directorio \textbf{home}, editamos el archivo \path{.bashrc} y añadimos las siguientes líneas al final:
 
 \fig{P2/3.png}
 
 \newpage
 
-En paralelo, instalamos la versión \textbf{JDK 21} para que NiFi utilice esta versión, manteniendo la JDK 11 como predeterminada en el sistema:
+En paralelo, instalamos la versión \textbf{JDK 21}, ya que es la requerida por NiFi, manteniendo la JDK 11 como predeterminada en el sistema para otros posibles usos:
 
 \fig{P2/4.png}
 
-Posteriormente comprobamos las rutas de instalación y configuramos \textbf{Java 11} como versión predeterminada:
+Posteriormente, comprobamos las rutas de instalación y configuramos \textbf{Java 11} como versión predeterminada del sistema operativo:
 
 \fig{P2/5.png}
 
@@ -62,7 +62,7 @@ Posteriormente comprobamos las rutas de instalación y configuramos \textbf{Java
 
 \fig{P2/6.png}
 
-A continuación descargamos \textbf{Apache NiFi} desde la \href{https://nifi.apache.org/}{página oficial}:
+A continuación, descargamos \textbf{Apache NiFi} desde la \href{https://nifi.apache.org/}{página oficial}:
 
 \fig{P2/7.png}
 \fig{P2/8.png}
@@ -75,7 +75,7 @@ Y lo movemos a un directorio más adecuado:
 
 \fig{P2/10.png}
 
-Definimos también las variables de entorno de NiFi, editando nuevamente el archivo \path{.bashrc} y añadiendo lo siguiente:
+Definimos también las \textbf{variables de entorno de NiFi}, editando nuevamente el archivo \path{.bashrc} y añadiendo lo siguiente:
 
 \fig{P2/11.png}
 
@@ -83,16 +83,16 @@ Ahora intentamos arrancar NiFi:
 
 \fig{P2/12.png}
 
-Observamos que aparece un error, ya que la versión 11 de Java no es compatible con esta versión de NiFi.
+Observamos que aparece un error, ya que la versión 11 de Java, la predeterminada del sistema, no es compatible con esta versión de NiFi.
 
 \newpage
 
-Para solucionarlo, editamos el archivo \path{nifi-env.sh} e indicamos que NiFi utilice la JDK 21:
+Para solucionarlo, editamos el archivo de configuración \path{nifi-env.sh} e indicamos que NiFi debe utilizar específicamente la \textbf{JDK 21} que hemos instalado:
 
 \fig{P2/13.png}
 \fig{P2/14.png}
 
-Como se aprecia, ahora NiFi arranca sin problemas. Lo detenemos con \path{nifi.sh stop} y configuramos un usuario y contraseña:
+Como se aprecia, ahora NiFi arranca sin problemas. Lo detenemos con \path{nifi.sh} \textbf{stop} y configuramos un usuario y contraseña para asegurar la interfaz:
 
 \fig{P2/16.png}
 
@@ -102,22 +102,22 @@ Si lo iniciamos nuevamente y accedemos a \textbf{https://localhost:8443}, llegam
 
 \newpage
 
-Para facilitar la gestión y el acceso desde el host, modificamos el archivo \path{nifi.properties}, ubicado en \path{/opt/nifi/conf}, de la siguiente forma:
+Para facilitar la gestión y el acceso desde el host, modificamos el archivo de propiedades \path{nifi.properties}, ubicado en \path{/opt/nifi/conf}, de la siguiente forma:
 
 \fig{P2/19.png}
 \fig{P2/20.png}
 \fig{P2/21.png}
 
-Dado que la máquina virtual está configurada en modo \textbf{NAT}, no es posible acceder directamente desde el exterior. Para solucionarlo, configuramos un reenvío de puertos en VirtualBox, redirigiendo el puerto 8081 de la máquina virtual al 8080 de la máquina anfitriona:
+Dado que la máquina virtual está configurada en modo \textbf{NAT}, no es posible acceder directamente desde el exterior. Para solucionarlo, configuramos un \textbf{reenvío de puertos} en VirtualBox, redirigiendo el puerto de la interfaz web de NiFi (8081) de la máquina virtual al puerto 8080 de la máquina anfitriona:
 
 \fig{P2/23.png}
 \fig{P2/24.png}
 
-\textit{Nota: el puerto anfitrión corresponde al host, mientras que el puerto invitado corresponde al servicio de NiFi en la máquina virtual.}
+\textit{Nota: el puerto anfitrión (\textit{Host Port}) corresponde al host, mientras que el puerto invitado (\textit{Guest Port}) corresponde al servicio de NiFi en la máquina virtual.}
 
 \newpage
 
-Tras configurar esto, arrancamos NiFi y ya podemos acceder fácilmente desde el host:
+Tras configurar esto, arrancamos NiFi y ya podemos acceder más fácilmente:
 
 \fig{P2/22.png}
 
@@ -126,24 +126,24 @@ Tras configurar esto, arrancamos NiFi y ya podemos acceder fácilmente desde el 
 % --------------------
 % Actividad 3: Manejo de ficheros con Apache NiFi
 % --------------------
-\section{Manejo de ficheros}
-A continuación aprenderemos a manejar ficheros de forma sencilla con NiFi, creando un par de flujos para generar, renombrar y mover archivos.  
+\section{Flujos básicos para el manejo de archivos}
+A continuación, aprenderemos a manejar archivos de forma sencilla con NiFi, creando un par de flujos para generar, renombrar y moverlos.
 
-Primero creamos los directorios de trabajo en la máquina:
+Primero creamos los directorios de trabajo necesarios en la máquina virtual:
 
 \fig{P3/1.png}
 
-Accedemos a NiFi y comenzamos con el primer flujo. Arrastramos un proceso al área de trabajo:
+Accedemos a NiFi y comenzamos con el primer flujo. Arrastramos un procesador al área de trabajo:
 
 \fig[0.5\textwidth]{P3/2.png}
 
-Seleccionamos el tipo de proceso. En este caso, \textbf{GenerateFlowFile}, que genera archivos:
+Seleccionamos el tipo de procesador. En este caso, \textbf{GenerateFlowFile}, que se utiliza para generar archivos de flujo (datos ficticios):
 
 \fig{P3/3.png}
 
 \newpage
 
-Hacemos doble clic en el proceso y lo configuramos. En la pestaña \textit{Scheduling}, establecemos que se ejecute cada 20 segundos:
+Hacemos doble clic en el procesador y lo configuramos. En la pestaña \textit{Scheduling}, establecemos que se ejecute cada \textbf{20 segundos}:
 
 \fig{P3/4.png}
 
@@ -151,9 +151,9 @@ En la pestaña \textit{Properties}, en el campo \textit{Custom Text}, escribimos
 
 \fig{P3/5.png}
 
-Esto hará que cada archivo generado contenga dicho texto junto con la fecha y hora de creación.  
+Esto hará que cada archivo generado contenga dicho texto junto con la fecha y hora de creación, facilitando la trazabilidad.  
 
-Luego añadimos otro proceso, \textbf{UpdateAttribute}, para modificar atributos del fichero creado:
+Luego añadimos otro procesador, \textbf{UpdateAttribute}, para modificar atributos del archivo de flujo generado (el FlowFile):
 
 \fig{P3/6.png}
 
@@ -163,67 +163,67 @@ En sus propiedades, añadimos un nuevo atributo haciendo clic en el icono \textb
 
 \fig{P3/7.png}
 
-Lo nombramos \path{filename} (atributo del nombre de archivo) y le damos el siguiente contenido:
+Lo nombramos \path{filename} (el atributo que define el nombre del archivo) y le damos el siguiente contenido, usando la sintaxis del Expression Language de NiFi:
 
 \fig{P3/8.png}
 
-De esta manera, el nombre del archivo estará compuesto por la fecha y hora actuales.  
-Conectamos ambos procesos arrastrando la flecha desde el primero hacia el segundo:
+De esta manera, el nombre del archivo estará compuesto por la fecha y hora actuales, asegurando un nombre único. 
+Conectamos ambos procesadores arrastrando la flecha desde el primero hacia el segundo:
 
 \fig{P3/9.png}
 \fig{P3/10.png}
 
-En la configuración de la conexión seleccionamos la prioridad \textbf{FIFO (First In First Out)}:
+En la configuración de la conexión seleccionamos la estrategia de priorización \textbf{FIFO (First In First Out)} para que los archivos se procesen en el orden en que se generaron:
 
 \fig{P3/11.png}
 
-Así obtenemos un flujo como el siguiente:
+Así obtenemos un flujo parcial como el siguiente:
 
 \fig{P3/12.png}
 
-Después añadimos un proceso \textbf{PutFile}, que colocará el fichero en el directorio de entrada:
+Después, añadimos un procesador \textbf{PutFile}, que escribirá el archivo de flujo en el directorio de entrada del sistema de archivos local:
 
 \fig{P3/13.png}
 
 \newpage
 
-En sus propiedades configuramos los campos \textbf{Directory} y \textbf{Conflict Resolution Strategy}:
+En sus propiedades, configuramos los campos \textbf{Directory} (la carpeta de destino) y \textbf{Conflict Resolution Strategy} (qué hacer si el archivo ya existe):
 
 \fig{P3/14.png}
 
-Para validar los resultados, añadimos dos \textbf{Funnel}: uno para los ficheros exitosos (marcando \textit{Success}) y otro para los fallidos (marcando \textit{Failure}):
+Para validar los resultados del proceso, añadimos dos \textbf{Funnel} (embudos): uno para los archivos de flujo que completen el proceso exitosamente (marcando \textit{Success}) y otro para los fallidos (marcando \textit{Failure}):
 
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.1\textwidth}  % Primera imagen pequeña a la izquierda
+    \begin{minipage}{0.1\textwidth}  % Primera imagen pequeña a la izquierda
         \fig[1\linewidth]{P3/15.png}
     \end{minipage}\hfill
-    \begin{minipage}{0.8\textwidth}   % Segunda imagen más grande a la derecha
+    \begin{minipage}{0.8\textwidth}   % Segunda imagen más grande a la derecha
         \fig[1\linewidth]{P3/16.png}
     \end{minipage}
 \end{figure}
 
 \newpage
 
-El resultado debería ser similar a este:
+El flujo completo debería ser similar a este:
 
 \fig{P3/17.png}
 
-Ya tenemos el primer flujo listo. Lo seleccionamos completo (con \textbf{Shift}) y lo arrancamos:
+Ya tenemos el primer flujo listo. Lo seleccionamos por completo (manteniendo pulsada la tecla \textbf{Shift}) y lo arrancamos (opción Start):
 
 \fig{P3/18.png}
 
-Los procesos comenzarán a ejecutarse automáticamente:
+Los procesadores comenzarán a ejecutarse automáticamente:
 
 \fig{P3/19.png}
 
-En el directorio configurado de entrada se irán generando ficheros:
+En el directorio configurado de entrada (\path{/home/usuario/entrada}) se irán generando los archivos:
 
 \fig{P3/20.png}
 
 \newpage
 
-Podemos comprobar también la cola de \textit{Success}:
+Podemos comprobar también la cola de la relación de \textit{Success}:
 
 \fig{P3/21.png}
 \fig{P3/22.png}
@@ -232,22 +232,22 @@ Vamos a parar el flujo y limpiar las colas para comenzar con el siguiente:
 
 \fig[0.2\textwidth]{P3/23.png}
 
-El segundo flujo consistirá en mover los archivos del directorio de entrada a uno de salida. Para ello, creamos un proceso \textbf{GetFile}:
+El segundo flujo consistirá en \textbf{mover} los archivos generados del directorio de entrada a uno de salida. Para ello, creamos un procesador \textbf{GetFile} que leerá los archivos:
 
 \fig{P3/24.png}
 
 \newpage
 
-En sus propiedades establecemos el directorio de entrada:
+En sus propiedades, establecemos el directorio de entrada que creamos antes:
 
 \fig{P3/25.png}
 
-Luego añadimos un proceso \textbf{PutFile}, indicando el directorio de salida, conectamos ambos procesos y añadimos \textbf{Funnels} para controlar los flujos de éxito y fallo.
+Luego añadimos un procesador \textbf{PutFile}, indicando el directorio de salida. Conectamos ambos procesadores y añadimos los \textbf{Funnels} para controlar los flujos de éxito y fallo.
 El flujo final debe quedar de la siguiente manera:
 
 \fig{P3/26.png}
 
-Al ejecutarlo, los ficheros se mueven del directorio de entrada al de salida:
+Al ejecutarlo, los archivos se leen del directorio de entrada, se convierten en FlowFiles y se escriben en el directorio de salida:
 
 \fig{P3/27.png}
 
@@ -256,10 +256,10 @@ Al ejecutarlo, los ficheros se mueven del directorio de entrada al de salida:
 % --------------------
 % Actividad 4: Practicando con plantillas
 % --------------------
-\section{Uso de plantillas en NiFi}
-En este apartado vamos a aprender a crear y usar \textbf{plantillas} en NiFi, reutilizando uno de los flujos creados anteriormente.
+\section{Creación y Uso de Plantillas mediante Grupos}
+En este apartado vamos a aprender a crear y usar la lógica de los flujos de forma reutilizable en NiFi. Dado que las versiones más recientes han priorizado la gestión de la estructura a través de grupos, utilizaremos el método de exportación de \textbf{Grupos de Procesadores}.
 
-Seleccionamos todo el flujo y, con clic derecho, escogemos la opción de crear un grupo:
+Seleccionamos todo el flujo y, con clic derecho, escogemos la opción de \textbf{Crear Grupo}:
 
 \fig{P4/1.png}
 
@@ -267,11 +267,13 @@ Creamos el grupo, le ponemos el nombre que queramos y veremos cómo el flujo se 
 
 \fig{P4/2.png}
 
-Esto nos descargará un fichero \texttt{.json} que contiene el grupo creado:
+\newpage
+
+Esto nos descargará un fichero \texttt{.json} que contiene el grupo creado. Este archivo \texttt{.json} permite exportar y reutilizar la lógica de este subflujo:
 
 \fig{P4/3.png}
 
-A continuación, borramos todo el flujo y dejamos el área de trabajo vacía. Una vez hecho, añadimos un \textbf{Process Group} y, en la ventana que aparece, seleccionamos la opción de importar un archivo:
+A continuación, borramos todo el flujo y dejamos el área de trabajo vacía. Una vez hecho, arrastramos el icono de \textbf{Process Group} al lienzo y, en la ventana que aparece, seleccionamos la opción de importar un archivo:
 
 \begin{figure}[H]
     \centering
@@ -283,6 +285,8 @@ A continuación, borramos todo el flujo y dejamos el área de trabajo vacía. Un
     \end{minipage}
 \end{figure}
 
+\newpage
+
 Seleccionamos el archivo \texttt{.json} creado y lo añadimos:
 
 \fig{P4/5.png}
@@ -293,14 +297,14 @@ Como podemos ver en el flujo, tenemos de vuelta el grupo creado anteriormente. S
 
 \newpage
 
-\section{Practicando con grupos}
-Ahora que sabemos crear grupos, vamos a usarlos para crear flujos. Vamos borrar todo lo que teniamos hasta ahora y empezar de 0.
+\section{Trabajo con Grupos de Procesadores}
+Ahora vamos a practicar con los \textbf{Grupos de Procesadores} (Process Groups), que permiten encapsular flujos. Borraremos lo que teníamos y empezamos de cero.
 
-Primero vamos a crear un flujo que genere y renombre los archivos, y lo agrupamos:
+Primero vamos a crear un flujo que genere y renombre los archivos, y lo agrupamos en un Process Group:
 
 \fig{P5/1.png}
 
-Entramos con doble clic al grupo y añadimos un \textbf{Output Port}:
+Entramos con doble clic al grupo y añadimos un \textbf{Puerto de Salida} (Output Port), que permitirá conectar el flujo interno a otros procesadores externos al grupo:
 
 \begin{figure}[H]
     \centering
@@ -312,103 +316,96 @@ Entramos con doble clic al grupo y añadimos un \textbf{Output Port}:
     \end{minipage}
 \end{figure}
 
-El flujo final deberia quedar tal que así:
+\newpage
+
+El flujo final dentro del grupo debería quedar tal que así (conectando la salida del \path{UpdateAttribute} al Output Port):
 
 \fig{P5/5.png}
 
-Ahora salimos del grupo y vamos a enlazar la salida con un flujo que coloque los archivos en un directorio:
+Ahora salimos del grupo y vamos a enlazar su salida (Output Port) con un procesador \textbf{PutFile} que colocará los archivos en un directorio de salida:
 
 \fig{P5/7.png}
 \fig{P5/6.png}
 
-Finalmente, vamos a arrancar todo el flujo y comprobar el resultado:
+\newpage
+
+Finalmente, vamos a arrancar todo el flujo y comprobar el resultado en el directorio de salida:
 
 \fig{P5/8.png}
 
-\newpage
-
-Ahora vamos a crear otro flujo que mueva los archivos a un directorio, y lo agrupamos. A este flujo le vamos a poner un
-\textbf{Input Port}:
+Ahora vamos a crear otro flujo que mueva los archivos de un directorio a otro, y lo agrupamos. A este flujo le vamos a añadir un \textbf{Puerto de Entrada} (Input Port), que permitirá recibir archivos de flujo desde fuera:
 
 \fig{P5/9.png}
 
-Salimos del grupo, creamos un proceso para obtener ficheros y lo enlazamos al grupo, seleccionando de entrada el puerto que hemos
-añadido:
+Salimos del grupo, creamos un proceso \textbf{GetFile} para obtener archivos de un directorio y lo enlazamos al grupo, seleccionando como destino el puerto de entrada que hemos añadido:
 
 \fig{P5/11.png}
 \fig{P5/10.png}
+
+\newpage
 
 El resultado final de todo el flujo debería ser el siguiente:
 
 \fig{P5/12.png}
 
-\newpage
-
-Si lo probamos, veremos que los ficheros se crean en la entrada pero luego se mueven a la salida:
+Si lo probamos, veremos que los archivos se crean en el directorio de entrada y son consumidos por el grupo, que finalmente los mueve a la salida:
 
 \fig{P5/13.png}
+
+\newpage
 
 % --------------------
 % Actividad 6: Practicando la ingesta de datos en Batch.
 % --------------------
-\section{Ingesta de datos en Batch}
-En este apartado vamos a ver cómo funciona la ingesta de datos en batch, es decir, la carga y procesamiento de grandes volúmenes
-de datos en bloques o lotes.
+\section{Ingesta de Datos en Modo Batch (Lotes)}
+En este apartado, exploraremos la ingesta de datos en modo batch, que implica la carga y procesamiento de grandes volúmenes de datos en bloques o lotes.
 
-Primero vamos a instalat MySQL:
+Primero vamos a instalar \textbf{MySQL Server}:
 
 \fig{P6/1.png}
 
-\newpage
-
-Lo configuramos de la siguiente forma:
+Lo configuramos con las opciones de seguridad recomendadas:
 
 \fig{P6/2.png}
 \fig{P6/3.png}
 
-Durante la configuración hemos indicado lo siguiente:
+Durante la configuración hemos realizado los siguientes pasos:
 \begin{itemize}
     \item Hemos activado el componente de validación de contraseñas.
-    \item Hemos puesto el nivel de validación en bajo (LOW = 0).
+    \item Hemos puesto el nivel de validación en bajo (\textbf{LOW = 0}).
     \item Hemos borrado los usuarios anónimos.
-    \item Hemos desactivado la conexión remota del root.
-    \item Hemos borrado las bases de datos de prueba y quitado el acceso a las mismas.
-    \item Hemos recargado los privilegios de MySQL.
+    \item Hemos desactivado la conexión remota del usuario root.
+    \item Hemos borrado las bases de datos de prueba y eliminado el acceso a ellas.
+    \item Hemos recargado los privilegios de MySQL (para que los cambios surtan efecto).
 \end{itemize}
 
-\newpage
-
-Actualmente podemos seguir accediendo a MySQL como root, usando sudo. Vamos a definir una contraseña
-de root para localhost:
+Actualmente podemos seguir accediendo a MySQL como root usando \path{sudo}. Vamos a definir una contraseña específica para el usuario root en \path{localhost}:
 
 \fig{P6/4.png}
 
-Y vamos a crear un usuario para acceder de forma remota (en mi caso también se llamará root).
+Y vamos a crear un usuario para acceder de forma remota (en mi caso, también se llamará root, pero es recomendable usar un nombre distinto para entornos de producción):
 
 \fig{P6/5.png}
 
-Ahora que hemos creado el usuario, vamos a ver la dirección de enlace usando \path{netstat}.
+Ahora que hemos creado el usuario, vamos a verificar la dirección de enlace que está usando el servidor MySQL con \path{netstat}:
 
 \fig{P6/6.png}
 
 Vemos que apunta a la dirección de loopback (\path{127.0.0.1}) y al puerto de MySQL (\path{3306}).
-Vamos a cambiar esto para poder acceder de forma remota:
+Vamos a cambiar esto para permitir el acceso desde la red (o desde la IP de la VM si la cambiamos):
 
 \fig{P6/7.png}
 \fig{P6/8.png}
 
-\newpage
-
-Una vez hecho, vamos a reiniciar MySQL para aplicar los cambios:
+Una vez hecho, reiniciamos el servicio de MySQL para aplicar los cambios:
 
 \fig{P6/9.png}
 
-Y accedemos a MySQL como el usuario que hemos creado, indicando la dirección ip para emular que entramos de forma remota:
+Y accedemos a MySQL como el usuario que hemos creado, indicando la dirección IP para simular un acceso remoto:
 
 \fig{P6/10.png}
 
-Ahora vamos a crear la base de datos, usando el script proporcionado. Pero antes vamos a cambiar las variables globales de validación
-de contraseñas. Para ello hacemos lo siguiente:
+Ahora vamos a crear la base de datos usando el script proporcionado. Pero antes, vamos a cambiar las variables globales de validación de contraseñas. Para ello hacemos lo siguiente:
 
 \fig{P6/11.png}
 
@@ -418,98 +415,220 @@ Ahora ejecutamos el script de creación de la base de datos:
 
 \fig{P6/12.png}
 
-\textit{* La contraseña del usuario que crea es posible que sea neesario cambiarla para cumplir las politicas.}
+\textit{* La contraseña del usuario que se crea es posible que sea necesario cambiarla para cumplir con las políticas de MySQL.}
 
 \fig{P6/13.png}
 
 \newpage
 
-Ya tenemos todo lo necesario en MySQL, ahora vamos a empezar a configurar NiFi. Tenemos que descargar la librería necesaria para trabajar con bases de datos:
+Ya tenemos todo lo necesario en MySQL. Ahora vamos a empezar a configurar NiFi. Tenemos que descargar la librería (driver) necesaria para trabajar con MySQL:
 
 \fig{P6/14.png}
 
-Lo descomprimimos y movemos a la carpeta de drivers (tenemos que crearla) de NiFi:
+Lo descomprimimos y lo movemos a la carpeta de drivers de NiFi (debemos crearla si no existe):
 
 \fig{P6/15.png}
 \fig{P6/16.png}
 
-Ahora vamos a la interfaz de NiFi, vamos a crear un nuevo flujo desde 0. Empezamos por un proceso que haga consultas a una base de datos (\textbf{QueryDatabaseTable}).
+Ahora vamos a la interfaz de NiFi para crear un nuevo flujo desde cero. Empezamos con un procesador que realiza consultas a una base de datos (\textbf{QueryDatabaseTable}).
 
 \fig{P6/17.png}
 
-En las propiedades, tenemos que indicar el servicio que se va a usar. Como actualmente no existe ninguno, vamos a crearlo:
+\newpage
+
+En las propiedades, tenemos que indicar el servicio \textbf{DBCPConnectionPool} que se va a usar para la conexión. Como actualmente no existe ninguno, vamos a crearlo:
 
 \fig{P6/18.png}
 \fig{P6/19.png}
 
-Y una vez creado, vamos al mismo a configurarlo:
+Una vez creado, vamos a su configuración:
 
 \fig{P6/20.png}
 \fig{P6/21.png}
 
-En las propiedades, indicamos la url, la clase, la ruta dónde descargamos la librería y el usuario y contraseña de la base de datos (este se ha creado en el script).
+En las propiedades, indicamos la URL de conexión, la clase del driver, la ruta donde descargamos la librería (driver JAR) y el usuario y contraseña de la base de datos (este se ha creado en el script).
 
 \fig{P6/23.png}
 
-\newpage
-
-Una vez hecho, habilitamos el servicio:
+Una vez configurado, habilitamos el servicio:
 
 \fig{P6/24.png}
 
-Y terminamos de configurar el proceso de consulta a la base de datos, indicando parámetros como la tabla o el tipo de sistema de base de datos que tenemos:
+Y terminamos de configurar el procesador \textbf{QueryDatabaseTable}, indicando parámetros como el nombre de la tabla o el tipo de sistema de base de datos (\path{Database Type}):
 
 \fig{P6/25.png}
 
-Vamos a probar el proceso creando un funnel y activando el flujo:
+\newpage
+
+Vamos a probar el proceso creando un \textbf{Funnel} y activando el flujo:
 
 \fig{P6/26.png}
 
-
-\newpage
-
-En la cola podemos ver las consultas que se han hecho y ver su contenido en formato json:
+En la cola podemos ver los registros que se han extraído y ver su contenido, que por defecto está en formato \textbf{Avro}, pero NiFi nos permite formatearlo a \textbf{JSON}:
 
 \fig{P6/28.png}
 \fig{P6/29.png}
 
-Ahora vamos a continuar con el flujo creando un proceso que transforme el contenido de \textbf{Avro} (lenguaje original con el que trabaja NiFi) a \textbf{JSON}.
+\newpage
+
+Ahora vamos a continuar con el flujo creando un procesador que transforme el contenido de \textbf{Avro} (el formato de datos que NiFi usa por defecto) a \textbf{JSON}. Para esto, usamos \textbf{ConvertRecord}.
 
 \fig{P6/30.png}
 
-En las propiedades, le tenemos que indicar dos servicios, el lector (que será de avro) y el escritor (que será de json). Los creamos y los habilitamos:
+En sus propiedades, le tenemos que indicar dos servicios de tipo Controller Service: el lector (Record Reader), que será de Avro, y el escritor (Record Writer), que será de JSON. Los creamos y los habilitamos:
 
 \fig{P6/31.png}
 \fig{P6/32.png}
 
-Finalmente, vamos a acabar el flujo con un proceso de cambio de nombre y de colocación de archivo:
+Finalmente, vamos a acabar el flujo con un procesador \textbf{UpdateAttribute} (para cambiar el nombre del archivo) y un \textbf{PutFile} (para guardar el resultado en el sistema de archivos):
 
 \fig{P6/33.png}
-\fig{P6/34.png}
 
 \newpage
 
-En el directorio de salida podemos ver el resultado:
+El flujo debería quedar de la siguiente forma:
+
+\fig{P6/34.png}
+
+En el directorio de salida podemos ver el resultado en formato JSON:
 
 \fig{P6/35.png}
 
-Finalmente, vamos a convertir de JSON a csv con otro \textbf{ConvertRecord}, que tenga un lector de JSON y un escritor de csv:
+Finalmente, vamos a convertir de JSON a CSV con otro procesador \textbf{ConvertRecord}, que tenga un lector de JSON y un escritor de CSV:
 
 \fig{P6/36.png}
 
-El flujo final quedaría así:
+El flujo final quedaría así, permitiendo generar archivos en tres formatos:
 
 \fig{P6/37.png}
 
-Si lo probamos y vamos a la salida, veremos los archivos que se han generado:
+Si lo probamos y vamos a la salida, veremos los archivos CSV generados:
 
 \fig{P6/38.png}
+
+\newpage
 
 % --------------------
 % Actividad 7: Practicando la ingesta de datos en Streaming.
 % --------------------
-\section{Ingesta de datos en Streaming}
-En este apartado vamos a ver cómo funciona la ingesta de datos en streaming, es decir, la capacidad de procesar y analizar datos en tiempo
-real a medida que estos van llegando.
+\section{Ingesta de Datos en Modo Streaming}
+En este apartado, exploraremos la ingesta de datos en modo streaming, que es la capacidad de procesar y analizar datos en tiempo real a medida que estos van llegando.
+
+Para ello, vamos a instalar \textbf{Apache Kafka}. Lo descargamos:
+
+\fig{P7/1.png}
+
+Lo descomprimimos y lo movemos a un directorio más adecuado:
+
+\fig{P7/2.png}
+
+Añadimos las variables de entorno de Kafka al \path{PATH}, editando el archivo \path{.bashrc}:
+
+\fig{P7/3.png}
+\fig{P7/4.png}
+
+Ahora vamos a crear un directorio para los datos de Kafka:
+
+\fig{P7/5.png}
+
+\newpage
+
+En el archivo de configuración \path{$KAFKA_HOME/config/server.properties}, añadimos lo siguiente al final:
+
+\fig{P7/6.png}
+
+\textit{* Hay que cambiar el valor de \path{broker.id} al mismo que el de \path{node.id}.}
+
+Generamos el \path{cluster.id} de la siguiente forma:
+
+\fig{P7/7.png}
+
+Nos da error debido a que Kafka está tratando de usar Java-11, ya que es el predeterminado del sistema. Vamos a cambiar esto para que use Java-21, añadiendo la variable \path{JAVA_HOME} a \path{/opt/kafka/bin/kafka-run-class.sh}:
+
+\fig{P7/8.png}
+
+Como vemos, ahora sí podemos crear el \path{cluster.id}:
+
+\fig{P7/9.png}
+
+Ahora vamos a formatear el almacenamiento de los logs y verificar el archivo \path{meta.properties}:
+
+\fig{P7/10.png}
+
+Y ya podemos arrancar Kafka:
+
+\fig{P7/11.png}
+
+\newpage
+
+Ahora vamos a crear un \textbf{tópico} (topic), para posteriormente poder crear el productor y el consumidor:
+
+\fig{P7/12.png}
+
+Creamos un productor de prueba y enviamos algunos mensajes:
+
+\fig{P7/13.png}
+
+Creamos el consumidor y vemos que llegan los mensajes, confirmando que Kafka está operativo:
+
+\fig{P7/14.png}
+
+Ya vemos que Kafka funciona, así que podemos parar tanto el productor como el consumidor y nos vamos a NiFi.
+
+Vamos a crear un flujo usando Kafka. Para ello, empezamos con un procesador \textbf{GenerateFlowFile} que simulará la fuente de datos:
+
+\fig{P7/15.png}
+\fig{P7/16.png}
+
+Lo conectaremos a otro procesador llamado \textbf{PublishKafka}, que enviará los datos generados al tópico de Kafka:
+
+\fig{P7/17.png}
+
+Para configurar este procesador, nos vamos a la pestaña de propiedades y ponemos el tópico y, en el apartado de conexión de servicio, tenemos que crear y configurar un servicio de \textbf{Kafka Connection Pool}:
+
+\fig{P7/18.png}
+
+En las propiedades del servicio, indicamos la dirección del servicio de bootstrap (\path{localhost:9092}, que es la configuración por defecto de Kafka):
+
+\fig{P7/19.png}
+
+\newpage
+
+Finalmente, habilitamos el servicio, añadimos un par de \textbf{Funnels} para filtrar la salida y tendríamos un flujo como este:
+
+\fig{P7/20.png}
+
+Si lo arrancamos y miramos la cola de success, podemos ver que se han generado mensajes y que Kafka los está publicando correctamente:
+
+\fig{P7/21.png}
+\fig{P7/22.png}
+
+Ahora vamos a crear otro flujo que \textbf{consuma} los mensajes de Kafka y los almacene en un archivo. Para ello, empezamos con un procesador \textbf{ConsumeKafka}. En las propiedades, ponemos la misma configuración del tópico y el mismo servicio de conexión:
+
+\fig{P7/23.png}
+
+\newpage
+
+Vamos a poner un procesador \textbf{MergeContent}, que fusione el contenido de varios mensajes en uno solo, basándose en un número mínimo de fragmentos o un tamaño máximo:
+
+\fig{P7/24.png}
+
+Un \textbf{UpdateAttribute} para ponerle nombre al archivo resultante:
+
+\fig{P7/25.png}
+
+Un \textbf{PutFile} para colocar el archivo consolidado en el directorio de salida:
+
+\fig{P7/26.png}
+
+\newpage
+
+Y tendríamos al final un flujo como este. Si lo arrancamos y dejamos que trabaje, vemos que la cola de success del proceso \textbf{PublishKafka} contiene los mismos elementos que la cola del \textbf{ConsumeKafka}:
+
+\fig{P7/27.png}
+
+Si dejamos que trabaje un rato (para que supere los 50 mensajes y el \textbf{MergeContent} pueda consolidar) y vamos al directorio de salida, veremos los archivos con el contenido de varios mensajes fusionados:
+
+\fig{P7/28.png}
 
 \end{document}

@@ -1,8 +1,8 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {section}{\numberline {1}Lubuntu 24.04}{2}{section.1}%
-\contentsline {section}{\numberline {2}Preparación del entorno}{3}{section.2}%
-\contentsline {section}{\numberline {3}Manejo de ficheros}{9}{section.3}%
-\contentsline {section}{\numberline {4}Uso de plantillas en NiFi}{17}{section.4}%
-\contentsline {section}{\numberline {5}Practicando con grupos}{19}{section.5}%
-\contentsline {section}{\numberline {6}Ingesta de datos en Batch}{22}{section.6}%
-\contentsline {section}{\numberline {7}Ingesta de datos en Streaming}{33}{section.7}%
+\contentsline {section}{\numberline {1}Lubuntu 24.04: Preparación de la Máquina Virtual}{2}{section.1}%
+\contentsline {section}{\numberline {2}Preparación del entorno y configuración de Apache NiFi}{3}{section.2}%
+\contentsline {section}{\numberline {3}Flujos básicos para el manejo de archivos}{9}{section.3}%
+\contentsline {section}{\numberline {4}Creación y Uso de Plantillas mediante Grupos}{17}{section.4}%
+\contentsline {section}{\numberline {5}Trabajo con Grupos de Procesadores}{20}{section.5}%
+\contentsline {section}{\numberline {6}Ingesta de Datos en Modo Batch (Lotes)}{24}{section.6}%
+\contentsline {section}{\numberline {7}Ingesta de Datos en Modo Streaming}{35}{section.7}%
