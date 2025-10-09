@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  8 OCT 2025 17:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  9 OCT 2025 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -441,16 +441,16 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<graf1.png, id=3, 1383.1675pt x 786.94pt>
-File: graf1.png Graphic file (type png)
-<use graf1.png>
-Package pdftex.def Info: graf1.png  used on input line 9.
-(pdftex.def)             Requested size: 418.25368pt x 237.95702pt.
+<graf3.jpeg, id=11, 1204.5pt x 1204.5pt>
+File: graf3.jpeg Graphic file (type jpg)
+<use graf3.jpeg>
+Package pdftex.def Info: graf3.jpeg  used on input line 9.
+(pdftex.def)             Requested size: 418.25368pt x 418.25468pt.
 
 
 [1
 
-{C:/Users/bleik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./graf1.png>] (template.toc
+{C:/Users/bleik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./graf3.jpeg>] (template.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -464,7 +464,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.9 \maketitle
-               [1] (template.aux
+               [1]
+File: graf3.jpeg Graphic file (type jpg)
+<use graf3.jpeg>
+Package pdftex.def Info: graf3.jpeg  used on input line 13.
+(pdftex.def)             Requested size: 292.77629pt x 292.78012pt.
+
+
+[2]
+<grafico_modificado.png, id=33, 2409.0pt x 2409.0pt>
+File: grafico_modificado.png Graphic file (type png)
+<use grafico_modificado.png>
+Package pdftex.def Info: grafico_modificado.png  used on input line 25.
+(pdftex.def)             Requested size: 292.77629pt x 292.74336pt.
+
+
+[3 <./grafico_modificado.png>] (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -473,20 +488,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 60A774790D034E5DF5C6136FD22D4F97;228.
  ) 
 Here is how much of TeX's memory you used:
- 12366 strings out of 468133
- 195989 string characters out of 5430712
- 621593 words of memory out of 5000000
- 40822 multiletter control sequences out of 15000+600000
- 631748 words of font info for 47 fonts, out of 8000000 for 9000
+ 12387 strings out of 468133
+ 196352 string characters out of 5430712
+ 625599 words of memory out of 5000000
+ 40838 multiletter control sequences out of 15000+600000
+ 632524 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,11n,93p,315b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
-Output written on template.pdf (2 pages, 279553 bytes).
+ <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
+Output written on template.pdf (4 pages, 782115 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 3 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 
