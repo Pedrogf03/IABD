@@ -1,0 +1,52 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Sistemas de Big Data}
+\renewcommand{\tituloTrabajo}{Dashboard básico de Power BI}
+\renewcommand{\imagenPortada}{dashboard.png}
+
+\begin{document}
+
+\maketitle
+
+\section{Explicando el Dashboard}
+
+El dashboard está dividido en 3 secciones principales:
+
+En la \textbf{superior} he puesto unos indicadores generales:
+
+\fig{dashboard_superior.png}
+
+\begin{itemize}
+  \item Los pedidos totales.
+  \item El tiempo promedio de entrega.
+  \item Distancia promedio de los repartos.
+  \item Tiempo medio de preparación de un pedido.
+\end{itemize}
+
+Estos KPIs ofrecen una visión general del \textbf{volumen y la eficiencia} promedio del servicio de reparto.
+
+En la \textbf{central} he puesto unos gráficos que muestran factores que \textbf{afectan al tiempo de entrega}:
+
+\fig{dashboard_central.png}
+
+Tiempo de entrega según:
+
+\begin{itemize}
+  \item Condiciones climáticas.
+  \item Tipo de vehículo del repartidor.
+  \item Nivel de tráfico.
+\end{itemize}
+
+Y a la derecha del todo, un gráfico de líneas que muestra el \textbf{tiempo promedio de entrega dependiendo del momento del día}.
+
+Y en la \textbf{inferior} he puesto un histograma que hace un recuento de \textbf{cúantos pedidos hay por cada franja de tiempo},
+deferenciadas por 10 min, junto a un diagrama de dispersión que muestra una \textbf{relación entre el tiempo de entrega y la distancia de
+cada pedido}, diferenciando por colores el vehículo de dicho pedido:
+
+\fig{dashboard_inferior.png}
+
+En conclusión, el dashboard permite \textbf{identificar los factores que más afectan a la eficiencia de las entregas} y muestra
+cómo se distribuyen los tiempos en función de diversos factores. Esto ofrece una visión integral para poder \textbf{optimizar
+las rutas, asignar vehículos correctamente y ver tiempos operativos en el servicio a domicilio}.
+
+\end{document}
