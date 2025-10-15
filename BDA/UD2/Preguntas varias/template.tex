@@ -1,0 +1,96 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Big Data Aplicado}
+\renewcommand{\tituloTrabajo}{Preguntas Varias}
+\renewcommand{\imagenPortada}{portada.png}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción a los sistemas de almacenamiento de datos}
+
+\subsection{¿Qué diferencia a un sistema de almacenamiento de datos de un sistema de almacenamiento convencional?}
+
+Los sistemas de almacenamiento de datos integran tecnologías y prácticas para manejar grandes volúmenes de información estructurada y
+no estructurada, con el fin de analizarla y apoyar decisiones estratégicas. Los convencionales (OLTP) solo gestionan operaciones diarias
+y transaccionales.
+
+\subsection{¿Cómo contribuyen los sistemas de almacenamiento de datos a la toma de decisiones estratégicas en una organización?}
+
+Permiten consolidar información de múltiples fuentes, realizar análisis detallados e identificar tendencias y áreas de mejora, apoyando
+la planificación estratégica.
+
+\subsection{¿Qué factores se deben tener en cuenta para asegurar que un sistema de almacenamiento de datos sea flexible y escalable?}
+
+El sistema debe adaptarse al crecimiento de los datos y a los cambios en las necesidades organizativas. Tecnologías modernas (NoSQL, lagos
+de datos) ofrecen escalabilidad horizontal y flexibilidad en el manejo de datos diversos.
+
+\subsection{¿Cómo se diferencia el manejo de datos estructurados y no estructurados en un sistema de almacenamiento?}
+
+Los almacenes de datos manejan datos estructurados y procesados mediante ETL, mientras que los lagos de datos almacenan información
+estructurada, semi-estructurada y no estructurada en bruto para análisis posteriores (“schema-on-read”).
+
+\subsection{¿Por qué es importante consolidar datos de diversas fuentes en un sistema de almacenamiento centralizado?}
+
+Centralizar los datos en un repositorio común proporciona una visión integrada de la organización y mejora la coherencia y
+la calidad de la información usada para decisiones estratégicas.
+
+\newpage
+
+\section{Diseño de arquitecturas de almacenamiento}
+
+\subsection{¿Qué aspectos clave definen los enfoques de diseño de almacenes de datos de Kimball e Inmon?}
+
+Kimball propone un diseño dimensional y descentralizado basado en data marts por áreas temáticas.
+Inmon plantea un enfoque centralizado y normalizado, creando un almacén corporativo como fuente única de verdad
+
+\subsection{¿Qué ventajas presenta el diseño dimensional en áreas temáticas propuesto por Ralph Kimball frente a un diseño centralizado de Inmon?}
+
+Ofrece agilidad, modularidad y facilidad de uso. Cada área temática puede desarrollarse y ampliarse sin rehacer el sistema completo, facilitando
+implementaciones rápidas y orientadas al usuario final
+
+\subsection{¿Cuáles son los beneficios de utilizar un esquema estrella en un almacén de datos frente a un esquema de copo de nieve?}
+
+El esquema estrella simplifica las consultas al usar tablas desnormalizadas (una tabla de hechos central con dimensiones directas). Mejora el
+rendimiento frente al copo de nieve, que es más normalizado y complejo.
+
+\subsection{¿Cómo afecta la normalización o desnormalización de datos en el rendimiento de las consultas en un almacén de datos?}
+
+La desnormalización aumenta la velocidad de las consultas al reducir uniones, mientras que la normalización prioriza la integridad y consistencia
+de los datos a costa del rendimiento.
+
+\subsection{¿En qué tipo de organización sería más recomendable implementar el enfoque de Inmon en lugar del enfoque de Kimball y por qué?}
+
+Es preferible en organizaciones grandes con necesidad de una visión corporativa única, integridad de datos y coherencia total entre departamentos,
+aunque implique más tiempo y recursos de implementación.
+
+
+\newpage
+
+\section{Soluciones de almacenamiento en la nube}
+
+\subsection{¿Qué factores deben evaluarse para decidir si migrar el almacenamiento de datos a la nube es la mejor opción para una organización?}
+
+Evaluar costo, seguridad, cumplimiento normativo, escalabilidad, dependencia del proveedor y capacidad de integración con sistemas existentes.
+
+\subsection{¿Cómo influyen la escalabilidad y los modelos de pago por uso en la adopción de soluciones de almacenamiento en la nube?}
+
+La nube permite ajustar capacidad y costos según la demanda, eliminando inversiones en hardware y optimizando recursos financieros.
+
+\subsection{¿Qué diferencias existen entre un Data Warehouse en la nube y un lago de datos en la nube, y en qué situaciones es preferible cada uno?}
+
+El Data Warehouse almacena datos estructurados listos para análisis; el Data Lake conserva datos en su formato original (estructurados y no estructurados)
+para análisis flexibles. El primero es ideal para informes consistentes; el segundo para proyectos de Big Data y aprendizaje automático.
+
+\subsection{¿Qué ventajas ofrece Snowflake en términos de flexibilidad frente a otras soluciones de almacenamiento en la nube como Amazon Redshift y Google BigQuery?}
+
+Ofrece separación de almacenamiento y cómputo, escalabilidad automática, compatibilidad multi-nube y alta flexibilidad, superando en elasticidad a
+Redshift y BigQuery.
+
+\subsection{¿Cuáles son las principales preocupaciones de seguridad al implementar soluciones de almacenamiento en la nube, y cómo pueden mitigarse?}
+
+Incluyen control de acceso, cifrado, cumplimiento normativo y privacidad de los datos. Se mitigan mediante autenticación robusta, cifrado en tránsito y reposo,
+auditorías y políticas de gobernanza de datos.
+
+\end{document}
