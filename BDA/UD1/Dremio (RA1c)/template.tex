@@ -233,5 +233,63 @@ Vamos a guardarlo como un dataset en el espacio de ventas:
 \fig{P10/25.png}
 \fig{P10/26.png}
 
+\newpage
+
+% --------------------
+% Actividad 11: Power BI y Dremio
+% --------------------
+\section{Power BI y Dremio}
+En este apartado vamos a usar Dremio como fuente de datos para la aplicación Power BI. Lo primero sería instalar una máquina virtual de Windows,
+pero yo voy a usar mi sistema anfitrión por lo que voy a saltar esta parte.
+
+Instalamos Power BI desde la Microsoft Store y lo ejecutamos:
+
+\fig{P11/1.png}
+
+Para poder conectarlo con Dremio, tenemos que descargar e instalar los drivers de la \href{https://dremio.com/drivers/odbc}{página oficial}:.
+
+\fig{P11/2.png}
+
+\newpage
+
+Lo descargamos y seguimos el wizard de instalación:
+
+\fig{P11/3.png}
+
+Ahora, vamos a configurarlo:
+
+\fig{P11/4.png}
+\fig{P11/5.png}
+
+Aquí tenemos que indicar la dirección IP de la máquina donde está instalado Dremio y los credenciales de la cuenta de administrador que creamos
+la primera vez que entramos:
+
+\fig{P11/6.png}
+\fig{P11/7.png}
+
+Antes de probar la conexión, en mi caso hay un paso extra. En VirtualBox, he tenido que reenviar dos puertos usados para la conexión con dremio:
+
+\fig{P11/8.png}
+
+Ahora si, probamos la conexión y vemos que va todo bien.
+
+\fig{P11/9.png}
+
+Ahora, en Power BI, creamos un proyecto en blanco y vamos a traernos los datos desde Dremio:
+
+\fig{P11/10.png}
+\fig{P11/11.png}
+
+Aquí tenemos que especificar la dirección del servidor donde están los datos:
+
+\fig{P11/12.png}
+\fig{P11/13.png}
+
+\newpage
+
+Y finalmente vemos el dataset y podemos trabajar con él desde Power BI para hacer gráficos o dashboards:
+
+\fig{P11/14.png}
+\fig{P11/15.png}
 
 \end{document}
