@@ -1,0 +1,858 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  16 OCT 2025 18:14
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/bleik/Desktop/IABD/BDA/UD1/Dremio (RA1c)/template.tex"
+(c:/Users/bleik/Desktop/IABD/BDA/UD1/Dremio (RA1c)/template.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+(../../../miPlantilla.cls
+
+LaTeX Warning: You have requested document class `../../../miPlantilla',
+               but the document class provides `miPlantilla'.
+
+Document Class: miPlantilla 2025/09/25 Clase personalizada basada en article
+(C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@section=\count276
+\c@subsection=\count277
+\c@subsubsection=\count278
+\c@paragraph=\count279
+\c@subparagraph=\count280
+\c@figure=\count281
+\c@table=\count282
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count283
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2045.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2047.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2049.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2050.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2051.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2053.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2078.
+\U@D=\dimen149
+\l@unhyphenated=\language79
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count284
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 12.
+)
+\es@quottoks=\toks17
+\es@quotdepth=\count285
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 11.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 11.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip51
+\f@nch@offset@elh=\skip52
+\f@nch@offset@erh=\skip53
+\f@nch@offset@olh=\skip54
+\f@nch@offset@orh=\skip55
+\f@nch@offset@elf=\skip56
+\f@nch@offset@erf=\skip57
+\f@nch@offset@olf=\skip58
+\f@nch@offset@orf=\skip59
+\f@nch@height=\skip60
+\f@nch@footalignment=\skip61
+\f@nch@widthL=\skip62
+\f@nch@widthC=\skip63
+\f@nch@widthR=\skip64
+\@temptokenb=\toks20
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count286
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen150
+\Hy@linkcounter=\count288
+\Hy@pagecounter=\count289
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count290
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count291
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen151
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count292
+\Field@Width=\dimen152
+\Fld@charsize=\dimen153
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count293
+\c@Item=\count294
+\c@Hfootnote=\count295
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count296
+\c@bookmark@seq@number=\count297
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip65
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks22
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count301
+\float@exts=\toks23
+\float@box=\box53
+\@float@everytoks=\toks24
+\@floatcapt=\box54
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.sty
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip66
+\subfigcapskip=\skip67
+\subfigcaptopadj=\dimen164
+\subfigbottomskip=\skip68
+\subfigcapmargin=\dimen165
+\subfiglabelskip=\skip69
+\c@subfigure=\count302
+\c@lofdepth=\count303
+\c@subtable=\count304
+\c@lotdepth=\count305
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/subfigure\subfigure.cfg)
+\subfig@top=\skip70
+\subfig@bottom=\skip71
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen166
+\ar@mcellbox=\box55
+\extrarowheight=\dimen167
+\NC@list=\toks25
+\extratabsurround=\skip72
+\backup@length=\skip73
+\ar@cellbox=\box56
+)
+\TX@col@width=\dimen168
+\TX@old@table=\dimen169
+\TX@old@col=\dimen170
+\TX@target=\dimen171
+\TX@delta=\dimen172
+\TX@cols=\count306
+\TX@ftn=\toks26
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2024-12-18 v4.23 Multi-page Table package (DPC)
+\LTleft=\skip74
+\LTright=\skip75
+\LTpre=\skip76
+\LTpost=\skip77
+\LTchunksize=\count307
+\LTcapwidth=\dimen173
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count308
+\LT@rows=\count309
+\c@LT@tables=\count310
+\c@LT@chunks=\count311
+\LT@p@ftn=\toks27
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen174
+\lightrulewidth=\dimen175
+\cmidrulewidth=\dimen176
+\belowrulesep=\dimen177
+\belowbottomsep=\dimen178
+\aboverulesep=\dimen179
+\abovetopsep=\dimen180
+\cmidrulesep=\dimen181
+\cmidrulekern=\dimen182
+\defaultaddspace=\dimen183
+\@cmidla=\count312
+\@cmidlb=\count313
+\@aboverulesep=\dimen184
+\@belowrulesep=\dimen185
+\@thisruleclass=\count314
+\@lastruleclass=\count315
+\@thisrulewidth=\dimen186
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+\everycr=\toks28
+\minrowclearance=\skip78
+\rownum=\count316
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen187
+\c@nlinenum=\count317
+\TeXr@lab=\toks29
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 34.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/sectsty\sectsty.sty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading styles
+
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+)) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count318
+) (template.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 11.
+)
+\openout1 = `template.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+Package hyperref Info: Link coloring ON on input line 7.
+ (template.out) (template.out)
+\@outlinefile=\write3
+\openout3 = `template.out'.
+
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count319
+\scratchdimen=\dimen188
+\scratchbox=\box62
+\nofMPsegments=\count320
+\nofMParguments=\count321
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count322
+\MPscratchDim=\dimen189
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
+\everyMPtoPDFconversion=\toks31
+) (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\bleik\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=731.23584pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-52.36449pt
+* \headheight=15.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+<image.png, id=15, 1204.5pt x 630.355pt>
+File: image.png Graphic file (type png)
+<use image.png>
+Package pdftex.def Info: image.png  used on input line 9.
+(pdftex.def)             Requested size: 418.25368pt x 218.88661pt.
+
+
+[1
+
+{C:/Users/bleik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./image.png>] (template.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@toc=\write4
+\openout4 = `template.toc'.
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 \maketitle
+               [1]
+<P8/1.png, id=35, 750.55406pt x 87.32625pt>
+File: P8/1.png Graphic file (type png)
+<use P8/1.png>
+Package pdftex.def Info: P8/1.png  used on input line 19.
+(pdftex.def)             Requested size: 292.77629pt x 34.0651pt.
+<P8/2.png, id=37, 458.46281pt x 104.64093pt>
+File: P8/2.png Graphic file (type png)
+<use P8/2.png>
+Package pdftex.def Info: P8/2.png  used on input line 20.
+(pdftex.def)             Requested size: 292.77629pt x 66.82625pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
+<P8/3.png, id=38, 500.62032pt x 247.67531pt>
+File: P8/3.png Graphic file (type png)
+<use P8/3.png>
+Package pdftex.def Info: P8/3.png  used on input line 24.
+(pdftex.def)             Requested size: 292.77629pt x 144.85356pt.
+<P8/4.png, id=40, 1415.2875pt x 308.65312pt>
+File: P8/4.png Graphic file (type png)
+<use P8/4.png>
+Package pdftex.def Info: P8/4.png  used on input line 28.
+(pdftex.def)             Requested size: 292.77629pt x 63.84888pt.
+
+
+[2 <./P8/1.png> <./P8/2.png> <./P8/3.png> <./P8/4.png>]
+<P8/5.png, id=50, 1139.00531pt x 193.47281pt>
+File: P8/5.png Graphic file (type png)
+<use P8/5.png>
+Package pdftex.def Info: P8/5.png  used on input line 34.
+(pdftex.def)             Requested size: 292.77629pt x 49.72902pt.
+<P8/6.png, id=51, 530.73282pt x 277.035pt>
+File: P8/6.png Graphic file (type png)
+<use P8/6.png>
+Package pdftex.def Info: P8/6.png  used on input line 35.
+(pdftex.def)             Requested size: 292.77629pt x 152.82625pt.
+<P8/7.png, id=52, 671.50874pt x 43.66313pt>
+File: P8/7.png Graphic file (type png)
+<use P8/7.png>
+Package pdftex.def Info: P8/7.png  used on input line 39.
+(pdftex.def)             Requested size: 292.77629pt x 19.0366pt.
+<P8/8.png, id=53, 775.39688pt x 252.19218pt>
+File: P8/8.png Graphic file (type png)
+<use P8/8.png>
+Package pdftex.def Info: P8/8.png  used on input line 43.
+(pdftex.def)             Requested size: 292.77629pt x 95.22217pt.
+<P8/9.png, id=54, 1021.56656pt x 57.96657pt>
+File: P8/9.png Graphic file (type png)
+<use P8/9.png>
+Package pdftex.def Info: P8/9.png  used on input line 44.
+(pdftex.def)             Requested size: 292.77629pt x 16.61263pt.
+<P8/10.png, id=55, 1413.02907pt x 675.27281pt>
+File: P8/10.png Graphic file (type png)
+<use P8/10.png>
+Package pdftex.def Info: P8/10.png  used on input line 48.
+(pdftex.def)             Requested size: 292.77629pt x 139.91557pt.
+<P8/11.png, id=56, 455.45157pt x 74.52844pt>
+File: P8/11.png Graphic file (type png)
+<use P8/11.png>
+Package pdftex.def Info: P8/11.png  used on input line 52.
+(pdftex.def)             Requested size: 292.77629pt x 47.90955pt.
+
+
+[3 <./P8/5.png> <./P8/6.png> <./P8/7.png> <./P8/8.png> <./P8/9.png> <./P8/10.png>]
+<P8/12.png, id=67, 222.8325pt x 63.23625pt>
+File: P8/12.png Graphic file (type png)
+<use P8/12.png>
+Package pdftex.def Info: P8/12.png  used on input line 53.
+(pdftex.def)             Requested size: 292.77629pt x 83.09192pt.
+
+
+[4 <./P8/11.png> <./P8/12.png>]
+<P9/2.png, id=74, 1397.22pt x 188.95593pt>
+File: P9/2.png Graphic file (type png)
+<use P9/2.png>
+Package pdftex.def Info: P9/2.png  used on input line 65.
+(pdftex.def)             Requested size: 292.77629pt x 39.59253pt.
+<P9/3.png, id=75, 273.27094pt x 144.54pt>
+File: P9/3.png Graphic file (type png)
+<use P9/3.png>
+Package pdftex.def Info: P9/3.png  used on input line 66.
+(pdftex.def)             Requested size: 292.77629pt x 154.86798pt.
+<P9/4.png, id=76, 1133.73563pt x 141.52875pt>
+File: P9/4.png Graphic file (type png)
+<use P9/4.png>
+Package pdftex.def Info: P9/4.png  used on input line 70.
+(pdftex.def)             Requested size: 292.77629pt x 36.54825pt.
+<P9/5.png, id=77, 497.60907pt x 373.395pt>
+File: P9/5.png Graphic file (type png)
+<use P9/5.png>
+Package pdftex.def Info: P9/5.png  used on input line 71.
+(pdftex.def)             Requested size: 292.77629pt x 219.6972pt.
+
+
+[5 <./P9/2.png> <./P9/3.png> <./P9/4.png> <./P9/5.png>]
+<P9/6.png, id=86, 897.3525pt x 546.54187pt>
+File: P9/6.png Graphic file (type png)
+<use P9/6.png>
+Package pdftex.def Info: P9/6.png  used on input line 77.
+(pdftex.def)             Requested size: 292.77629pt x 178.31618pt.
+<P9/7.png, id=87, 368.87813pt x 117.43875pt>
+File: P9/7.png Graphic file (type png)
+<use P9/7.png>
+Package pdftex.def Info: P9/7.png  used on input line 78.
+(pdftex.def)             Requested size: 292.77629pt x 93.20923pt.
+<P9/8.png, id=88, 898.10532pt x 433.62pt>
+File: P9/8.png Graphic file (type png)
+<use P9/8.png>
+Package pdftex.def Info: P9/8.png  used on input line 82.
+(pdftex.def)             Requested size: 292.77629pt x 141.3549pt.
+
+
+[6 <./P9/6.png> <./P9/7.png> <./P9/8.png>]
+<P9/9.png, id=97, 294.34969pt x 192.72pt>
+File: P9/9.png Graphic file (type png)
+<use P9/9.png>
+Package pdftex.def Info: P9/9.png  used on input line 88.
+(pdftex.def)             Requested size: 292.77629pt x 191.6932pt.
+<P9/10.png, id=98, 250.68657pt x 178.41656pt>
+File: P9/10.png Graphic file (type png)
+<use P9/10.png>
+Package pdftex.def Info: P9/10.png  used on input line 92.
+(pdftex.def)             Requested size: 292.77629pt x 208.39532pt.
+<P9/11.png, id=99, 258.9675pt x 35.38219pt>
+File: P9/11.png Graphic file (type png)
+<use P9/11.png>
+Package pdftex.def Info: P9/11.png  used on input line 98.
+(pdftex.def)             Requested size: 292.77629pt x 40.00569pt.
+<P9/12.png, id=100, 268.75406pt x 36.135pt>
+File: P9/12.png Graphic file (type png)
+<use P9/12.png>
+Package pdftex.def Info: P9/12.png  used on input line 100.
+(pdftex.def)             Requested size: 292.77629pt x 39.36484pt.
+<P9/13.png, id=101, 250.68657pt x 42.91031pt>
+File: P9/13.png Graphic file (type png)
+<use P9/13.png>
+Package pdftex.def Info: P9/13.png  used on input line 102.
+(pdftex.def)             Requested size: 292.77629pt x 50.12036pt.
+
+
+[7 <./P9/9.png> <./P9/10.png> <./P9/11.png> <./P9/12.png>]
+<P9/14.png, id=110, 1444.64719pt x 176.15813pt>
+File: P9/14.png Graphic file (type png)
+<use P9/14.png>
+Package pdftex.def Info: P9/14.png  used on input line 107.
+(pdftex.def)             Requested size: 292.77629pt x 35.6987pt.
+<P9/15.png, id=111, 267.24844pt x 241.65282pt>
+File: P9/15.png Graphic file (type png)
+<use P9/15.png>
+Package pdftex.def Info: P9/15.png  used on input line 108.
+(pdftex.def)             Requested size: 292.77629pt x 264.76434pt.
+
+
+[8 <./P9/13.png> <./P9/14.png> <./P9/15.png>]
+<P9/16.png, id=119, 289.83281pt x 370.38374pt>
+File: P9/16.png Graphic file (type png)
+<use P9/16.png>
+Package pdftex.def Info: P9/16.png  used on input line 115.
+(pdftex.def)             Requested size: 292.77629pt x 374.16939pt.
+<P9/17.png, id=120, 462.97969pt x 355.3275pt>
+File: P9/17.png Graphic file (type png)
+<use P9/17.png>
+Package pdftex.def Info: P9/17.png  used on input line 116.
+(pdftex.def)             Requested size: 292.77629pt x 224.70331pt.
+<P9/18.png, id=121, 402.00188pt x 315.42844pt>
+File: P9/18.png Graphic file (type png)
+<use P9/18.png>
+Package pdftex.def Info: P9/18.png  used on input line 117.
+(pdftex.def)             Requested size: 292.77629pt x 229.72177pt.
+
+
+[9 <./P9/16.png> <./P9/17.png>]
+<P9/19.png, id=128, 285.31593pt x 382.42876pt>
+File: P9/19.png Graphic file (type png)
+<use P9/19.png>
+Package pdftex.def Info: P9/19.png  used on input line 121.
+(pdftex.def)             Requested size: 292.77629pt x 392.42966pt.
+
+
+[10 <./P9/18.png> <./P9/19.png>]
+<P9/20.png, id=135, 711.4078pt x 225.09094pt>
+File: P9/20.png Graphic file (type png)
+<use P9/20.png>
+Package pdftex.def Info: P9/20.png  used on input line 127.
+(pdftex.def)             Requested size: 292.77629pt x 92.6382pt.
+<P9/21.png, id=136, 720.44156pt x 246.1697pt>
+File: P9/21.png Graphic file (type png)
+<use P9/21.png>
+Package pdftex.def Info: P9/21.png  used on input line 131.
+(pdftex.def)             Requested size: 292.77629pt x 100.03624pt.
+<P9/22.png, id=137, 339.51843pt x 246.9225pt>
+File: P9/22.png Graphic file (type png)
+<use P9/22.png>
+Package pdftex.def Info: P9/22.png  used on input line 135.
+(pdftex.def)             Requested size: 292.77629pt x 212.93695pt.
+<P9/23.png, id=138, 707.64375pt x 251.43938pt>
+File: P9/23.png Graphic file (type png)
+<use P9/23.png>
+Package pdftex.def Info: P9/23.png  used on input line 136.
+(pdftex.def)             Requested size: 292.77629pt x 104.03078pt.
+
+
+[11 <./P9/20.png> <./P9/21.png> <./P9/22.png> <./P9/23.png>]
+<P10/1.png, id=147, 305.64188pt x 200.24812pt>
+File: P10/1.png Graphic file (type png)
+<use P10/1.png>
+Package pdftex.def Info: P10/1.png  used on input line 150.
+(pdftex.def)             Requested size: 292.77629pt x 191.82657pt.
+<P10/3.png, id=148, 289.83281pt x 143.78719pt>
+File: P10/3.png Graphic file (type png)
+<use P10/3.png>
+Package pdftex.def Info: P10/3.png  used on input line 151.
+(pdftex.def)             Requested size: 292.77629pt x 145.25682pt.
+<P10/4.png, id=149, 910.90312pt x 378.66469pt>
+File: P10/4.png Graphic file (type png)
+<use P10/4.png>
+Package pdftex.def Info: P10/4.png  used on input line 155.
+(pdftex.def)             Requested size: 292.77629pt x 121.70674pt.
+
+
+[12 <./P10/1.png> <./P10/3.png> <./P10/4.png>]
+<P10/5.png, id=158, 356.83313pt x 206.27063pt>
+File: P10/5.png Graphic file (type png)
+<use P10/5.png>
+Package pdftex.def Info: P10/5.png  used on input line 161.
+(pdftex.def)             Requested size: 292.77629pt x 169.25pt.
+<P10/6.png, id=159, 408.77719pt x 219.82124pt>
+File: P10/6.png Graphic file (type png)
+<use P10/6.png>
+Package pdftex.def Info: P10/6.png  used on input line 162.
+(pdftex.def)             Requested size: 292.77629pt x 157.44939pt.
+<P10/7.png, id=160, 1146.53343pt x 389.95688pt>
+File: P10/7.png Graphic file (type png)
+<use P10/7.png>
+Package pdftex.def Info: P10/7.png  used on input line 167.
+(pdftex.def)             Requested size: 292.77629pt x 99.57751pt.
+
+
+[13 <./P10/5.png> <./P10/6.png> <./P10/7.png>]
+<P10/8.png, id=168, 921.4425pt x 583.42969pt>
+File: P10/8.png Graphic file (type png)
+<use P10/8.png>
+Package pdftex.def Info: P10/8.png  used on input line 173.
+(pdftex.def)             Requested size: 292.77629pt x 185.37485pt.
+<P10/9.png, id=169, 1142.76938pt x 646.66594pt>
+File: P10/9.png Graphic file (type png)
+<use P10/9.png>
+Package pdftex.def Info: P10/9.png  used on input line 177.
+(pdftex.def)             Requested size: 292.77629pt x 165.67221pt.
+
+
+[14 <./P10/8.png> <./P10/9.png>]
+<P10/10.png, id=176, 179.92218pt x 220.57407pt>
+File: P10/10.png Graphic file (type png)
+<use P10/10.png>
+Package pdftex.def Info: P10/10.png  used on input line 184.
+(pdftex.def)             Requested size: 292.77629pt x 358.957pt.
+
+
+[15 <./P10/10.png>]
+<P10/11.png, id=182, 191.9672pt x 271.76532pt>
+File: P10/11.png Graphic file (type png)
+<use P10/11.png>
+Package pdftex.def Info: P10/11.png  used on input line 190.
+(pdftex.def)             Requested size: 292.77629pt x 414.53894pt.
+<P10/12.png, id=183, 1442.38875pt x 694.09312pt>
+File: P10/12.png Graphic file (type png)
+<use P10/12.png>
+Package pdftex.def Info: P10/12.png  used on input line 194.
+(pdftex.def)             Requested size: 292.77629pt x 140.88141pt.
+
+
+[16 <./P10/11.png> <./P10/12.png>]
+<P10/13.png, id=190, 899.61093pt x 410.2828pt>
+File: P10/13.png Graphic file (type png)
+<use P10/13.png>
+Package pdftex.def Info: P10/13.png  used on input line 201.
+(pdftex.def)             Requested size: 292.77629pt x 133.52188pt.
+<P10/14.png, id=191, 179.16937pt x 304.13625pt>
+File: P10/14.png Graphic file (type png)
+<use P10/14.png>
+Package pdftex.def Info: P10/14.png  used on input line 205.
+(pdftex.def)             Requested size: 292.77629pt x 497.0139pt.
+<P10/15.png, id=192, 686.565pt x 627.84563pt>
+File: P10/15.png Graphic file (type png)
+<use P10/15.png>
+Package pdftex.def Info: P10/15.png  used on input line 206.
+(pdftex.def)             Requested size: 292.77629pt x 267.73618pt.
+<P10/16.png, id=193, 688.82344pt x 584.1825pt>
+File: P10/16.png Graphic file (type png)
+<use P10/16.png>
+Package pdftex.def Info: P10/16.png  used on input line 207.
+(pdftex.def)             Requested size: 292.77629pt x 248.29655pt.
+
+
+[17 <./P10/13.png> <./P10/14.png>]
+<P10/17.png, id=200, 188.95593pt x 416.30531pt>
+File: P10/17.png Graphic file (type png)
+<use P10/17.png>
+Package pdftex.def Info: P10/17.png  used on input line 211.
+(pdftex.def)             Requested size: 292.77629pt x 645.1014pt.
+<P10/18.png, id=201, 694.09312pt x 552.56438pt>
+File: P10/18.png Graphic file (type png)
+<use P10/18.png>
+Package pdftex.def Info: P10/18.png  used on input line 212.
+(pdftex.def)             Requested size: 292.77629pt x 233.08722pt.
+
+
+[18 <./P10/15.png> <./P10/16.png>]
+
+[19 <./P10/17.png>]
+<P10/19.png, id=214, 156.585pt x 193.47281pt>
+File: P10/19.png Graphic file (type png)
+<use P10/19.png>
+Package pdftex.def Info: P10/19.png  used on input line 216.
+(pdftex.def)             Requested size: 292.77629pt x 361.79822pt.
+<P10/20.png, id=215, 580.41844pt x 557.83406pt>
+File: P10/20.png Graphic file (type png)
+<use P10/20.png>
+Package pdftex.def Info: P10/20.png  used on input line 217.
+(pdftex.def)             Requested size: 292.77629pt x 281.38477pt.
+<P10/21.png, id=216, 152.06813pt x 196.48407pt>
+File: P10/21.png Graphic file (type png)
+<use P10/21.png>
+Package pdftex.def Info: P10/21.png  used on input line 218.
+(pdftex.def)             Requested size: 292.77629pt x 378.30045pt.
+
+
+[20 <./P10/18.png> <./P10/19.png>]
+<P10/22.png, id=223, 694.84593pt x 601.4972pt>
+File: P10/22.png Graphic file (type png)
+<use P10/22.png>
+Package pdftex.def Info: P10/22.png  used on input line 219.
+(pdftex.def)             Requested size: 292.77629pt x 253.43477pt.
+
+
+[21 <./P10/20.png> <./P10/21.png>]
+<P10/23.png, id=230, 852.93657pt x 176.91093pt>
+File: P10/23.png Graphic file (type png)
+<use P10/23.png>
+Package pdftex.def Info: P10/23.png  used on input line 223.
+(pdftex.def)             Requested size: 292.77629pt x 60.7266pt.
+<P10/24.png, id=231, 1092.33093pt x 406.51875pt>
+File: P10/24.png Graphic file (type png)
+<use P10/24.png>
+Package pdftex.def Info: P10/24.png  used on input line 227.
+(pdftex.def)             Requested size: 292.77629pt x 108.95514pt.
+
+
+[22 <./P10/22.png> <./P10/23.png> <./P10/24.png>]
+<P10/25.png, id=239, 361.35pt x 215.30438pt>
+File: P10/25.png Graphic file (type png)
+<use P10/25.png>
+Package pdftex.def Info: P10/25.png  used on input line 233.
+(pdftex.def)             Requested size: 292.77629pt x 174.44815pt.
+<P10/26.png, id=240, 478.78876pt x 225.84375pt>
+File: P10/26.png Graphic file (type png)
+<use P10/26.png>
+Package pdftex.def Info: P10/26.png  used on input line 234.
+(pdftex.def)             Requested size: 292.77629pt x 138.10219pt.
+
+
+[23 <./P10/25.png> <./P10/26.png>] (template.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-08-13>
+ ***********
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: 519D08EFEC8B3A89DB7788424AAF8FAF;548.
+ ) 
+Here is how much of TeX's memory you used:
+ 12839 strings out of 468133
+ 203099 string characters out of 5430712
+ 624587 words of memory out of 5000000
+ 41261 multiletter control sequences out of 15000+600000
+ 635275 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 90i,11n,93p,315b,539s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
+Output written on template.pdf (24 pages, 2152473 bytes).
+PDF statistics:
+ 444 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+

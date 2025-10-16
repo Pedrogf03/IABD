@@ -1,0 +1,237 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Big Data Aplicado}
+\renewcommand{\tituloTrabajo}{Dremio}
+\renewcommand{\imagenPortada}{image.png}
+
+\begin{document}
+
+\maketitle
+
+% --------------------
+% Actividad 8: Instalando la herramienta Dremio
+% --------------------
+\section{Instalando Dremio}
+En esta actividad vamos a instalar y aprender a usar la herramienta Dremio. Para ello vamos a comenzar con la configuración inicial:
+
+Creamos un usuario de sistema y el grupo asociado:
+
+\fig{P8/1.png}
+\fig{P8/2.png}
+
+También tenemos que preparar la estructura de directorios en \path{/opt}:
+
+\fig{P8/3.png}
+
+Ahora vamos a descargar el software de la \href{https://download.dremio.com/community-server/}{página oficial}:
+
+\fig{P8/4.png}
+
+\newpage
+
+Lo descomprimimos en la ruta que hemos preparado:
+
+\fig{P8/5.png}
+\fig{P8/6.png}
+
+Una vez hecho, vamos a crear un enlace simbólico de la configuración en \path{/etc} y copiamos el servicio para el arranque:
+
+\fig{P8/7.png}
+
+Arrancamos dremio y, cuando finalice, lo configuramos para que se arranque al iniciar:
+
+\fig{P8/8.png}
+\fig{P8/9.png}
+
+Finalmente, vamos a comprobar si podemos acceder:
+
+\fig{P8/10.png}
+
+Como paso extra, voy a configurar un reenvio de puerto en la máquina virtual para acceder a dremio desde el host:
+
+\fig{P8/11.png}
+\fig{P8/12.png}
+
+\newpage
+
+% --------------------
+% Actividad 9: Trabajando con distintos formatos en dremio
+% --------------------
+\section{Trabajando con formatos en Dremio}
+En este apartado vamos a usar un dataset de muestra y hacer operaciones con él en diferentes formatos.
+
+Primero creamos una carpeta en dremio para guardar todos los ficheros:
+
+\fig{P9/2.png}
+\fig{P9/3.png}
+
+Dentro de la carpeta, tenemos que subir el archivo csv de muestra:
+
+\fig{P9/4.png}
+\fig{P9/5.png}
+
+\newpage
+
+Al subirlo, tenemos que activar la opción para que extraiga los nombres de las columas y no los trate como un registro más:
+
+\fig{P9/6.png}
+\fig{P9/7.png}
+
+Si entramos en el dataset, podemos hacer consultas como si de una base de datos se tratase:
+
+\fig{P9/8.png}
+
+\newpage
+
+Hacemos una consulta para mostrar todos los datos y vamos a descargar este resultado en dos formatos, en \path{JSON} y en \path{PARQUET}:
+
+\fig{P9/9.png}
+
+Y subimos los ficheros a Dremio como hicimos con el csv inicial:
+
+\fig{P9/10.png}
+
+Ahora vamos a lanzar una consulta de prueba en cada uno de los datasets para comprobar que dataset la realiza más rápido:
+
+\begin{itemize}
+    \item CSV:
+    \fig{P9/11.png}
+    \item JSON:
+    \fig{P9/12.png}
+    \item PARQUET:
+    \fig{P9/13.png}
+\end{itemize}
+
+Podemos revisar los detalles de los trabajos:
+
+\fig{P9/14.png}
+\fig{P9/15.png}
+
+\newpage
+
+Finalmente, vamos a realizar una comprobación. Queremos saber si PARQUET es autodescriptivo. Para esto vamos a cargar datos de prueba
+y crear un dataset a partir de un fichero parquet.
+
+\fig{P9/16.png}
+\fig{P9/17.png}
+\fig{P9/18.png}
+
+Dentro de los datos de prueba, hay varios ficheros en distinto formato:
+
+\fig{P9/19.png}
+
+\newpage
+
+Si miramos el csv, podemos ver que este no es autodescrptivo:
+
+\fig{P9/20.png}
+
+Sin embargo, si miramos el JSON, veremos que si lo es:
+
+\fig{P9/21.png}
+
+Vamos a comprobar que ocurre con un archivo PARQUET.
+
+\fig{P9/22.png}
+\fig{P9/23.png}
+
+Como podemos observar, PARQUET si es autodescriptivo.
+
+\newpage
+
+% --------------------
+% Actividad 10: Transformando datos en Dremio
+% --------------------
+\section{Transformando datos en Dremio}
+En este apartado vamos a empezar a partir de un dataset y vamos a transformar los datos a nuestra elección.
+
+Para ello, vamos a crear un espacio llamado 'Ventas':
+
+\fig{P10/1.png}
+\fig{P10/3.png}
+
+Ahora vamos a realizar una consulta a la tabla Supermarket y guardamos el resultado como un dataset nuevo dentro del espacio que hemos creado:
+
+\fig{P10/4.png}
+
+\newpage
+
+Lo guardamos como 'Ventas':
+
+\fig{P10/5.png}
+\fig{P10/6.png}
+
+Lo primero que vamos a hacer es crear una wiki del dataset. Esto nos permite tener la documentación dentralizada, aportando contexto y 
+trazabilidad a los datos.
+
+\fig{P10/7.png}
+
+\newpage
+
+Añadimos una descripción al dataset:
+
+\fig{P10/8.png}
+
+Y ahora, cuando hagamos consultas, podemos tener la documentación siempre a mano:
+
+\fig{P10/9.png}
+
+\newpage
+
+Lo siguiente que vamos a hacer es cambiar los tipos de datos. Empezaremos por cambiar a formato número (float o entero) los campos numéricos
+pero que estan puestos en formato texto. Seleccionamos el campo y le damos a 'Convert data Type...'
+
+\fig{P10/10.png}
+
+\newpage
+
+Dentro, ponemos el tipo de campo al que queremos convertirlo:
+
+\fig{P10/11.png}
+
+Y vemos un preview del resultado:
+
+\fig{P10/12.png}
+
+\newpage
+
+Si aplicamos, vemos la consulta generada automáticamente para la conversión del tipo. Si repetimos el proceso con el resto de campos, 
+llegamos a este resultado:
+
+\fig{P10/13.png}
+
+Ahora vamos a limpiar los espacios de las cadenas y capitalizar el texto:
+
+\fig{P10/14.png}
+\fig{P10/15.png}
+\fig{P10/16.png}
+
+Y, finalmente, vamos a separar por partes el ID y luego lo vamos a volver a unir:
+
+\fig{P10/17.png}
+\fig{P10/18.png}
+
+* Aquí es importante no borrar el campo original.
+
+\fig{P10/19.png}
+\fig{P10/20.png}
+\fig{P10/21.png}
+\fig{P10/22.png}
+
+La consulta final quedaría así:
+
+\fig{P10/23.png}
+
+Y mostraría este resultado:
+
+\fig{P10/24.png}
+
+\newpage
+
+Vamos a guardarlo como un dataset en el espacio de ventas:
+
+\fig{P10/25.png}
+\fig{P10/26.png}
+
+
+\end{document}
