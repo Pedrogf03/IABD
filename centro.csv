@@ -1,5 +1,6 @@
 tipo;nombre;apellidos;cursos
-alumno;Pedro;Gonzalez;Matematicas,Fisica
-alumno;Juan;Perez;Fisica
 curso;Matematicas;;
 curso;Fisica;;
+alumno;Pedro;Gonzalez;Matematicas,Fisica
+alumno;Juan;Perez;Fisica
+alumno;Pepe;Garcia Martinez;Matematicas

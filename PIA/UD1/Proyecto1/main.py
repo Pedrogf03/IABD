@@ -86,9 +86,23 @@ class Centro:
                   alumno.cursos.append(curso_obj)
 
       print(f"Cargados {len(self.alumnos)} alumnos y {len(self.cursos)} cursos desde centro.csv.")
+
+  def save(self, file: str = "centro.csv"):
+    with open(file, "w", newline="", encoding="utf-8") as f:
+      writer = csv.writer(f, delimiter=";")
+      writer.writerow(["tipo", "nombre", "apellidos", "cursos"])
+      
+      for curso in self.cursos:
+        writer.writerow(["curso", curso.nombre, "", ""])
+      
+      for alumno in self.alumnos:
+        cursos_str = ",".join([curso.nombre for curso in alumno.cursos])
+        writer.writerow(["alumno", alumno.nombre, alumno.apellidos, cursos_str])
+    
+    print(f"Datos guardados en {file}")
     
   # -- Gestión de Alumnos -- #
-    
+
   # Método para añadir un alumno al centro.
   def add_alumno(self):
     nombre = input("Introduzca el nombre del alumno: ")
@@ -141,7 +155,7 @@ class Centro:
       return
     
     curso._inscribir_alumno(alumno)
-    print(f"Alumno matriculado correctamente en el curso de {curso.nombre}.")
+    print(f"Alumno {alumno.nombre} matriculado correctamente en el curso de {curso.nombre}.")
   
   # -- Gestión de Cursos --
   
@@ -217,5 +231,7 @@ class Centro:
 
 centro = Centro()
 
-centro.consultar_alumnos_curso(centro.cursos[0])
-centro.consultar_cursos_alumno(centro.alumnos[0])
+while True:
+  pass
+
+centro.save()
