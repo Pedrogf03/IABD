@@ -145,33 +145,21 @@ class Game:
         # Dibujar espacios vacíos (centrados horizontalmente)
         for c in range(COLS):
             for r in range(ROWS):
-                pygame.draw.circle(self.screen, BLACK, 
-                                 (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                  int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                 RADIUS)
+                pygame.draw.circle(self.screen, BLACK, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
         
         # Dibujar fichas existentes (centradas horizontalmente)
         for c in range(COLS):
             for r in range(ROWS):
                 if self.board.board[r][c] == 1:  # Jugador 1
-                    pygame.draw.circle(self.screen, RED, 
-                                     (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                      int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                     RADIUS)
+                    pygame.draw.circle(self.screen, RED, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
                 elif self.board.board[r][c] == 2:  # Jugador 2
-                    pygame.draw.circle(self.screen, YELLOW, 
-                                     (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                      int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                     RADIUS)
+                    pygame.draw.circle(self.screen, YELLOW, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
         
         # Dibujar ficha en animación (centrada horizontalmente)
         if self.animating:
             color = RED if self.animation_piece == 1 else YELLOW
             y_pos = int(self.animation_progress * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)
-            pygame.draw.circle(self.screen, color, 
-                             (int(self.animation_col * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                              y_pos), 
-                             RADIUS)
+            pygame.draw.circle(self.screen, color, (int(self.animation_col * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), y_pos), RADIUS)
         
         # Dibujar ficha flotante para mostrar el turno (solo si no hay animación)
         if not self.animating and not self.board.game_over:
@@ -193,24 +181,15 @@ class Game:
         # Dibujar espacios vacíos (centrados horizontalmente)
         for c in range(COLS):
             for r in range(ROWS):
-                pygame.draw.circle(self.screen, BLACK, 
-                                 (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                  int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                 RADIUS)
+                pygame.draw.circle(self.screen, BLACK, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
         
         # Dibujar fichas (centradas horizontalmente)
         for c in range(COLS):
             for r in range(ROWS):
                 if self.board.board[r][c] == 1:  # Jugador 1
-                    pygame.draw.circle(self.screen, RED, 
-                                     (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                      int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                     RADIUS)
+                    pygame.draw.circle(self.screen, RED, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
                 elif self.board.board[r][c] == 2:  # Jugador 2
-                    pygame.draw.circle(self.screen, YELLOW, 
-                                     (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), 
-                                      int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), 
-                                     RADIUS)
+                    pygame.draw.circle(self.screen, YELLOW, (int(c * SQUARE_SIZE + SQUARE_SIZE / 2 + MARGIN_X), int(r * SQUARE_SIZE + SQUARE_SIZE + SQUARE_SIZE / 2)), RADIUS)
         
         # Dibujar ficha flotante para mostrar el turno
         if not self.board.game_over:
