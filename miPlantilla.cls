@@ -36,7 +36,8 @@
 % --------------------
 % Ajustes generales
 % --------------------
-\setlength{\textfloatsep}{10pt plus 1pt minus 2pt}   % Espacio entre texto y figuras
+\setlength{\textfloatsep}{4pt plus 1pt minus 1pt}   % Texto <-> Figuras
+\setlength{\floatsep}{3pt plus 1pt minus 1pt}       % Figura <-> Figura
 \setlength{\parindent}{0pt}   % Sin sangría
 \setlength{\parskip}{0.5em}   % Espacio entre párrafos
 

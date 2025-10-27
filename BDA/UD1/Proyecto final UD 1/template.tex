@@ -1,0 +1,430 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Big Data Aplicado}
+\renewcommand{\tituloTrabajo}{SMARTPARKING: Sistema Inteligente de Gestión de Aparcamiento}
+\renewcommand{\imagenPortada}{portada.png}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+\subsection{Contextualización}
+En la era de las '\texttt{Smart Cities}', la gestión eificiente de recursos urbanos se ha convertido en una prioridad.
+Las plazas de aparcamiento representan uno de los desafíos más significativos en entornos urbanos sobrepoblados, donde 
+la congestión del tráfico y la disponibilidad de plazas de aparcamiento generan pérdidas económicas, contaminación y 
+estrés en los conductores. La tecnologia \textbf{Big Data}, combinada con el \textbf{Internet de las Cosas (IoT)},
+ofrece soluciones innovadoras para transformar la gestión tradicional de aparcamientos en sistemas inteligentes
+capaces de optimizar el espacio disponible y mejorar la experiencia del usuario.
+
+\subsection{Justificación}
+La implementación de un sistema inteligente de gestión de aparcamiento, como \textbf{SmartParking}, es crucial para
+resolver la necesidad de:
+
+\begin{itemize}
+  \item Reducir el tiempo de búsqueda de plazas de aparcamiento, disminuyendo así la congestión del tráfico y
+        las emisiones de CO2.
+  \item Proporcionar datos en tiempo real para la toma de decisiones tanto por parte de los conductores como de los
+        gestores del parking.
+  \item Crear una base histórica de datos que permita analizar patrones de uso y optimizar la gestión del espacio.
+  \item Servir como caso de estudio para la aplicación de tecnologías Big Data e IoT en entornos urbanos.
+\end{itemize}
+
+\subsection{Objetivos}
+\subsubsection{Objetivo General}
+El objetivo general es desarrollar e implementar un sistema inteligente de monitorización de plazas de aparcamiento que
+permita la gestión eficiente del espacio, mediante la captura, procesamiento, almacenamiento y visualización de datos en
+tiempo real.
+
+\newpage
+
+\subsubsection{Objetivos Específicos}
+\begin{itemize}
+  \item Configurar Apache Kafka para la ingesta de datos en tiempo real desde sensores IoT.
+  \item Diseñar flujos de datos en Apache NiFi para el procesamiento y routing de la información.
+  \item Implementar una base de datos NoSQL (MongoDB) para el almacenamiento eficiente de grandes volúmenes de datos, 
+        así como de la gestión de plazas de aparcamiento en tiempo real.
+  \item Desarrollar una aplicación web con Flask para la visualización del parking en tiempo real.
+  \item Integrar Dremio para el análisis avanzado de datos y generación de informes.
+  \item Validar el rendimiento del sistema bajo condiciones de carga simuladas.
+\end{itemize}
+
+\subsection{Alcance del proyecto}
+El proyecto \textbf{SmartParking} se centrará en la implementación de un sistema piloto que abarque las siguientes
+áreas:
+\begin{itemize}
+  \item Desarrollo del Backend de procesamiento de datos.
+  \item Implementación de la base de datos.
+  \item Creación de la interfaz web de visualización.
+  \item Configuración de la plataforma de análisis de datos.
+  \item Documentación técnica y memoria del proyecto.
+\end{itemize}
+
+Excluye aspectos como:
+\begin{itemize}
+  \item Desarrollo de hardware específico para sensores IoT.
+  \item Implementación en producción real.
+  \item Sistemas de pago.
+  \item Aplicación móvil nativa.
+\end{itemize}
+
+\subsection{Planificación}
+El proyecto se desarrollará en varias fases a lo largo de un periodo de 4 semanas, distribuidas de la siguiente manera:
+\begin{itemize}
+  \item Semana 1: Análisis y diseño del sistema.
+  \item Semana 2: Configuración de Apache Kafka, Apache NiFi e implementación de la base de datos.
+  \item Semana 3: Desarrollo del backend y la interfaz web e integración con dremio.
+  \item Semana 4: Pruebas finales, desarrollo de la memoria y video demostrativo.
+\end{itemize}
+
+\section{Marco teórico}
+\subsection{Big Data y su relevancia en la gestión urbana}
+El Big Data se refiere al manejo y análisis de grandes volúmenes de datos que no pueden ser procesados mediante
+herramientas tradicionales. En el contexto urbano, el Big Data permite la recopilación y análisis de datos en tiempo real
+provenientes de diversas fuentes, como sensores IoT, cámaras y dispositivos móviles. Esta capacidad es fundamental para
+la gestión eficiente de recursos urbanos, incluyendo la optimización del tráfico y la gestión de aparcamientos.
+
+\subsection{Internet de las Cosas (IoT) en la monitorización de aparcamientos}
+El Internet de las Cosas (IoT) se refiere a la interconexión de dispositivos físicos a través de internet, permitiendo
+la recopilación e intercambio de datos. En el ámbito de la gestión de aparcamientos, los sensores IoT pueden detectar la ocupación
+de plazas en tiempo real, proporcionando datos valiosos para la optimización del uso del espacio y la mejora de la experiencia del usuario.
+
+\subsection{Tecnologías Big Data utilizadas}
+\subsubsection{Apache Kafka}
+Apache Kafka es una plataforma de streaming distribuida que permite la ingesta y procesamiento de grandes volúmenes de datos en tiempo real.
+En el proyecto SmartParking, Kafka se utilizará para recibir datos de los sensores IoT y distribuirlos a los componentes del sistema.
+
+\begin{itemize}
+  \item Tópico: Categoría o canal donde se publican los mensajes.
+  \item Productor: Componente que envía datos a un tópico.
+  \item Consumidor: Componente que recibe datos de un tópico.
+  \item Broker: Servidor que almacena y distribuye los mensajes.
+\end{itemize}
+
+\subsubsection{Apache NiFi}
+Apache NiFi es una herramienta de integración de datos que facilita el flujo, transformación y enrutamiento de datos entre sistemas.
+En SmartParking, NiFi se empleará para procesar los datos recibidos de Kafka y enviarlos a la base de datos y otros servicios.
+
+\begin{itemize}
+  \item Procesadores: Componentes que realizan operaciones específicas sobre los datos.
+  \item Flujos de datos: Definiciones de cómo los datos se mueven y transforman dentro de NiFi.
+\end{itemize}
+
+\subsubsection{MongoDB}
+MongoDB es una base de datos NoSQL orientada a documentos que ofrece alta escalabilidad y flexibilidad en el almacenamiento de datos.
+En este proyecto, MongoDB se utilizará para almacenar la información de las plazas de aparcamiento en tiempo real y los datos históricos
+de ocupación.
+
+\begin{itemize}
+  \item Documentos: Estructuras de datos similares a JSON que almacenan la información.
+  \item Colecciones: Conjuntos de documentos relacionados.
+  \item Consultas: Operaciones para recuperar y manipular datos almacenados.
+  \item Índices: Estructuras que mejoran la velocidad de las consultas.
+\end{itemize}
+
+\subsubsection{Flask}
+Flask es un microframework web para Python que permite el desarrollo rápido de aplicaciones web. En SmartParking, Flask se utilizará para crear
+la interfaz web que mostrará el estado del aparcamiento en tiempo real.
+
+\subsubsection{Dremio}
+Dremio es una plataforma de análisis de datos que facilita la consulta y visualización de grandes volúmenes de datos. En el proyecto,
+Dremio se empleará para analizar los datos almacenados en MongoDB y generar consultas sobre el uso del aparcamiento. 
+
+\section{Fase de análisis}
+\subsection{Requisitos Funcionales}
+\begin{itemize}
+  \item RF1: El sistema debe capturar datos de sensores IoT en tiempo real.
+  \item RF2: El sistema debe almacenar un histórico completo de los eventos.
+  \item RF3: El sistema debe mantener el estado actual de cada plaza.
+  \item RF4: El sistema debe visualizar la ocupación en tiempo real.
+  \item RF5: El sistema debe permitir el análisis de datos históricos.
+\end{itemize}
+
+\subsection{Requisitos No Funcionales}
+\begin{itemize}
+  \item RNF1: El sistema debe ser escalable para manejar un aumento en el número de sensores.
+  \item RNF2: El sistema debe garantizar la integridad y consistencia de los datos.
+\end{itemize}
+
+\subsection{Análisis de tecnologías}
+La selección de tecnologías se basa en:
+
+\begin{itemize}
+  \item Apache Kafka: Ideal para la ingesta de datos en tiempo real debido a su alta capacidad de manejo de mensajes.
+  \item Apache NiFi: Facilita la integración y procesamiento de datos con una interfaz visual intuitiva.
+  \item MongoDB: Proporciona flexibilidad y escalabilidad para almacenar grandes volúmenes de datos no estructurados.
+  \item Flask: Permite un desarrollo rápido y sencillo de la interfaz web.
+  \item Dremio: Ofrece capacidades avanzadas de análisis y visualización de datos.
+\end{itemize}
+
+\section{Fase de diseño}
+\subsection{Arquitectura del sistema}
+La arquitectura del sistema SmartParking se compone de los siguientes componentes principales:
+
+Sensores IoT $\rightarrow$ Apache Kafka $\rightarrow$ Apache NiFi $\rightarrow$ MongoDB $\rightarrow$ Flask (Interfaz Web) \& Dremio (Análisis de Datos)
+
+\subsection{Diseño de la Base de Datos}
+La base de datos MongoDB se diseñará con las siguientes colecciones principales:
+\begin{itemize}
+  \item \textbf{Events}: Documentos que registran cada evento de ocupación o liberación de una plaza, con marca temporal y detalles del sensor.
+  \item \textbf{Bays}: Documentos que representan cada plaza de aparcamiento, con su estado actual (ocupada/libre).
+\end{itemize}
+
+\newpage
+
+\subsubsection{Diseño de los documentos}
+Ambas colecciones tendrán la misma estructura de documento base:
+\begin{verbatim}
+{
+  "_id": ObjectId("..."),
+  "bay_id": "L1-A-023",
+  "parking_id": "PK-CADIZ-01",
+  "level": "L1",
+  "occupied": true,
+  "last_event_ts": "2025-10-07T10:15:30Z",
+  "metrics": {
+    "temperature_c": 23.4,
+    "battery_pct": 78
+  },
+  "updated_at": "2025-10-07T10:15:31Z"
+}
+\end{verbatim}
+
+Dónde:
+\begin{itemize}
+  \item \texttt{\_id}: Identificador único del documento generado por MongoDB.
+  \item \texttt{bay\_id}: Identificador único de la plaza de aparcamiento.
+  \item \texttt{parking\_id}: Identificador del parking al que pertenece la plaza.
+  \item \texttt{level}: Nivel del parking donde se encuentra la plaza.
+  \item \texttt{occupied}: Estado actual de la plaza (ocupada o libre).
+  \item \texttt{last\_event\_ts}: Marca temporal del último evento registrado para la plaza.
+  \item \texttt{metrics}: Objeto que contiene métricas adicionales proporcionadas por el sensor.
+  \begin{itemize}
+    \item \texttt{temperature\_c}: Temperatura medida por el sensor en grados Celsius.
+    \item \texttt{battery\_pct}: Porcentaje de batería restante del sensor
+  \end{itemize} 
+  \item \texttt{updated\_at}: Marca temporal de la última actualización del documento.
+\end{itemize}
+
+\subsection{Diseño del Flujo NiFi}
+El flujo de datos en Apache NiFi se diseñará para:
+\begin{itemize}
+  \item Consumir mensajes desde el tópico de Kafka.
+  \item Procesar y transformar los datos según sea necesario.
+  \item Enviar los datos procesados a MongoDB para su almacenamiento en ambas colecciones.
+\end{itemize}
+
+\subsection{Diseño de la Interfaz Web}
+La interfaz web desarrollada con Flask mostrará:
+\begin{itemize}
+  \item Mapa en tiempo real del estado de las plazas de aparcamiento.
+  \item Codificación de colores: verde (libre), rojo (ocupado).
+  \item Estadísticas básicas sobre la ocupación del parking.
+  \item Diseño responsive para múltiples dispositivos
+\end{itemize}
+
+\section{Fase de implementación}
+
+\subsection{Configuración del entorno}
+Para la implementación del sistema SmartParking, se ha usado una máquina virtual con las siguientes características:
+\begin{itemize}
+  \item Sistema Operativo: Lubuntu 24.04.03 LTS
+  \item Memoria RAM: 8 GB
+  \item Almacenamiento: 50 GB SSD
+  \item Procesador: 4 núcleos
+\end{itemize}
+
+Tras la creación de la máquina, he instalado algunos paquetes necesarios que se usarán más adelante, como Python y sus componentes.\\
+{\small(Anexo: \nameref{anexo:paquetes-vm})}.
+
+Posteriormente, he instalado Java en su versión 11 para el uso por defecto del sistema, y posteriormente Java 21 para su uso en NiFi y Kafka.\\
+{\small(Anexo: \nameref{anexo:config-java})}.
+
+Finalmente, para finalizar con la configuración del sistema, he creado el directorio dónde voy a trabajar y montar casi todo el sistema.\\
+{\small(Anexo: \nameref{anexo:work-dir})}.
+
+\newpage
+
+\subsection{Apache Kafka}
+Una vez tengo el sistema preparado, he continuado con Apache Kafka. Trans descargarlo y ubicarlo en el directorio de trabajo, he añadido la 
+variable de entorno al archivo \texttt{.bashrc} {\small(Anexo: \nameref{anexo:kafka})}.
+
+Posteriormente, he configurado el archivo de propiedades de Kafka, para usarlo en modo \textbf{KRaft} (sin Zookeeper):
+\fig[1\textwidth]{Kafka/Screenshot_4.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:kafka})}.
+\end{center}
+
+Tras esto, he terminado la configuración de Apache Kafka tal y como se puede ver al final del anexo \nameref{anexo:kafka}.
+
+Con Kafka ya corriendo, he creado el tópico que voy a usar para la ingesta de datos de SmartParking:
+\fig[1\textwidth]{Kafka/Screenshot_8.png}
+
+Con todo esto, ya estaría finalizada la configuración de Kafka, así que he hecho una prueba básica en la que creo un \textbf{productor}
+que envía mensajes de prueba y un \textbf{consumidor} que los va a consumir, y el resultado ha sido este:
+\fig[1\textwidth]{Kafka/Screenshot_10.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:kafka})}.
+\end{center}
+
+\newpage
+\section{Fase de pruebas}
+// TODO: Describir las pruebas realizadas y los resultados obtenidos aquí.
+
+\section{Conclusiones y líneas futuras}
+\subsection{Conclusiones}
+Este proyecto ha demostrado la viabilidad de uso de tecnologías Big Data e IoT para la gestión inteligente de aparcamientos urbanos.
+La integración de Apache Kafka, Apache NiFi, MongoDB, Flask y Dremio ha permitido desarrollar un sistema capaz de capturar, procesar
+y visualizar datos en tiempo real, mejorando la eficiencia en la gestión del espacio de aparcamiento.
+
+\subsection{Líneas futuras}
+Las futuras mejoras y expansiones del proyecto SmartParking podrían incluir:
+\begin{itemize}
+  \item Integración con sistemas de pago y reservas de plazas.
+  \item Desarrollo de una aplicación móvil nativa para usuarios.
+  \item Implementación de algoritmos de predicción basados en aprendizaje automático.
+  \item Expansión del sistema a múltiples ubicaciones y ciudades.
+  \item Incorporación de análisis avanzados y generación de informes personalizados.
+  \item Optimización del rendimiento y escalabilidad del sistema.
+\end{itemize}
+
+\subsection{Lecciones aprendidas}
+El desarrollo del proyecto SmartParking ha proporcionado valiosas lecciones en la integración de tecnologías Big Data e IoT,
+destacando la importancia de una planificación cuidadosa, pruebas exhaustivas y la adaptabilidad a los desafíos técnicos que surgen durante la implementación.
+
+\begin{itemize}
+  \item La orquestación con NiFi simplifica significativamente el manejo de flujo de datos complejos.
+  \item MongoDB ofrece el equilibrio adecuado entre flexibilidad y rendimiento para datos de sensores IoT.
+  \item La documentación y pruebas continuas son esenciales para garantizar la calidad del sistema.
+\end{itemize}
+
+\section{Bibliografía}
+\begin{itemize}
+  \item Documentación oficial de Apache NiFi: \url{https://nifi.apache.org/docs.html}
+  \item Documentación oficial de Apache Kafka: \url{https://kafka.apache.org/documentation/}
+  \item Documentación oficial de MongoDB: \url{https://docs.mongodb.com/}
+  \item Documentación oficial de Flask: \url{https://flask.palletsprojects.com/en/2.0.x/}
+  \item Documentación oficial de Dremio: \url{https://docs.dremio.com/}
+  \item Herramientas de IA Generativa:
+  \begin{itemize}
+    \item ChatGPT de OpenAI: \url{https://openai.com/chatgpt}
+    \item DeepSeek: \url{https://www.deepseek.com/}
+    \item Copilot de GitHub (Integrado en VS Code).
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Nota sobre el uso de IA Generativa}
+El uso de estas herramientas se ha limitado a la resolución de dudas puntuales, generación de código (Script de envío de mensajes y Flask) y
+apoyo en la redacción de ciertos apartados del documento.
+
+\section{Diario de trabajo (anexo)}
+\begin{itemize}
+  \item Semana 1: Análisis y diseño del sistema:
+  \begin{itemize}
+    \item Investigación de tecnologías requeridas.
+    \item Definición de requisitos funcionales y no funcionales.
+    \item Diseño de la arquitectura del sistema y la base de datos.
+  \end{itemize}
+  \item Semana 2: Configuración de Apache Kafka, Apache NiFi e implementación de la base de datos.
+  \begin{itemize}
+    \item Configuración de Kafka y creación de tópicos.
+    \item Implementación de la base de datos MongoDB y creación de colecciones.
+    \item Diseño e implementación del flujo de datos en NiFi.
+    \item Pruebas iniciales de ingesta y almacenamiento de datos.
+  \end{itemize}
+  \item Semana 3: Desarrollo del backend y la interfaz web e integración con dremio.
+  \begin{itemize}
+    \item Investigación de Flask y desarrollo de la aplicación web.
+    \item Integración de Dremio para análisis de datos y desarrollo de consultas descriptivas.
+  \end{itemize}
+  \item Semana 4: Pruebas finales, desarrollo de la memoria y video demostrativo.
+  \begin{itemize}
+    \item Realización de pruebas de carga y rendimiento.
+    \item Documentación del proyecto y elaboración de la memoria.
+    \item Creación del video demostrativo del sistema.
+  \end{itemize}
+\end{itemize}
+
+\section{Anexo}
+
+\subsection{Configuración del entorno}
+\subsubsection*{Paquetes necesarios}
+\label{anexo:paquetes-vm}
+
+Instalación de paquetes necesarios:
+\begin{verbatim}
+  $ sudo apt update && sudo apt upgrade -y
+  $ sudo apt install -y curl wget git unzip build-essential jq
+  $ sudo apt install -y python3 python3-venv python3-pip net-tools 
+\end{verbatim}
+
+\subsubsection*{Instalación y configuración de Java 11 \& 21}
+\label{anexo:config-java}
+
+Instalación de Java 11:
+\begin{verbatim}
+  $ sudo apt install -y openjdk-11-jdk
+\end{verbatim}
+\fig[1\textwidth]{Preparación de la VM/Screenshot_4.png}
+
+Se incluye la variable \texttt{JAVA\_HOME} en el archivo \texttt{.bashrc}:
+\fig[1\textwidth]{Preparación de la VM/Screenshot_5.png}
+
+Instalación de Java 21:
+\begin{verbatim}
+  $ sudo apt install -y openjdk-21-jdk
+\end{verbatim}
+
+Especificar la versión 11 como predeterminada del sistema:
+\begin{verbatim}
+  $ sudo update-alternatives --config java
+\end{verbatim}
+\fig[1\textwidth]{Preparación de la VM/Screenshot_7.png}
+\fig[1\textwidth]{Preparación de la VM/Screenshot_8.png}
+
+\subsubsection*{Creación del directorio de trabajo}
+\label{anexo:work-dir}
+
+Creación del directorio de trabajo de SmartParking:
+\fig[1\textwidth]{Preparación de la VM/Screenshot_9.png}
+
+\subsubsection*{Apache Kafka}
+\label{anexo:kafka}
+
+Descarga y ubicación de Apache Kafka:
+\fig[1\textwidth]{Kafka/Screenshot_1.png}
+
+\newpage
+
+Adición de la variable de entorno \texttt{KAFKA\_HOME} al archivo \texttt{.bashrc}:
+\fig[1\textwidth]{Kafka/Screenshot_2.png}
+
+\textbf{Explicación del archivo de configuración:}
+
+\fig[1\textwidth]{Kafka/Screenshot_4.png}
+Este archivo configura Kafka en modo autónomo (sin Zookeeper) para desarrollo local. Define un único nodo que actúa como broker y controller,
+escuchando en localhost:9092 para clientes y 9093 para comunicación interna, con los datos almacenados en una carpeta específica.
+
+\textbf{Configuración final de Kafka:}
+
+Genero el \texttt{cluster.id}:
+\fig[1\textwidth]{Kafka/Screenshot_5.png}
+
+Formateo el almacenamiento:
+\fig[1\textwidth]{Kafka/Screenshot_6.png}
+
+\newpage
+
+Verifico el \texttt{meta.properties} para ver que está todo correcto y arranco el servicio:
+\fig[1\textwidth]{Kafka/Screenshot_7.png}
+
+\textbf{Explicación de la prueba final de Kafka:}
+
+He creado un \textbf{productor} que he usado para enviar algunos mensajes de prueba, usando el topico creado para el proyecto:
+\fig[1\textwidth]{Kafka/Screenshot_9.png}
+
+Y he creado un \textbf{consumidor} que leerá los mensajes desde el inicio del canal de datos, para comprobar si se han enviado correctamente y si 
+llegan a través del canal:
+\fig[1\textwidth]{Kafka/Screenshot_10.png}
+
+\end{document}
