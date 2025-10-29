@@ -8,11 +8,11 @@ COLS = 7 # Columnas
 SQUARE_SIZE = 100 # Tamaño de cada cuadrado
 RADIUS = int(SQUARE_SIZE / 2 - 5) # Radio de las fichas
 
-# Calcular dimensiones con margen horizontal para centrar
+
 BOARD_WIDTH = COLS * SQUARE_SIZE
 MARGIN_X = 100  # Margen horizontal para centrar
-WIDTH = BOARD_WIDTH + 2 * MARGIN_X
-HEIGHT = (ROWS + 1) * SQUARE_SIZE # Alto de la ventana (una fila extra para mostrar la ficha flotante)
+WIDTH = BOARD_WIDTH + 2 * MARGIN_X # Ancho de la ventana
+HEIGHT = (ROWS + 1) * SQUARE_SIZE # Alto de la ventana
 SIZE = (WIDTH, HEIGHT) # Tamaño de la ventana
 
 # Colores del juego
@@ -97,7 +97,7 @@ class Board:
             if row != -1:
                 piece = 1 if self.turn == 0 else 2
                 self.drop_piece(row, col, piece)
-                return row  # Devolver la fila donde se colocó la ficha
+                return row 
         return -1
 
 class Game:

@@ -174,7 +174,7 @@ La base de datos MongoDB se diseñará con las siguientes colecciones principale
 
 \subsubsection{Diseño de los documentos}
 Ambas colecciones tendrán la misma estructura de documento base:
-\begin{verbatim}
+\begin{lstlisting}
 {
   "_id": ObjectId("..."),
   "bay_id": "L1-A-023",
@@ -188,7 +188,7 @@ Ambas colecciones tendrán la misma estructura de documento base:
   },
   "updated_at": "2025-10-07T10:15:31Z"
 }
-\end{verbatim}
+\end{lstlisting}
 
 Dónde:
 \begin{itemize}
@@ -226,7 +226,7 @@ La interfaz web desarrollada con Flask mostrará:
 \section{Fase de implementación}
 
 \subsection{Configuración del entorno}
-Para la implementación del sistema SmartParking, se ha usado una máquina virtual con las siguientes características:
+Para la implementación del sistema SmartParking, he creado una máquina virtual con las siguientes características:
 \begin{itemize}
   \item Sistema Operativo: Lubuntu 24.04.03 LTS
   \item Memoria RAM: 8 GB
@@ -234,38 +234,104 @@ Para la implementación del sistema SmartParking, se ha usado una máquina virtu
   \item Procesador: 4 núcleos
 \end{itemize}
 
-Tras la creación de la máquina, he instalado algunos paquetes necesarios que se usarán más adelante, como Python y sus componentes.\\
+Tras la creación de la máquina, instalé algunos paquetes necesarios para su posterior uso, como Python y sus componentes.\\
 {\small(Anexo: \nameref{anexo:paquetes-vm})}.
 
-Posteriormente, he instalado Java en su versión 11 para el uso por defecto del sistema, y posteriormente Java 21 para su uso en NiFi y Kafka.\\
-{\small(Anexo: \nameref{anexo:config-java})}.
+Posteriormente, instalé Java en su versión 11 para el sistema, y Java 21 para su uso en NiFi y Kafka.
+\fig[1\textwidth]{Preparación de la VM/Screenshot_8.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:config-java})}.
+\end{center}
 
-Finalmente, para finalizar con la configuración del sistema, he creado el directorio dónde voy a trabajar y montar casi todo el sistema.\\
-{\small(Anexo: \nameref{anexo:work-dir})}.
+Finalmente, para finalizar con la configuración del sistema, creé el directorio dónde voy a trabajar y montar casi todo el sistema.
+\fig[1\textwidth]{Preparación de la VM/Screenshot_9.png}
 
 \newpage
 
 \subsection{Apache Kafka}
-Una vez tengo el sistema preparado, he continuado con Apache Kafka. Trans descargarlo y ubicarlo en el directorio de trabajo, he añadido la 
-variable de entorno al archivo \texttt{.bashrc} {\small(Anexo: \nameref{anexo:kafka})}.
+Con el sistema listo, lo primero que hice fue preparar Apache Kafka para su posterior uso, dado que es el primer componente de este proyecto.
 
-Posteriormente, he configurado el archivo de propiedades de Kafka, para usarlo en modo \textbf{KRaft} (sin Zookeeper):
+Tras descargarlo y ubicarlo en el directorio de trabajo, añadí la variable de entorno \texttt{KAFKA\_HOME} al archivo \texttt{.bashrc} {\small(Anexo: \nameref{anexo:kafka})}.
+
+Posteriormente, configuré Kafka, para usarlo en modo \textbf{KRaft} (sin Zookeeper):
 \fig[1\textwidth]{Kafka/Screenshot_4.png}
 \begin{center}
   {\small(Anexo: \nameref{anexo:kafka})}.
 \end{center}
 
-Tras esto, he terminado la configuración de Apache Kafka tal y como se puede ver al final del anexo \nameref{anexo:kafka}.
-
-Con Kafka ya corriendo, he creado el tópico que voy a usar para la ingesta de datos de SmartParking:
+Tras realizar la configuración de Apache Kafka tal y como se puede ver al final del anexo \nameref{anexo:kafka}, arranqué el servicio Y
+creé el tópico que voy a usar para la ingesta de datos de SmartParking:
 \fig[1\textwidth]{Kafka/Screenshot_8.png}
 
-Con todo esto, ya estaría finalizada la configuración de Kafka, así que he hecho una prueba básica en la que creo un \textbf{productor}
-que envía mensajes de prueba y un \textbf{consumidor} que los va a consumir, y el resultado ha sido este:
+Con todo esto, ya estaría finalizada la configuración de Kafka, así que realicé una prueba básica en la que creo un \textbf{productor}
+que envía mensajes de prueba y un \textbf{consumidor} que los va a consumir, y el resultado fue el siguiente:
 \fig[1\textwidth]{Kafka/Screenshot_10.png}
 \begin{center}
   {\small(Anexo: \nameref{anexo:kafka})}.
 \end{center}
+
+\newpage
+
+\subsection{MongoDB}
+Siguiendo el orden natural del proyecto, lo siguiente sería \textbf{Apache NiFi}, pero sería complicado hacer el flujo sin tener listo el destino de los datos,
+así que antes me encargué de configurar MongoDB.
+
+Lo primero fue añadirlo a los repositorios por defecto de linux e instalarlo con apt.
+\fig[1\textwidth]{MongoDB/Screenshot_3.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:mongo})}.
+\end{center}
+
+Tras la instalación, habilité el servicio y accedí a Mongo con \texttt{mongosh}. Dentro creé la base de datos y ambas colecciones para el proyexto:
+\begin{itemize}
+  \item \textbf{events} para almacenar el histórico de las plazas del parking.
+  \item \textbf{bays} para almacenar el estado de cada plaza en tiempo real.
+\end{itemize}
+\fig[0.7\textwidth]{MongoDB/Screenshot_5.png}
+
+Con esto, MongoDB ya estaría listo para su uso, pero antes de continuar hice algunas pruebas de inserción de datos consultas y upsert. Finalmente añadí índices
+para facilitar las consultas:
+\fig[0.7\textwidth]{MongoDB/Screenshot_7.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:mongo})}.
+\end{center}
+
+\newpage
+
+\subsection{Apache NiFi}
+Teniendo listos tanto el origen como el destino de los datos, configuré la conexión entre ambos, es decir, el flujo de \textbf{Apache NiFi}.
+
+\subsubsection{Instalación y configuración}
+
+\subsubsection{Flujo de Datos}
+
+\newpage
+
+\subsection{Parking en tiempo real con Flask}
+Con el componente principal del sistema funcionando, me encargué de la parte relacionada con \textbf{representar los datos}, primero con Flask para mostrar las plazas de parking
+en tiempo real y posteriormente con Dremio para obtener estádisticas y patrones de los datos históricos.
+
+Este apartado se divide en dos partes:
+\begin{enumerate}
+  \item El \textbf{backend} en python que obtiene datos de Mongo y los envía al front.
+  \item El \textbf{frontend} que recibe los datos del backend y representa un mapa del parking en tiempo real.
+\end{enumerate}
+
+\subsubsection{Backend}
+
+\subsubsection{Frontend}
+
+\newpage
+
+\subsection{Análisis y estádistica de los datos con Dremio}
+El último punto de este proyecto, como ya mencioné anteriormente, es configurar Dremio para consultar los datos históricos de las plazas del parking, de forma que
+podamos \textbf{analizar y sacar conclusiones} de los mismos, como patrones que se repiten, estadísticas de interés, etc. 
+
+\subsubsection{Instalación y configuración general}
+
+\subsubsection{Configuración específica}
+
+\subsubsection{Consultas de ejemplo}
 
 \newpage
 \section{Fase de pruebas}
@@ -315,9 +381,10 @@ destacando la importancia de una planificación cuidadosa, pruebas exhaustivas y
 
 \subsection*{Nota sobre el uso de IA Generativa}
 El uso de estas herramientas se ha limitado a la resolución de dudas puntuales, generación de código (Script de envío de mensajes y Flask) y
-apoyo en la redacción de ciertos apartados del documento.
+apoyo en la redacción de ciertos apartados del documento. Las respuestas obtenidas de estas herramientas se han contrastado con fuentes oficiales
+y se han usado a modo orientativo.
 
-\section{Diario de trabajo (anexo)}
+\section{Diario de trabajo}
 \begin{itemize}
   \item Semana 1: Análisis y diseño del sistema:
   \begin{itemize}
@@ -337,6 +404,7 @@ apoyo en la redacción de ciertos apartados del documento.
     \item Investigación de Flask y desarrollo de la aplicación web.
     \item Integración de Dremio para análisis de datos y desarrollo de consultas descriptivas.
   \end{itemize}
+  \newpage
   \item Semana 4: Pruebas finales, desarrollo de la memoria y video demostrativo.
   \begin{itemize}
     \item Realización de pruebas de carga y rendimiento.
@@ -352,79 +420,85 @@ apoyo en la redacción de ciertos apartados del documento.
 \label{anexo:paquetes-vm}
 
 Instalación de paquetes necesarios:
-\begin{verbatim}
+\begin{lstlisting}
   $ sudo apt update && sudo apt upgrade -y
-  $ sudo apt install -y curl wget git unzip build-essential jq
-  $ sudo apt install -y python3 python3-venv python3-pip net-tools 
-\end{verbatim}
+  $ sudo apt install -y curl wget git unzip build-essential jq python3 python3-venv python3-pip net-tools
+\end{lstlisting}
 
 \subsubsection*{Instalación y configuración de Java 11 \& 21}
 \label{anexo:config-java}
 
 Instalación de Java 11:
-\begin{verbatim}
+\begin{lstlisting}
   $ sudo apt install -y openjdk-11-jdk
-\end{verbatim}
+\end{lstlisting}
 \fig[1\textwidth]{Preparación de la VM/Screenshot_4.png}
 
 Se incluye la variable \texttt{JAVA\_HOME} en el archivo \texttt{.bashrc}:
 \fig[1\textwidth]{Preparación de la VM/Screenshot_5.png}
 
+\newpage
+
 Instalación de Java 21:
-\begin{verbatim}
+\begin{lstlisting}
   $ sudo apt install -y openjdk-21-jdk
-\end{verbatim}
+\end{lstlisting}
 
 Especificar la versión 11 como predeterminada del sistema:
-\begin{verbatim}
+\begin{lstlisting}
   $ sudo update-alternatives --config java
-\end{verbatim}
+\end{lstlisting}
 \fig[1\textwidth]{Preparación de la VM/Screenshot_7.png}
 \fig[1\textwidth]{Preparación de la VM/Screenshot_8.png}
 
-\subsubsection*{Creación del directorio de trabajo}
-\label{anexo:work-dir}
-
-Creación del directorio de trabajo de SmartParking:
-\fig[1\textwidth]{Preparación de la VM/Screenshot_9.png}
-
-\subsubsection*{Apache Kafka}
+\subsection{Apache Kafka}
 \label{anexo:kafka}
 
 Descarga y ubicación de Apache Kafka:
 \fig[1\textwidth]{Kafka/Screenshot_1.png}
 
-\newpage
-
 Adición de la variable de entorno \texttt{KAFKA\_HOME} al archivo \texttt{.bashrc}:
 \fig[1\textwidth]{Kafka/Screenshot_2.png}
 
-\textbf{Explicación del archivo de configuración:}
+\newpage
+
+\subsubsection*{Explicación del archivo de configuración:}
 
 \fig[1\textwidth]{Kafka/Screenshot_4.png}
 Este archivo configura Kafka en modo autónomo (sin Zookeeper) para desarrollo local. Define un único nodo que actúa como broker y controller,
-escuchando en localhost:9092 para clientes y 9093 para comunicación interna, con los datos almacenados en una carpeta específica.
+escuchando en el puerto 9092 para clientes y en el 9093 para comunicación interna, con los datos almacenados en una carpeta específica.
 
-\textbf{Configuración final de Kafka:}
+\subsubsection*{Configuración final de Kafka:}
 
-Genero el \texttt{cluster.id}:
+Generar el \texttt{cluster.id}:
 \fig[1\textwidth]{Kafka/Screenshot_5.png}
 
-Formateo el almacenamiento:
+Formatear el almacenamiento:
 \fig[1\textwidth]{Kafka/Screenshot_6.png}
+
+Verificar el \texttt{meta.properties} para ver que está todo correcto y arranco el servicio:
+\fig[1\textwidth]{Kafka/Screenshot_7.png}
 
 \newpage
 
-Verifico el \texttt{meta.properties} para ver que está todo correcto y arranco el servicio:
-\fig[1\textwidth]{Kafka/Screenshot_7.png}
+\subsubsection*{Explicación de la prueba final de Kafka:}
 
-\textbf{Explicación de la prueba final de Kafka:}
-
-He creado un \textbf{productor} que he usado para enviar algunos mensajes de prueba, usando el topico creado para el proyecto:
+Crear un \textbf{productor} que usado para enviar algunos mensajes de prueba, usando el topico creado para el proyecto:
 \fig[1\textwidth]{Kafka/Screenshot_9.png}
 
-Y he creado un \textbf{consumidor} que leerá los mensajes desde el inicio del canal de datos, para comprobar si se han enviado correctamente y si 
+Crear un \textbf{consumidor} que lee los mensajes desde el inicio del canal de datos, para comprobar si se han enviado correctamente y si 
 llegan a través del canal:
 \fig[1\textwidth]{Kafka/Screenshot_10.png}
+
+\subsection{MongoDB}
+\label{anexo:mongo}
+
+\textbf{Adición del repositorio de MongoDB}
+
+\begin{lstlisting}
+$ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+$ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+$ sudo apt update
+\end{lstlisting}
 
 \end{document}

@@ -1,0 +1,156 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Sistemas de Big Data}
+\renewcommand{\tituloTrabajo}{Análisis de proyectos basados en Minería de datos y CRISP-DM}
+\renewcommand{\imagenPortada}{portada.png}
+
+\begin{document}
+
+\maketitle
+
+\section{TFG Estimación de edad a partir de la rodilla}
+El primer proyecto que he encontrado y voy a analizar trata sobre el \textbf{desarrollo de un
+sistema basado en deep learning para la estimación de la edad usando la imagen radiolñogica
+de rodilla}, de la UGR.
+
+\subsection{Comprensión del negocio}
+Este proyecto está realacionado con el ámbito de la \textbf{Antropología Forense}, donde la
+estimación de la edad es un proceso esencial, tanto a la hora de identificar restos humanos,
+como en casos legales que involucran personas vivas sin documentación. El autor parte de la
+necesidad social y científica de desarrollar métodos más precisos, rápidos y objetivos, 
+empleando la IA como apoyo al trabajo de forense. 
+
+El problema se centra en la dificultad de estimar la edad mediante la rodilla, --una parte
+del cuerpo poco exlotada a nivel anatómico-- y el objetivo es crear un sistema capaz de
+realizar esta tarea de forma automática mediante imágenes de resonancia magnética. 
+
+El autor incluye en esta fase la relevancia ética y práctica del modelo, aludiendo a su 
+posible aplicación en migración, identificación y procesos judiciales, dónde es crucial la
+precisión de la estimación.
+
+\subsection{Comprensión de los datos}
+El proyecto trabaja con imágenes médicas tridimensionales de resonancia magnética nuclear.
+En esta fase se analiza el tipo de datos disponibles, su formato, su distribución por edades
+y las característiacas anatómicas visibles en las imágenes. Se examina la calidad de las 
+imágenes y se toman decisiones sobre si es necesario aplicar técnicas de mejora visual y 
+reducción de ruido. También se tienen en cuenta los metadatos clínicos que contienen las
+imágenes, que posteriormente se integran como variables complementarias en el modelado.
+
+La exploración inicial permite detectar las limitaciones en la cantidad de datos y su rango
+de edad, aspectos que condicionan el rendimiento y generalización de los modelos.
+
+\subsection{Preparación de los datos}
+Esta fase ocupa una gran parte del proyecto. Implementa preprocesamiento de imágenes para
+mejorar la calidad de la información visual que se usará en el entrenamiento. Emplea técnicas
+como la normalización de intensidades, ajuste de contraste y, sobre todo, el método de 
+umbralización de Otsu para segmentar las estructuras relevantes de la rodilla. También se
+describe la generación de varios subconjuntos de datos para el entrenamiento, la validación
+y la prueba del modelo, con especial cuidado en la representatividad de las edades en cada uno.
+De forma adicional, integra metadatos (como el sexo) en algunos modelos para evaluar si mejoran
+la precisión del sistema. En esta fase se transforma un conjunto de imágenes médicas heterogéneas
+en un dataset estructurado y listo para el modelado.
+
+\subsection{Modelado}
+Se desarrollan y entrenan varios modelos de deep learning, centrándose en arquitecturas como ResNet
+y DenseNet. También se comparan dos enfoques conceptuales diferentes:
+\begin{itemize}
+  \item Uno basado en regresión, para estimar directamente la edad numérica.
+  \item Otro de clasificación, para asignar rangos de edades o distinguir entre menores y adultos.
+\end{itemize}
+Los modelos emplean PyTorch, --libreria open-source usada para deep learning y procesamiento de
+lenguaje natural-- y se ejecutan en un servidor proporcionado por el Instituto DaSCI.
+esta fase representa el núcleo experimental del proyecto, donde se empieza a materializar la 
+solución técnica al problema definido.
+
+\subsection{Evaluación}
+Los modelos que se han desarrollado se somenten a una evaluación exhasutiva mediante métricas
+como el \textbf{MAE (Mean Absolute Error)}. Se comparan las diferentes variantes y arquitecturas 
+y se analizan los resultados en profundidad, identificando las configuraciones que ofrecen
+mejores resultados. Además, se comparan los resultados obtenidos con los de otros estudios,
+valorando avances y limitaciones del modelo en relación con los requisitos de precisión exigidos
+para su eso forense real. Esta fase termina en un análisis crítico de la fiabilidad y aplicabilidad
+del sistema.
+
+\subsection{Despliegue o aplicación final}
+Pese a que el trabajo tiene una orientación investigadora, se plantea un sistema funcional
+capaz de estimar la edad a partir de una nueva imagen de resonancia magnética de rodilla,
+sin necesidad de intervención humana. Se documenta la implementación del código en un repositorio
+público de GitHub y se describe la arquitectura modular del sistema, lo que permite su futura
+integración en entornos reales. En las conclusiones se señalan los pasos necesarios para una
+aplicación práctica, mencionando la mejora del conjunto de datos y la validación de nuevas
+poblaciones. De este modo, el despliegue es una base sólida sobre la que construir una herramienta
+real de apoyo pericial.
+
+\newpage
+
+\section{Análisis de tráfico y optimización de rutas con machine learning}
+El segundo proyecto trata sobre un modelo para \textbf{analizar y optimizar el tráfico mediante
+deep learning}, de la UOC.
+
+\subsection{Comprensión del negocio}
+En esta fase se definen los principales objetivos y la problemática a resolver del
+proyecto. Se establece la necesidad de analizar los datos de tráfico de Madrid
+para optimizar las rutas mediante modelos de machine learning, identificando el 
+propósito, alcance y beneficios esperados.
+
+\subsection{Comprensión de los datos}
+Se revisa de forma exhaustiva las fuentes de información disponibles, y se selecciona
+el conjunto de datos abierto del Ayuntamiento de Madrid, por su fiabilidad, formato estándar 
+y volumen más que suficiente para el análisis. En esta etapa se analizan las características
+de las variables, su estructura y la calidad de los registros, identificando posibles valores
+nulos o que no son válidos.
+
+\subsection{Preparación de los datos}
+Una vez comprendidos los datos, se llevan a cabo labores de integración, limpieza y transformación.
+Se fusionan ficheros mensuales, se añaden nuevas columnas como el día de la semana, y se ajustan
+los valores de intensidad y velocidad media. En esta fase se acaba generando un conjunto de datos
+homogéneo y listo para modelar.
+
+\subsection{Modelado}
+En esta fase se aplican algoritmos y modelos de aprendizaje automático de optimización de rutas.
+Se desarrollan y comparan enfoques como el algoritmo de Dijkstra, la colonia de hormigas (ACO)
+o la colonia de abejas (ABC), empleando parámetros de tráfico y velocidad para rutas mas eficientes.
+Cada modelo se configura y ejecuta sobre los datos procesados para evaluar su rendimiento y viabilidad.
+
+\subsection{Evaluación}
+Se analizan los resultados obtenidos por los modelos, comparando la efectividad de cada uno 
+según criterios como la ditancia y duración de trayecto o el tiempo de ejcución. Se verifica
+que cumplan con los objetivo iniciales y se evalua si es posible su aplicación en entornos reales.
+
+\subsection{Despliegue o aplicación final}
+Finalmente, se integran los resultados en una propuesta funcional que demuestra la viabilidad 
+de aplicar sistemas Big Data y algoritmos de IA para la gestión del tráfico. Se elaboran mapas 
+de calor, visualizaciones interactivas y ejemplos de optimización de rutas, estableciendo la 
+base para futuras mejoras, como incorporar datos en tiempo real o ampliar el área de estudio.
+
+\section{Comparación de ambos trabajos}
+
+\subsection{¿Qué proyecto representa mejor las fases del CRISP-DM?}
+Los dos trabajos cubren las fases del modelo CRISP-DM, aunque se centran en distintas etapas.
+Mientras que el primero se centra y detalla las fases de \textbf{Modelado} y \textbf{Evaluación},
+el segundo tiene una implementación muy clara de las fases de \textbf{Comprensión y preparación 
+de los datos}.
+
+\subsection{¿Qué tipo de modelos o técnicas se aplican en cada caso?}
+El primero se centra en el deep learning, empleando técnicas como redes neuronales convolucionales,
+usando arquitectura ResNet para procesar las imágenes.
+
+El segundo trata de optimización, usando algoritmos como Dijkstra o la colonia de hormigas. Además,
+también emplea redes neuronales convolucionales.
+
+\subsection{¿Qué aspectos podrías aplicar tú en un proyecto propio de minería de datos?}
+Sobretodo aspectos como no limitarme a probar un modelo estándar, sino investigar y experimentar
+con varios; integrar librerias específicas que me permitan modelar datos complejos; definir
+y medir métricas con sentido en el contexto del problema, etc.
+
+\section{Bibliografía}
+
+\textbf{Estimación de edad a partir de la rodilla}:
+
+\url{https://digibug.ugr.es/handle/10481/105807}
+
+\textbf{Análisis de tráfico y optimización de rutas con machine learning}:
+
+\url{https://openaccess.uoc.edu/items/330072f2-7827-4268-9ef3-a4f32b8d04b0#page=1}
+
+\end{document}

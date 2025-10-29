@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  29 OCT 2025 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  29 OCT 2025 19:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/bleik/Desktop/IABD/BDA/UD1/Proyecto final UD 1/template.tex"
-(c:/Users/bleik/Desktop/IABD/BDA/UD1/Proyecto final UD 1/template.tex
+**"c:/Users/bleik/Desktop/IABD/SBD/UD2/Análisis de proyectos basados en Minería de datos y CRISP-DM/template.tex"
+(c:/Users/bleik/Desktop/IABD/SBD/UD2/Análisis de proyectos basados en Minería de datos y CRISP-DM/template.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
 (../../../miPlantilla.cls
@@ -465,16 +465,16 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count333
-<portada.png, id=211, 1027.84pt x 1027.84pt>
+<portada.png, id=79, 843.15pt x 562.35094pt>
 File: portada.png Graphic file (type png)
 <use portada.png>
 Package pdftex.def Info: portada.png  used on input line 9.
-(pdftex.def)             Requested size: 418.25368pt x 418.24905pt.
+(pdftex.def)             Requested size: 418.25368pt x 278.96094pt.
 
 
 [1
 
-{C:/Users/bleik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./portada.png (PNG copy)>] (template.toc
+{C:/Users/bleik/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./portada.png>] (template.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -483,170 +483,31 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `template.toc'.
+
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...line {5.4}Apache NiFi}{12}{subsection.5.4}
-                                                  % [1])
-\tf@toc=\write4
-\openout4 = `template.toc'.
-
-
+l.9 \maketitle
+               [1]
 
 [2]
 
 [3]
 
 [4]
-
-[5]
-
-[6]
-
-[7]
-
-[8]
-<Preparación de la VM/Screenshot_8.png, id=328, 1035.11719pt x 103.88812pt>
-File: Preparación de la VM/Screenshot_8.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_8.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 241.
-(pdftex.def)             Requested size: 418.25368pt x 41.97775pt.
-<Preparación de la VM/Screenshot_9.png, id=331, 697.10437pt x 155.83218pt>
-File: Preparación de la VM/Screenshot_9.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_9.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_9.png  used on input line 247.
-(pdftex.def)             Requested size: 418.25368pt x 93.49765pt.
-
-
-[9 <./Preparación de la VM/Screenshot_8.png> <./Preparación de la VM/Screenshot_9.png>]
-<Kafka/Screenshot_4.png, id=341, 1444.64719pt x 555.57562pt>
-File: Kafka/Screenshot_4.png Graphic file (type png)
-<use Kafka/Screenshot_4.png>
-Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 257.
-(pdftex.def)             Requested size: 418.25368pt x 160.84999pt.
-<Kafka/Screenshot_8.png, id=344, 1444.64719pt x 127.97812pt>
-File: Kafka/Screenshot_8.png Graphic file (type png)
-<use Kafka/Screenshot_8.png>
-Package pdftex.def Info: Kafka/Screenshot_8.png  used on input line 264.
-(pdftex.def)             Requested size: 418.25368pt x 37.05215pt.
-<Kafka/Screenshot_10.png, id=345, 1109.64563pt x 95.6072pt>
-File: Kafka/Screenshot_10.png Graphic file (type png)
-<use Kafka/Screenshot_10.png>
-Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 268.
-(pdftex.def)             Requested size: 418.25368pt x 36.0364pt.
-
-
-[10 <./Kafka/Screenshot_4.png> <./Kafka/Screenshot_8.png> <./Kafka/Screenshot_10.png>]
-<MongoDB/Screenshot_3.png, id=354, 505.89pt x 77.53969pt>
-File: MongoDB/Screenshot_3.png Graphic file (type png)
-<use MongoDB/Screenshot_3.png>
-Package pdftex.def Info: MongoDB/Screenshot_3.png  used on input line 280.
-(pdftex.def)             Requested size: 418.25368pt x 64.10825pt.
-<MongoDB/Screenshot_5.png, id=356, 370.38374pt x 173.14688pt>
-File: MongoDB/Screenshot_5.png Graphic file (type png)
-<use MongoDB/Screenshot_5.png>
-Package pdftex.def Info: MongoDB/Screenshot_5.png  used on input line 290.
-(pdftex.def)             Requested size: 292.77629pt x 136.86908pt.
-<MongoDB/Screenshot_7.png, id=357, 474.27188pt x 222.07968pt>
-File: MongoDB/Screenshot_7.png Graphic file (type png)
-<use MongoDB/Screenshot_7.png>
-Package pdftex.def Info: MongoDB/Screenshot_7.png  used on input line 294.
-(pdftex.def)             Requested size: 292.77629pt x 137.09834pt.
-
-
-[11 <./MongoDB/Screenshot_3.png> <./MongoDB/Screenshot_5.png> <./MongoDB/Screenshot_7.png>]
-
-[12]
-
-[13]
-
-[14]
-Overfull \hbox (57.28839pt too wide) in paragraph at lines 370--371
-[]\T1/cmr/m/n/12 Documentaci�n ofi-cial de Apa-che Kaf-ka: [][]$\T1/cmtt/m/n/12 https : / / kafka . apache . org / documentation/$[][] 
+Overfull \hbox (15.8908pt too wide) in paragraph at lines 154--155
+[][][]$\T1/cmtt/m/n/12 https : / / openaccess . uoc . edu / items / 330072f2-[]7827-[]4268-[]9ef3-[]a4f32b8d04b0 #
  []
 
 
 
-[15]
-Overfull \hbox (2.10323pt too wide) in paragraph at lines 372--373
-[]\T1/cmr/m/n/12 Documentaci�n ofi-cial de Flask: [][]$\T1/cmtt/m/n/12 https : / / flask . palletsprojects . com / en /
- []
-
-
-
-[16]
-<Preparación de la VM/Screenshot_4.png, id=399, 761.09344pt x 103.13531pt>
-File: Preparación de la VM/Screenshot_4.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_4.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_4.png  used on input line 435.
-(pdftex.def)             Requested size: 418.25368pt x 56.67894pt.
-<Preparación de la VM/Screenshot_5.png, id=400, 1444.64719pt x 700.11563pt>
-File: Preparación de la VM/Screenshot_5.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_5.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_5.png  used on input line 438.
-(pdftex.def)             Requested size: 418.25368pt x 202.69716pt.
-
-
-[17 <./Preparación de la VM/Screenshot_4.png> <./Preparación de la VM/Screenshot_5.png>]
-<Preparación de la VM/Screenshot_7.png, id=412, 1014.03844pt x 274.02374pt>
-File: Preparación de la VM/Screenshot_7.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_7.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_7.png  used on input line 451.
-(pdftex.def)             Requested size: 418.25368pt x 113.02364pt.
-File: Preparación de la VM/Screenshot_8.png Graphic file (type png)
-<use Preparación de la VM/Screenshot_8.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 452.
-(pdftex.def)             Requested size: 418.25368pt x 41.97775pt.
-<Kafka/Screenshot_1.png, id=413, 1444.64719pt x 382.42876pt>
-File: Kafka/Screenshot_1.png Graphic file (type png)
-<use Kafka/Screenshot_1.png>
-Package pdftex.def Info: Kafka/Screenshot_1.png  used on input line 458.
-(pdftex.def)             Requested size: 418.25368pt x 110.7206pt.
-<Kafka/Screenshot_2.png, id=414, 1444.64719pt x 567.62062pt>
-File: Kafka/Screenshot_2.png Graphic file (type png)
-<use Kafka/Screenshot_2.png>
-Package pdftex.def Info: Kafka/Screenshot_2.png  used on input line 461.
-(pdftex.def)             Requested size: 418.25368pt x 164.33727pt.
-
-
-[18 <./Preparación de la VM/Screenshot_7.png> <./Kafka/Screenshot_1.png> <./Kafka/Screenshot_2.png>]
-File: Kafka/Screenshot_4.png Graphic file (type png)
-<use Kafka/Screenshot_4.png>
-Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 467.
-(pdftex.def)             Requested size: 418.25368pt x 160.84999pt.
-<Kafka/Screenshot_5.png, id=427, 922.19531pt x 82.05656pt>
-File: Kafka/Screenshot_5.png Graphic file (type png)
-<use Kafka/Screenshot_5.png>
-Package pdftex.def Info: Kafka/Screenshot_5.png  used on input line 474.
-(pdftex.def)             Requested size: 418.25368pt x 37.21558pt.
-<Kafka/Screenshot_6.png, id=428, 1336.995pt x 48.18pt>
-File: Kafka/Screenshot_6.png Graphic file (type png)
-<use Kafka/Screenshot_6.png>
-Package pdftex.def Info: Kafka/Screenshot_6.png  used on input line 477.
-(pdftex.def)             Requested size: 418.25368pt x 15.07237pt.
-<Kafka/Screenshot_7.png, id=429, 1038.88126pt x 223.58531pt>
-File: Kafka/Screenshot_7.png Graphic file (type png)
-<use Kafka/Screenshot_7.png>
-Package pdftex.def Info: Kafka/Screenshot_7.png  used on input line 480.
-(pdftex.def)             Requested size: 418.25368pt x 90.0125pt.
-
-
-[19 <./Kafka/Screenshot_5.png> <./Kafka/Screenshot_6.png> <./Kafka/Screenshot_7.png>]
-<Kafka/Screenshot_9.png, id=439, 1141.26375pt x 124.21407pt>
-File: Kafka/Screenshot_9.png Graphic file (type png)
-<use Kafka/Screenshot_9.png>
-Package pdftex.def Info: Kafka/Screenshot_9.png  used on input line 487.
-(pdftex.def)             Requested size: 418.25368pt x 45.52254pt.
-File: Kafka/Screenshot_10.png Graphic file (type png)
-<use Kafka/Screenshot_10.png>
-Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 491.
-(pdftex.def)             Requested size: 418.25368pt x 36.0364pt.
-
-
-[20 <./Kafka/Screenshot_9.png>] (template.aux
+[5] (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -655,20 +516,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 920B53C6883C09BEB335FCBFA89473E7;8372.
+(rerunfilecheck)             Checksum: E8B2A5068730AB9DED0290D1F63C8ED4;4183.
  ) 
 Here is how much of TeX's memory you used:
- 14316 strings out of 468133
- 224828 string characters out of 5430712
- 671994 words of memory out of 5000000
- 42641 multiletter control sequences out of 15000+600000
- 637477 words of font info for 61 fonts, out of 8000000 for 9000
+ 13804 strings out of 468133
+ 217290 string characters out of 5430712
+ 651760 words of memory out of 5000000
+ 42215 multiletter control sequences out of 15000+600000
+ 636043 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,12n,93p,525b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/bleik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on template.pdf (21 pages, 2163158 bytes).
+ 90i,11n,93p,633b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk>
+Output written on template.pdf (6 pages, 376024 bytes).
 PDF statistics:
- 927 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 409 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

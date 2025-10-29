@@ -29,12 +29,25 @@
 \contentsline {section}{\numberline {5}Fase de implementación}{9}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Configuración del entorno}{9}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Apache Kafka}{10}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Fase de pruebas}{11}{section.6}%
-\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{11}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Conclusiones}{11}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Líneas futuras}{11}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Lecciones aprendidas}{11}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Bibliografía}{12}{section.8}%
-\contentsline {section}{\numberline {9}Diario de trabajo (anexo)}{12}{section.9}%
-\contentsline {section}{\numberline {10}Anexo}{13}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Configuración del entorno}{13}{subsection.10.1}%
+\contentsline {subsection}{\numberline {5.3}MongoDB}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Apache NiFi}{12}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Instalación y configuración}{12}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Flujo de Datos}{12}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.5}Parking en tiempo real con Flask}{13}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}Backend}{13}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}Frontend}{13}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}Análisis y estádistica de los datos con Dremio}{14}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Instalación y configuración general}{14}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Configuración específica}{14}{subsubsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.3}Consultas de ejemplo}{14}{subsubsection.5.6.3}%
+\contentsline {section}{\numberline {6}Fase de pruebas}{15}{section.6}%
+\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{15}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Conclusiones}{15}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Líneas futuras}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Lecciones aprendidas}{15}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Bibliografía}{16}{section.8}%
+\contentsline {section}{\numberline {9}Diario de trabajo}{16}{section.9}%
+\contentsline {section}{\numberline {10}Anexo}{17}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Configuración del entorno}{17}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Apache Kafka}{18}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}MongoDB}{20}{subsection.10.3}%

@@ -1,0 +1,62 @@
+\documentclass{../../../miPlantilla}
+
+\renewcommand{\miAsignatura}{Big Data Aplicado}
+\renewcommand{\tituloTrabajo}{Análisis y diseño datawarehouse 1}
+\renewcommand{\imagenPortada}{model.png}
+
+\begin{document}
+
+\maketitle
+
+\section{Análisis del problema}
+El objetivo es diseñar un almacén de datos que permita a los responsables de proyecto
+y división analizar las \textbf{horas registradas por empleado y proyecto}, así como
+realizar un análisis temporal por día, mes, trimestre y año.
+
+\fig[0.5\textwidth]{1.png}
+
+\newpage
+
+\section{Diseño del modelo}
+Para dar soporte a los requerimientos, he diseñado un modelo de tipo \textbf{estrella}.
+La granularidad escogida corresponde a las \textbf{horas registradas por un empleado
+en un proyecto en un día determinado}, lo que permite analizar a nivel de empleado,
+proyecto, división o periodo temporal (día, mes, trimestre o año).
+
+El modelo está formado por una \textbf{tabla de hechos} y cuatro \textbf{tablas de dimensiones}:
+\fig[1\textwidth]{model.png}
+
+En la tabla de hechos, la medida principal es el campo \textbf{Hours\_logged}, que representa una variable numérica
+que se puede agregar y analizar bajo diferentes perspectivas.
+
+Sobre las tablas de dimensiones:
+
+\begin{itemize}
+  \item La dimensión \texttt{Employee} contiene los atributos que definen a un empleado.
+  \item La dimensión \texttt{Project} contiene los atributos que definen un proyecto.
+  \item La dimensión \texttt{Division} dontiene los atributos que definen una división o departamento.
+  \item La dimensión \texttt{Time} contiene atributos sobre la fecha, permitiendo realizar análisis por diferentes niveles de agregación temporal.
+\end{itemize}
+
+Todas las dimensiones están relacionadas directamente con la tabla de hechos, ya que ayudan a definir
+el propio hecho.
+
+\newpage
+
+\section{Justificación del modelo}
+El campo \texttt{Hours\_logged} se ha incluido en la tabla de hechos y no en la dimensión de empleados
+ya que representa una \textbf{medida cuantitativa} que puede variar con el tiempo y contexto del proyecto.
+
+Las dimensiones se limitan a información descriptiva y estática, al contrario que la tabla de hechos,
+que contiene valores numéricos que pueden agregarse para analizarlos.
+
+De esta forma, mi modelo permite analizar:
+
+\begin{itemize}
+  \item Horas totales trabajadas por cada empleado.
+  \item Horas trabajadas por proyecto o prioridad.
+  \item Distribución de horas por división o responsable.
+  \item Evolución temporal de las horas trabajadas por mes, trimestre o año.
+\end{itemize}
+
+\end{document}

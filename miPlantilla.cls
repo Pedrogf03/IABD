@@ -24,6 +24,16 @@
 \RequirePackage[table,xcdraw]{xcolor}
 \RequirePackage{makecell}
 \renewcommand{\arraystretch}{1.3} % mejora la legibilidad
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    breaklines=true,
+    breakatwhitespace=true,
+    basicstyle=\ttfamily\small,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
 
 % Configuración de hyperref
 \hypersetup{
