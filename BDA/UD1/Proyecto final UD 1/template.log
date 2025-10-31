@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  29 OCT 2025 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.18)  30 OCT 2025 19:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -465,7 +465,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count333
-<portada.png, id=211, 1027.84pt x 1027.84pt>
+<portada.png, id=215, 1027.84pt x 1027.84pt>
 File: portada.png Graphic file (type png)
 <use portada.png>
 Package pdftex.def Info: portada.png  used on input line 9.
@@ -489,7 +489,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 ...line {5.4}Apache NiFi}{12}{subsection.5.4}
+l.33 ...mberline {5.3}MongoDB}{11}{subsection.5.3}
                                                   % [1])
 \tf@toc=\write4
 \openout4 = `template.toc'.
@@ -509,144 +509,364 @@ l.33 ...line {5.4}Apache NiFi}{12}{subsection.5.4}
 [7]
 
 [8]
-<Preparación de la VM/Screenshot_8.png, id=328, 1035.11719pt x 103.88812pt>
+
+[9]
+<Preparación de la VM/Screenshot_8.png, id=337, 1035.11719pt x 103.88812pt>
 File: Preparación de la VM/Screenshot_8.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_8.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 241.
+Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 266.
 (pdftex.def)             Requested size: 418.25368pt x 41.97775pt.
-<Preparación de la VM/Screenshot_9.png, id=331, 697.10437pt x 155.83218pt>
+<Preparación de la VM/Screenshot_9.png, id=340, 697.10437pt x 155.83218pt>
 File: Preparación de la VM/Screenshot_9.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_9.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_9.png  used on input line 247.
+Package pdftex.def Info: Preparación de la VM/Screenshot_9.png  used on input line 272.
 (pdftex.def)             Requested size: 418.25368pt x 93.49765pt.
 
 
-[9 <./Preparación de la VM/Screenshot_8.png> <./Preparación de la VM/Screenshot_9.png>]
-<Kafka/Screenshot_4.png, id=341, 1444.64719pt x 555.57562pt>
+[10 <./Preparación de la VM/Screenshot_8.png> <./Preparación de la VM/Screenshot_9.png>]
+<Kafka/Screenshot_4.png, id=350, 1444.64719pt x 555.57562pt>
 File: Kafka/Screenshot_4.png Graphic file (type png)
 <use Kafka/Screenshot_4.png>
-Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 257.
+Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 282.
 (pdftex.def)             Requested size: 418.25368pt x 160.84999pt.
-<Kafka/Screenshot_8.png, id=344, 1444.64719pt x 127.97812pt>
+<Kafka/Screenshot_8.png, id=353, 1444.64719pt x 127.97812pt>
 File: Kafka/Screenshot_8.png Graphic file (type png)
 <use Kafka/Screenshot_8.png>
-Package pdftex.def Info: Kafka/Screenshot_8.png  used on input line 264.
+Package pdftex.def Info: Kafka/Screenshot_8.png  used on input line 289.
 (pdftex.def)             Requested size: 418.25368pt x 37.05215pt.
-<Kafka/Screenshot_10.png, id=345, 1109.64563pt x 95.6072pt>
+<Kafka/Screenshot_10.png, id=354, 1109.64563pt x 95.6072pt>
 File: Kafka/Screenshot_10.png Graphic file (type png)
 <use Kafka/Screenshot_10.png>
-Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 268.
+Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 293.
 (pdftex.def)             Requested size: 418.25368pt x 36.0364pt.
-
-
-[10 <./Kafka/Screenshot_4.png> <./Kafka/Screenshot_8.png> <./Kafka/Screenshot_10.png>]
-<MongoDB/Screenshot_3.png, id=354, 505.89pt x 77.53969pt>
+<MongoDB/Screenshot_3.png, id=356, 505.89pt x 77.53969pt>
 File: MongoDB/Screenshot_3.png Graphic file (type png)
 <use MongoDB/Screenshot_3.png>
-Package pdftex.def Info: MongoDB/Screenshot_3.png  used on input line 280.
+Package pdftex.def Info: MongoDB/Screenshot_3.png  used on input line 303.
 (pdftex.def)             Requested size: 418.25368pt x 64.10825pt.
-<MongoDB/Screenshot_5.png, id=356, 370.38374pt x 173.14688pt>
+
+
+[11 <./Kafka/Screenshot_4.png> <./Kafka/Screenshot_8.png> <./Kafka/Screenshot_10.png> <./MongoDB/Screenshot_3.png>]
+<MongoDB/Screenshot_5.png, id=366, 370.38374pt x 173.14688pt>
 File: MongoDB/Screenshot_5.png Graphic file (type png)
 <use MongoDB/Screenshot_5.png>
-Package pdftex.def Info: MongoDB/Screenshot_5.png  used on input line 290.
-(pdftex.def)             Requested size: 292.77629pt x 136.86908pt.
-<MongoDB/Screenshot_7.png, id=357, 474.27188pt x 222.07968pt>
-File: MongoDB/Screenshot_7.png Graphic file (type png)
-<use MongoDB/Screenshot_7.png>
-Package pdftex.def Info: MongoDB/Screenshot_7.png  used on input line 294.
-(pdftex.def)             Requested size: 292.77629pt x 137.09834pt.
+Package pdftex.def Info: MongoDB/Screenshot_5.png  used on input line 313.
+(pdftex.def)             Requested size: 418.25368pt x 195.52687pt.
+<MongoDB/Screenshot_8.png, id=367, 511.15968pt x 113.67468pt>
+File: MongoDB/Screenshot_8.png Graphic file (type png)
+<use MongoDB/Screenshot_8.png>
+Package pdftex.def Info: MongoDB/Screenshot_8.png  used on input line 317.
+(pdftex.def)             Requested size: 418.25368pt x 93.01262pt.
 
 
-[11 <./MongoDB/Screenshot_3.png> <./MongoDB/Screenshot_5.png> <./MongoDB/Screenshot_7.png>]
+[12 <./MongoDB/Screenshot_5.png> <./MongoDB/Screenshot_8.png>]
+<NiFi/Screenshot_6_7.png, id=376, 1444.64719pt x 688.82344pt>
+File: NiFi/Screenshot_6_7.png Graphic file (type png)
+<use NiFi/Screenshot_6_7.png>
+Package pdftex.def Info: NiFi/Screenshot_6_7.png  used on input line 329.
+(pdftex.def)             Requested size: 376.42575pt x 179.47876pt.
+<NiFi/Screenshot_8.png, id=378, 752.8125pt x 470.50781pt>
+File: NiFi/Screenshot_8.png Graphic file (type png)
+<use NiFi/Screenshot_8.png>
+Package pdftex.def Info: NiFi/Screenshot_8.png  used on input line 340.
+(pdftex.def)             Requested size: 334.60422pt x 209.1348pt.
 
-[12]
 
-[13]
+[13 <./NiFi/Screenshot_6_7.png> <./NiFi/Screenshot_8.png>]
+<NiFi/Screenshot_22.png, id=386, 830.35219pt x 485.56406pt>
+File: NiFi/Screenshot_22.png Graphic file (type png)
+<use NiFi/Screenshot_22.png>
+Package pdftex.def Info: NiFi/Screenshot_22.png  used on input line 354.
+(pdftex.def)             Requested size: 334.60422pt x 195.66695pt.
+<NiFi/Screenshot_12.png, id=388, 761.09344pt x 474.27188pt>
+File: NiFi/Screenshot_12.png Graphic file (type png)
+<use NiFi/Screenshot_12.png>
+Package pdftex.def Info: NiFi/Screenshot_12.png  used on input line 360.
+(pdftex.def)             Requested size: 334.60422pt x 208.51382pt.
+<NiFi/Screenshot_16.png, id=390, 846.16125pt x 496.85625pt>
+File: NiFi/Screenshot_16.png Graphic file (type png)
+<use NiFi/Screenshot_16.png>
+Package pdftex.def Info: NiFi/Screenshot_16.png  used on input line 366.
+(pdftex.def)             Requested size: 334.60422pt x 196.47214pt.
 
-[14]
-Overfull \hbox (57.28839pt too wide) in paragraph at lines 370--371
+
+[14 <./NiFi/Screenshot_22.png> <./NiFi/Screenshot_12.png>]
+<NiFi/Screenshot_17.png, id=398, 578.16pt x 589.4522pt>
+File: NiFi/Screenshot_17.png Graphic file (type png)
+<use NiFi/Screenshot_17.png>
+Package pdftex.def Info: NiFi/Screenshot_17.png  used on input line 372.
+(pdftex.def)             Requested size: 334.60422pt x 341.13599pt.
+<NiFi/Screenshot_19.png, id=399, 759.58781pt x 466.74374pt>
+File: NiFi/Screenshot_19.png Graphic file (type png)
+<use NiFi/Screenshot_19.png>
+Package pdftex.def Info: NiFi/Screenshot_19.png  used on input line 377.
+(pdftex.def)             Requested size: 418.25368pt x 257.00897pt.
+
+
+[15 <./NiFi/Screenshot_16.png> <./NiFi/Screenshot_17.png>]
+<NiFi/Screenshot_20.png, id=409, 869.49844pt x 563.10374pt>
+File: NiFi/Screenshot_20.png Graphic file (type png)
+<use NiFi/Screenshot_20.png>
+Package pdftex.def Info: NiFi/Screenshot_20.png  used on input line 383.
+(pdftex.def)             Requested size: 418.25368pt x 270.871pt.
+
+
+[16 <./NiFi/Screenshot_19.png> <./NiFi/Screenshot_20.png>]
+<NiFi/Screenshot_23.png, id=416, 477.28313pt x 411.78844pt>
+File: NiFi/Screenshot_23.png Graphic file (type png)
+<use NiFi/Screenshot_23.png>
+Package pdftex.def Info: NiFi/Screenshot_23.png  used on input line 390.
+(pdftex.def)             Requested size: 418.25368pt x 360.85435pt.
+
+
+[17 <./NiFi/Screenshot_23.png>]
+<flask/Screenshot_1.png, id=425, 858.20625pt x 690.32906pt>
+File: flask/Screenshot_1.png Graphic file (type png)
+<use flask/Screenshot_1.png>
+Package pdftex.def Info: flask/Screenshot_1.png  used on input line 417.
+(pdftex.def)             Requested size: 418.25368pt x 336.4419pt.
+
+
+[18 <./flask/Screenshot_1.png>]
+
+[19]
+Overfull \hbox (57.28839pt too wide) in paragraph at lines 463--464
 []\T1/cmr/m/n/12 Documentaci�n ofi-cial de Apa-che Kaf-ka: [][]$\T1/cmtt/m/n/12 https : / / kafka . apache . org / documentation/$[][] 
  []
 
 
-
-[15]
-Overfull \hbox (2.10323pt too wide) in paragraph at lines 372--373
+Overfull \hbox (2.10323pt too wide) in paragraph at lines 465--466
 []\T1/cmr/m/n/12 Documentaci�n ofi-cial de Flask: [][]$\T1/cmtt/m/n/12 https : / / flask . palletsprojects . com / en /
  []
 
 
 
-[16]
-<Preparación de la VM/Screenshot_4.png, id=399, 761.09344pt x 103.13531pt>
+[20]
+<Preparación de la VM/Screenshot_4.png, id=450, 761.09344pt x 103.13531pt>
 File: Preparación de la VM/Screenshot_4.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_4.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_4.png  used on input line 435.
+Package pdftex.def Info: Preparación de la VM/Screenshot_4.png  used on input line 527.
 (pdftex.def)             Requested size: 418.25368pt x 56.67894pt.
-<Preparación de la VM/Screenshot_5.png, id=400, 1444.64719pt x 700.11563pt>
+<Preparación de la VM/Screenshot_5.png, id=451, 1444.64719pt x 700.11563pt>
 File: Preparación de la VM/Screenshot_5.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_5.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_5.png  used on input line 438.
+Package pdftex.def Info: Preparación de la VM/Screenshot_5.png  used on input line 530.
 (pdftex.def)             Requested size: 418.25368pt x 202.69716pt.
 
 
-[17 <./Preparación de la VM/Screenshot_4.png> <./Preparación de la VM/Screenshot_5.png>]
-<Preparación de la VM/Screenshot_7.png, id=412, 1014.03844pt x 274.02374pt>
+[21 <./Preparación de la VM/Screenshot_4.png>]
+<Preparación de la VM/Screenshot_7.png, id=462, 1014.03844pt x 274.02374pt>
 File: Preparación de la VM/Screenshot_7.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_7.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_7.png  used on input line 451.
+Package pdftex.def Info: Preparación de la VM/Screenshot_7.png  used on input line 541.
 (pdftex.def)             Requested size: 418.25368pt x 113.02364pt.
 File: Preparación de la VM/Screenshot_8.png Graphic file (type png)
 <use Preparación de la VM/Screenshot_8.png>
-Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 452.
+Package pdftex.def Info: Preparación de la VM/Screenshot_8.png  used on input line 542.
 (pdftex.def)             Requested size: 418.25368pt x 41.97775pt.
-<Kafka/Screenshot_1.png, id=413, 1444.64719pt x 382.42876pt>
+<Kafka/Screenshot_1.png, id=463, 1444.64719pt x 382.42876pt>
 File: Kafka/Screenshot_1.png Graphic file (type png)
 <use Kafka/Screenshot_1.png>
-Package pdftex.def Info: Kafka/Screenshot_1.png  used on input line 458.
+Package pdftex.def Info: Kafka/Screenshot_1.png  used on input line 548.
 (pdftex.def)             Requested size: 418.25368pt x 110.7206pt.
-<Kafka/Screenshot_2.png, id=414, 1444.64719pt x 567.62062pt>
+<Kafka/Screenshot_2.png, id=464, 1444.64719pt x 567.62062pt>
 File: Kafka/Screenshot_2.png Graphic file (type png)
 <use Kafka/Screenshot_2.png>
-Package pdftex.def Info: Kafka/Screenshot_2.png  used on input line 461.
+Package pdftex.def Info: Kafka/Screenshot_2.png  used on input line 551.
 (pdftex.def)             Requested size: 418.25368pt x 164.33727pt.
 
 
-[18 <./Preparación de la VM/Screenshot_7.png> <./Kafka/Screenshot_1.png> <./Kafka/Screenshot_2.png>]
+[22 <./Preparación de la VM/Screenshot_5.png> <./Preparación de la VM/Screenshot_7.png> <./Kafka/Screenshot_1.png>]
 File: Kafka/Screenshot_4.png Graphic file (type png)
 <use Kafka/Screenshot_4.png>
-Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 467.
+Package pdftex.def Info: Kafka/Screenshot_4.png  used on input line 555.
 (pdftex.def)             Requested size: 418.25368pt x 160.84999pt.
-<Kafka/Screenshot_5.png, id=427, 922.19531pt x 82.05656pt>
+<Kafka/Screenshot_5.png, id=476, 922.19531pt x 82.05656pt>
 File: Kafka/Screenshot_5.png Graphic file (type png)
 <use Kafka/Screenshot_5.png>
-Package pdftex.def Info: Kafka/Screenshot_5.png  used on input line 474.
+Package pdftex.def Info: Kafka/Screenshot_5.png  used on input line 562.
 (pdftex.def)             Requested size: 418.25368pt x 37.21558pt.
-<Kafka/Screenshot_6.png, id=428, 1336.995pt x 48.18pt>
+<Kafka/Screenshot_6.png, id=477, 1336.995pt x 48.18pt>
 File: Kafka/Screenshot_6.png Graphic file (type png)
 <use Kafka/Screenshot_6.png>
-Package pdftex.def Info: Kafka/Screenshot_6.png  used on input line 477.
+Package pdftex.def Info: Kafka/Screenshot_6.png  used on input line 565.
 (pdftex.def)             Requested size: 418.25368pt x 15.07237pt.
-<Kafka/Screenshot_7.png, id=429, 1038.88126pt x 223.58531pt>
+<Kafka/Screenshot_7.png, id=478, 1038.88126pt x 223.58531pt>
 File: Kafka/Screenshot_7.png Graphic file (type png)
 <use Kafka/Screenshot_7.png>
-Package pdftex.def Info: Kafka/Screenshot_7.png  used on input line 480.
+Package pdftex.def Info: Kafka/Screenshot_7.png  used on input line 568.
 (pdftex.def)             Requested size: 418.25368pt x 90.0125pt.
 
 
-[19 <./Kafka/Screenshot_5.png> <./Kafka/Screenshot_6.png> <./Kafka/Screenshot_7.png>]
-<Kafka/Screenshot_9.png, id=439, 1141.26375pt x 124.21407pt>
+[23 <./Kafka/Screenshot_2.png> <./Kafka/Screenshot_5.png> <./Kafka/Screenshot_6.png>]
+<Kafka/Screenshot_9.png, id=488, 1141.26375pt x 124.21407pt>
 File: Kafka/Screenshot_9.png Graphic file (type png)
 <use Kafka/Screenshot_9.png>
-Package pdftex.def Info: Kafka/Screenshot_9.png  used on input line 487.
+Package pdftex.def Info: Kafka/Screenshot_9.png  used on input line 573.
 (pdftex.def)             Requested size: 418.25368pt x 45.52254pt.
 File: Kafka/Screenshot_10.png Graphic file (type png)
 <use Kafka/Screenshot_10.png>
-Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 491.
+Package pdftex.def Info: Kafka/Screenshot_10.png  used on input line 577.
 (pdftex.def)             Requested size: 418.25368pt x 36.0364pt.
+<MongoDB/Screenshot_6.png, id=489, 520.19344pt x 242.40562pt>
+File: MongoDB/Screenshot_6.png Graphic file (type png)
+<use MongoDB/Screenshot_6.png>
+Package pdftex.def Info: MongoDB/Screenshot_6.png  used on input line 593.
+(pdftex.def)             Requested size: 418.25368pt x 194.90123pt.
 
 
-[20 <./Kafka/Screenshot_9.png>] (template.aux
+[24 <./Kafka/Screenshot_7.png> <./Kafka/Screenshot_9.png>]
+<MongoDB/Screenshot_7.png, id=504, 474.27188pt x 222.07968pt>
+File: MongoDB/Screenshot_7.png Graphic file (type png)
+<use MongoDB/Screenshot_7.png>
+Package pdftex.def Info: MongoDB/Screenshot_7.png  used on input line 596.
+(pdftex.def)             Requested size: 418.25368pt x 195.8543pt.
+<MongoDB/Screenshot_9.png, id=505, 754.31813pt x 218.31563pt>
+File: MongoDB/Screenshot_9.png Graphic file (type png)
+<use MongoDB/Screenshot_9.png>
+Package pdftex.def Info: MongoDB/Screenshot_9.png  used on input line 599.
+(pdftex.def)             Requested size: 418.25368pt x 121.05pt.
+<NiFi/Screenshot_1.png, id=506, 1444.64719pt x 262.73157pt>
+File: NiFi/Screenshot_1.png Graphic file (type png)
+<use NiFi/Screenshot_1.png>
+Package pdftex.def Info: NiFi/Screenshot_1.png  used on input line 607.
+(pdftex.def)             Requested size: 418.25368pt x 76.06592pt.
+
+
+[25 <./MongoDB/Screenshot_6.png> <./MongoDB/Screenshot_7.png> <./MongoDB/Screenshot_9.png>]
+<NiFi/Screenshot_2.png, id=515, 1444.64719pt x 514.92375pt>
+File: NiFi/Screenshot_2.png Graphic file (type png)
+<use NiFi/Screenshot_2.png>
+Package pdftex.def Info: NiFi/Screenshot_2.png  used on input line 610.
+(pdftex.def)             Requested size: 418.25368pt x 149.08049pt.
+<NiFi/Screenshot_3.png, id=516, 1444.64719pt x 365.86688pt>
+File: NiFi/Screenshot_3.png Graphic file (type png)
+<use NiFi/Screenshot_3.png>
+Package pdftex.def Info: NiFi/Screenshot_3.png  used on input line 613.
+(pdftex.def)             Requested size: 418.25368pt x 105.92561pt.
+<NiFi/Screenshot_4.png, id=517, 1444.64719pt x 418.56375pt>
+File: NiFi/Screenshot_4.png Graphic file (type png)
+<use NiFi/Screenshot_4.png>
+Package pdftex.def Info: NiFi/Screenshot_4.png  used on input line 617.
+(pdftex.def)             Requested size: 418.25368pt x 121.18237pt.
+<NiFi/Screenshot_5.png, id=518, 1444.64719pt x 414.04688pt>
+File: NiFi/Screenshot_5.png Graphic file (type png)
+<use NiFi/Screenshot_5.png>
+Package pdftex.def Info: NiFi/Screenshot_5.png  used on input line 618.
+(pdftex.def)             Requested size: 418.25368pt x 119.87466pt.
+<NiFi/Screenshot_6.png, id=519, 1444.64719pt x 461.47406pt>
+File: NiFi/Screenshot_6.png Graphic file (type png)
+<use NiFi/Screenshot_6.png>
+Package pdftex.def Info: NiFi/Screenshot_6.png  used on input line 619.
+(pdftex.def)             Requested size: 418.25368pt x 133.60576pt.
+
+
+[26 <./NiFi/Screenshot_1.png> <./NiFi/Screenshot_2.png> <./NiFi/Screenshot_3.png> <./NiFi/Screenshot_4.png>]
+<NiFi/Screenshot_7.png, id=528, 370.38374pt x 141.52875pt>
+File: NiFi/Screenshot_7.png Graphic file (type png)
+<use NiFi/Screenshot_7.png>
+Package pdftex.def Info: NiFi/Screenshot_7.png  used on input line 624.
+(pdftex.def)             Requested size: 418.25368pt x 159.82196pt.
+File: NiFi/Screenshot_8.png Graphic file (type png)
+<use NiFi/Screenshot_8.png>
+Package pdftex.def Info: NiFi/Screenshot_8.png  used on input line 627.
+(pdftex.def)             Requested size: 418.25368pt x 261.41492pt.
+
+
+[27 <./NiFi/Screenshot_5.png> <./NiFi/Screenshot_6.png> <./NiFi/Screenshot_7.png>]
+<NiFi/Screenshot_9.png, id=537, 765.6103pt x 469.755pt>
+File: NiFi/Screenshot_9.png Graphic file (type png)
+<use NiFi/Screenshot_9.png>
+Package pdftex.def Info: NiFi/Screenshot_9.png  used on input line 631.
+(pdftex.def)             Requested size: 418.25368pt x 256.63142pt.
+<NiFi/Screenshot_24.png, id=538, 230.36063pt x 84.315pt>
+File: NiFi/Screenshot_24.png Graphic file (type png)
+<use NiFi/Screenshot_24.png>
+Package pdftex.def Info: NiFi/Screenshot_24.png  used on input line 637.
+(pdftex.def)             Requested size: 418.25368pt x 153.09584pt.
+
+
+[28 <./NiFi/Screenshot_9.png>]
+File: NiFi/Screenshot_22.png Graphic file (type png)
+<use NiFi/Screenshot_22.png>
+Package pdftex.def Info: NiFi/Screenshot_22.png  used on input line 641.
+(pdftex.def)             Requested size: 418.25368pt x 244.58183pt.
+<NiFi/Screenshot_14.png, id=544, 752.0597pt x 465.99094pt>
+File: NiFi/Screenshot_14.png Graphic file (type png)
+<use NiFi/Screenshot_14.png>
+Package pdftex.def Info: NiFi/Screenshot_14.png  used on input line 645.
+(pdftex.def)             Requested size: 418.25368pt x 259.1613pt.
+
+
+[29 <./NiFi/Screenshot_24.png>]
+<NiFi/Screenshot_11.png, id=550, 265.74281pt x 102.3825pt>
+File: NiFi/Screenshot_11.png Graphic file (type png)
+<use NiFi/Screenshot_11.png>
+Package pdftex.def Info: NiFi/Screenshot_11.png  used on input line 648.
+(pdftex.def)             Requested size: 418.25368pt x 161.1533pt.
+File: NiFi/Screenshot_12.png Graphic file (type png)
+<use NiFi/Screenshot_12.png>
+Package pdftex.def Info: NiFi/Screenshot_12.png  used on input line 652.
+(pdftex.def)             Requested size: 418.25368pt x 260.64047pt.
+
+
+[30 <./NiFi/Screenshot_14.png> <./NiFi/Screenshot_11.png>]
+<NiFi/Screenshot_13.png, id=558, 758.08218pt x 472.01344pt>
+File: NiFi/Screenshot_13.png Graphic file (type png)
+<use NiFi/Screenshot_13.png>
+Package pdftex.def Info: NiFi/Screenshot_13.png  used on input line 655.
+(pdftex.def)             Requested size: 418.25368pt x 260.42206pt.
+File: NiFi/Screenshot_19.png Graphic file (type png)
+<use NiFi/Screenshot_19.png>
+Package pdftex.def Info: NiFi/Screenshot_19.png  used on input line 661.
+(pdftex.def)             Requested size: 418.25368pt x 257.00897pt.
+
+
+[31 <./NiFi/Screenshot_13.png>]
+File: NiFi/Screenshot_20.png Graphic file (type png)
+<use NiFi/Screenshot_20.png>
+Package pdftex.def Info: NiFi/Screenshot_20.png  used on input line 664.
+(pdftex.def)             Requested size: 418.25368pt x 270.871pt.
+<python/sendMessages.png, id=564, 1485.55pt x 2162.0775pt>
+File: python/sendMessages.png Graphic file (type png)
+<use python/sendMessages.png>
+Package pdftex.def Info: python/sendMessages.png  used on input line 668.
+(pdftex.def)             Requested size: 418.25368pt x 608.70964pt.
+
+
+[32]
+<python/app.png, id=569, 1515.6625pt x 2581.645pt>
+File: python/app.png Graphic file (type png)
+<use python/app.png>
+Package pdftex.def Info: python/app.png  used on input line 673.
+(pdftex.def)             Requested size: 376.42575pt x 641.15527pt.
+
+
+[33 <./python/sendMessages.png>]
+<python/css.png, id=576, 1377.145pt x 3992.9175pt>
+File: python/css.png Graphic file (type png)
+<use python/css.png>
+Package pdftex.def Info: python/css.png  used on input line 679.
+(pdftex.def)             Requested size: 209.12683pt x 606.34488pt.
+
+
+[34 <./python/app.png>]
+<python/html.png, id=582, 1654.18pt x 1017.8025pt>
+File: python/html.png Graphic file (type png)
+<use python/html.png>
+Package pdftex.def Info: python/html.png  used on input line 685.
+(pdftex.def)             Requested size: 250.95476pt x 154.40318pt.
+
+
+[35 <./python/css.png>]
+<python/javascript.png, id=589, 2180.145pt x 3764.0625pt>
+File: python/javascript.png Graphic file (type png)
+<use python/javascript.png>
+Package pdftex.def Info: python/javascript.png  used on input line 689.
+(pdftex.def)             Requested size: 230.04079pt x 397.1623pt.
+
+
+[36 <./python/html.png> <./python/javascript.png>] (template.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
 )
@@ -655,20 +875,20 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-08-13>
  ***********
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 920B53C6883C09BEB335FCBFA89473E7;8372.
+(rerunfilecheck)             Checksum: EC9608B6C2017243EC883001129D0D3D;8555.
  ) 
 Here is how much of TeX's memory you used:
- 14316 strings out of 468133
- 224828 string characters out of 5430712
- 671994 words of memory out of 5000000
- 42641 multiletter control sequences out of 15000+600000
- 637477 words of font info for 61 fonts, out of 8000000 for 9000
+ 14558 strings out of 468133
+ 231019 string characters out of 5430712
+ 674193 words of memory out of 5000000
+ 42857 multiletter control sequences out of 15000+600000
+ 638243 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  90i,12n,93p,525b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/bleik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on template.pdf (21 pages, 2163158 bytes).
+ <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\bleik\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/bleik/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on template.pdf (37 pages, 5242209 bytes).
 PDF statistics:
- 927 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 507 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1117 PDF objects out of 1200 (max. 8388607)
+ 134 named destinations out of 1000 (max. 500000)
+ 665 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartParking — Estado por planta</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #222;
+        }
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+        }
+        h1 { margin: 0; font-size: 1.3rem; }
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        button {
+            background: #1976D2;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        button:hover { background: #125CA1; }
+        select {
+            padding: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 0.9rem;
+        }
+        .counters {
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .level-block {
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        .level-title {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #1976D2;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .level-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #1976D2;
+            margin: 6px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 12px;
+        }
+        .bay {
+            border-radius: 10px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            min-height: 80px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            transition: transform .12s ease;
+        }
+        .bay:hover { transform: translateY(-3px); }
+        .free { background: #4CAF50; }
+        .occupied { background: #E53935; }
+        .bay-id { font-size: 1.05rem; margin-bottom: 3px; }
+        .ts { font-size: 0.75rem; opacity: 0.9; }
+
+        footer {
+            max-width: 1000px;
+            margin: 18px auto 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SmartParking — Estado por planta</h1>
+        <div class="controls">
+            <div class="counters" id="counts">Cargando...</div>
+            <label for="interval">Intervalo:</label>
+            <select id="interval">
+                <option value="1000">1 s</option>
+                <option value="3000" selected>3 s</option>
+                <option value="5000">5 s</option>
+            </select>
+            <button id="refreshBtn">Actualizar ahora</button>
+        </div>
+    </header>
+
+    <main id="levels"></main>
+
+    <footer>
+        Datos actualizados automáticamente desde la colección <code>bays</code> de MongoDB.
+    </footer>
+
+<script>
+let timer = null;
+let intervalMs = 3000;
+
+const counts = document.getElementById('counts');
+const refreshBtn = document.getElementById('refreshBtn');
+const intervalSel = document.getElementById('interval');
+const levelsDiv = document.getElementById('levels');
+
+function fmt(ts) {
+    if (!ts) return '';
+    try {
+        const d = new Date(ts);
+        return d.toLocaleTimeString();
+    } catch { return ts; }
+}
+
+function fmt(ts) {
+    if (!ts) return '';
+    try {
+        const d = new Date(ts);
+        return d.toLocaleTimeString();
+    } catch { return ts; }
+}
+ 
+async function loadBays() {
+    try {
+        const res = await fetch('/api/bays', {cache:'no-store'});
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        // Contadores
+        const c = data.counts;
+        counts.innerHTML =
+          `Ocupadas: <b>${c.occupied}</b> &nbsp;|&nbsp; Libres: <b>${c.free}</b> &nbsp;|&nbsp; Total: <b>${c.total}</b>`;
+
+        // Limpiar contenido
+        levelsDiv.innerHTML = '';
+
+        for (const [level, bays] of Object.entries(data.levels)) {
+            const block = document.createElement('div');
+            block.className = 'level-block';
+
+            const title = document.createElement('div');
+            title.className = 'level-title';
+            title.textContent = `Planta L${level}`;
+            block.appendChild(title);
+
+            const grid = document.createElement('div');
+            grid.className = 'grid';
+
+            for (const b of bays) {
+                const div = document.createElement('div');
+                div.className = 'bay ' + (b.occupied ? 'occupied' : 'free');
+
+                const id = document.createElement('div');
+                id.className = 'bay-id';
+                id.textContent = b.bay_id;
+
+                const ts = document.createElement('div');
+                ts.className = 'ts';
+                if (b.updated_at) ts.textContent = 'Actualizado: ' + fmt(b.updated_at);
+
+                div.appendChild(id);
+                div.appendChild(ts);
+                grid.appendChild(div);
+            }
+
+            block.appendChild(grid);
+            levelsDiv.appendChild(block);
+        }
+    } catch (err) {
+        console.error(err);
+        counts.textContent = 'Error al cargar datos';
+    }
+}
+
+function startAutoRefresh() {
+    if (timer) clearInterval(timer);
+    timer = setInterval(loadBays, intervalMs);
+}
+ 
+refreshBtn.addEventListener('click', loadBays);
+intervalSel.addEventListener('change', e => {
+    intervalMs = parseInt(e.target.value);
+    startAutoRefresh();
+});
+
+loadBays();
+startAutoRefresh();
+</script>
+</body>
+</html>

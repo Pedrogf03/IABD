@@ -32,11 +32,26 @@ resolver la necesidad de:
 
 \subsection{Objetivos}
 \subsubsection{Objetivo General}
-El objetivo general es desarrollar e implementar un sistema inteligente de monitorización de plazas de aparcamiento que
-permita la gestión eficiente del espacio, mediante la captura, procesamiento, almacenamiento y visualización de datos en
-tiempo real.
+El objetivo general del proyecto es \textbf{diseñar, desarrollar e implementar un sistema inteligente de monitorización y
+gestión de plazas de aparcamiento} que permita optimizar el uso del espacio disponible en tiempo real. Este sistema se
+basa en la integración de diversas tecnologías de Big Data e Internet de las Cosas (IoT), con intención de procesar, 
+almacenar y visualizar información en tiempo real.
+
+A través de la simulación de sensores IoT, el sistema detecta el estado de cada plaza (libre u ocupada), así como datos
+adicionales relacionados con las condiciones del entorno o el estado de los dispositivos, como la temperatura y el nivel
+de batería. Toda esta información se transmite en tiempo real a través de una infraestructura de mensajería distribuida
+que garantiza la entrega de los datos de forma segura y escalable.
 
 \newpage
+
+Una vez recibidos, los datos son procesados y transformados para su almacenamiento estructurado. Posteriormente, los
+datos pueden visualizarse en un panel web que muestra en tiempo real el estado de las plazas, y analizarse históricamente
+para sacar conclusiones relevantes.
+
+En conjunto, el objetivo es construir una arquitectura integral capaz de manejar el flujo completo de información —desde
+la generación del dato hasta su análisis—, aportando una solución moderna, flexible y escalable para la gestión de
+aparcamientos inteligentes. Este enfoque no solo optimiza la disponibilidad de plazas, sino que también constituye una
+base sólida para la toma de decisiones y la mejora de la movilidad urbana.
 
 \subsubsection{Objetivos Específicos}
 \begin{itemize}
@@ -130,6 +145,8 @@ la interfaz web que mostrará el estado del aparcamiento en tiempo real.
 Dremio es una plataforma de análisis de datos que facilita la consulta y visualización de grandes volúmenes de datos. En el proyecto,
 Dremio se empleará para analizar los datos almacenados en MongoDB y generar consultas sobre el uso del aparcamiento. 
 
+\newpage
+
 \section{Fase de análisis}
 \subsection{Requisitos Funcionales}
 \begin{itemize}
@@ -157,9 +174,15 @@ La selección de tecnologías se basa en:
   \item Dremio: Ofrece capacidades avanzadas de análisis y visualización de datos.
 \end{itemize}
 
+\newpage
+
 \section{Fase de diseño}
 \subsection{Arquitectura del sistema}
-La arquitectura del sistema SmartParking se compone de los siguientes componentes principales:
+\subsection{Arquitectura del sistema}
+La arquitectura de \textbf{SmartParking} sigue un flujo de datos continuo desde los sensores hasta la visualización. Los \textbf{sensores IoT}
+detectan el estado de las plazas y envían la información a través de \textbf{Apache Kafka}, que gestiona la transmisión en tiempo real.
+\textbf{Apache NiFi} procesa y enruta los datos hacia \textbf{MongoDB}, donde se almacenan tanto los eventos históricos como el estado actual.
+Finalmente, la información se muestra en una interfaz web desarrollada con \textbf{Flask} y se analiza mediante \textbf{Dremio}.
 
 Sensores IoT $\rightarrow$ Apache Kafka $\rightarrow$ Apache NiFi $\rightarrow$ MongoDB $\rightarrow$ Flask (Interfaz Web) \& Dremio (Análisis de Datos)
 
@@ -169,8 +192,6 @@ La base de datos MongoDB se diseñará con las siguientes colecciones principale
   \item \textbf{Events}: Documentos que registran cada evento de ocupación o liberación de una plaza, con marca temporal y detalles del sensor.
   \item \textbf{Bays}: Documentos que representan cada plaza de aparcamiento, con su estado actual (ocupada/libre).
 \end{itemize}
-
-\newpage
 
 \subsubsection{Diseño de los documentos}
 Ambas colecciones tendrán la misma estructura de documento base:
@@ -189,6 +210,8 @@ Ambas colecciones tendrán la misma estructura de documento base:
   "updated_at": "2025-10-07T10:15:31Z"
 }
 \end{lstlisting}
+
+\newpage
 
 Dónde:
 \begin{itemize}
@@ -223,6 +246,8 @@ La interfaz web desarrollada con Flask mostrará:
   \item Diseño responsive para múltiples dispositivos
 \end{itemize}
 
+\newpage
+
 \section{Fase de implementación}
 
 \subsection{Configuración del entorno}
@@ -246,12 +271,12 @@ Posteriormente, instalé Java en su versión 11 para el sistema, y Java 21 para 
 Finalmente, para finalizar con la configuración del sistema, creé el directorio dónde voy a trabajar y montar casi todo el sistema.
 \fig[1\textwidth]{Preparación de la VM/Screenshot_9.png}
 
-\newpage
-
 \subsection{Apache Kafka}
 Con el sistema listo, lo primero que hice fue preparar Apache Kafka para su posterior uso, dado que es el primer componente de este proyecto.
 
 Tras descargarlo y ubicarlo en el directorio de trabajo, añadí la variable de entorno \texttt{KAFKA\_HOME} al archivo \texttt{.bashrc} {\small(Anexo: \nameref{anexo:kafka})}.
+
+\newpage
 
 Posteriormente, configuré Kafka, para usarlo en modo \textbf{KRaft} (sin Zookeeper):
 \fig[1\textwidth]{Kafka/Screenshot_4.png}
@@ -259,7 +284,7 @@ Posteriormente, configuré Kafka, para usarlo en modo \textbf{KRaft} (sin Zookee
   {\small(Anexo: \nameref{anexo:kafka})}.
 \end{center}
 
-Tras realizar la configuración de Apache Kafka tal y como se puede ver al final del anexo \nameref{anexo:kafka}, arranqué el servicio Y
+Tras realizar la configuración de Apache Kafka tal y como se puede ver al final del anexo \nameref{anexo:kafka}, arranqué el servicio y
 creé el tópico que voy a usar para la ingesta de datos de SmartParking:
 \fig[1\textwidth]{Kafka/Screenshot_8.png}
 
@@ -269,8 +294,6 @@ que envía mensajes de prueba y un \textbf{consumidor} que los va a consumir, y 
 \begin{center}
   {\small(Anexo: \nameref{anexo:kafka})}.
 \end{center}
-
-\newpage
 
 \subsection{MongoDB}
 Siguiendo el orden natural del proyecto, lo siguiente sería \textbf{Apache NiFi}, pero sería complicado hacer el flujo sin tener listo el destino de los datos,
@@ -287,11 +310,11 @@ Tras la instalación, habilité el servicio y accedí a Mongo con \texttt{mongos
   \item \textbf{events} para almacenar el histórico de las plazas del parking.
   \item \textbf{bays} para almacenar el estado de cada plaza en tiempo real.
 \end{itemize}
-\fig[0.7\textwidth]{MongoDB/Screenshot_5.png}
+\fig[1\textwidth]{MongoDB/Screenshot_5.png}
 
 Con esto, MongoDB ya estaría listo para su uso, pero antes de continuar hice algunas pruebas de inserción de datos consultas y upsert. Finalmente añadí índices
 para facilitar las consultas:
-\fig[0.7\textwidth]{MongoDB/Screenshot_7.png}
+\fig[1\textwidth]{MongoDB/Screenshot_8.png}
 \begin{center}
   {\small(Anexo: \nameref{anexo:mongo})}.
 \end{center}
@@ -301,11 +324,73 @@ para facilitar las consultas:
 \subsection{Apache NiFi}
 Teniendo listos tanto el origen como el destino de los datos, configuré la conexión entre ambos, es decir, el flujo de \textbf{Apache NiFi}.
 
-\subsubsection{Instalación y configuración}
+Antes de comenzar a hacer el flujo, instalé y configuré NiFi, de forma que este empleara Java 21, no la versión por defecto del sistema.
+Además, hice algunos cambios en el archivo de propiedades para facilitar la conexión al servicio.
+\fig[0.9\textwidth]{NiFi/Screenshot_6_7.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:nifi})}.
+\end{center}
 
 \subsubsection{Flujo de Datos}
+Llegamos a lo que sería el corazón del proyecto, la parte que conecta la ingesta de datos con el almacén de los mismos: el flujo de datos de NiFi.
+
+El flujo comienza con un procesador \textbf{ConsumeKafka} que, como su nombre indica, consume de un tópico de Kafka todos los mensajes que llegan.
+
+En la configuración de este procesador, hay que especificar las siguientes propiedades:
+\fig[0.8\textwidth]{NiFi/Screenshot_8.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:nifi})}.
+\end{center}
+
+Con esto, el flujo ya debería consumir los mensajes que se envían a través del tópico de Kafka. A partir de aquí, el flujo se divide en dos.
+Por un lado, los mensajes irían directos a la colección \textbf{events}, ya que al ser un histórico almacena todos los eventos que ocurren en el parking.
+Por otro lado, los mensajes irían a la colección \textbf{bays}, que se iría actualizando haciendo \textbf{upserts} de los mensajes para mantener el estado 
+en tiempo real de cada plaza del parking.
+
+Primero hice la parte relacionada a la colección \textbf{events}. Por cuestiones de rendimiento y ahorro de recursos, dado que esta colección no es necesario que esté
+en tiempo real, decidí poner un procesador \textbf{MergeContent}. Este procesador va recibiendo los mensajes de Kafka a través del procesador y los va guardando
+hasta que tiene entre 50 y 1000 mensajes. Entonces los fusiona en un solo JSON y lo envía al siguiente procesador. De esta forma, a nivel de MongoDB, en la colección \textbf{events}
+se estarían haciendo pocos inserts de muchos mensajes, en lugar de un insert por cada mensaje.
+\fig[0.8\textwidth]{NiFi/Screenshot_22.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:nifi})}.
+\end{center}
+
+El siguiente procesador es un \textbf{PutMongoRecord} que almacena los mensajes que recibe en la colección \textbf{events}. 
+\fig[0.8\textwidth]{NiFi/Screenshot_12.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:nifi})}.
+\end{center}
+
+En este momento el flujo tenía esta forma:
+\fig[0.8\textwidth]{NiFi/Screenshot_16.png}
+
+Al llegar a este punto, hice una prueba para comprobar si hasta ahora todo funcionaba correctamente. Para este prueba utilicé un script en python --Anexo: \nameref{anexo:script-sendMessages}-- que simula el comportamiento
+de los sensores IoT, enviando un mensaje con todos los datos aleatorizados a través del tópico de Kafka.
+
+El resultado fue el esperado, al llegar a los 50 mensajes enviados, se insertaban en la colección events de MongoDB:
+\fig[0.8\textwidth]{NiFi/Screenshot_17.png}
+
+A continuación, seguí con la otra parte del flujo, para almacenar los mensajes en tiempo real de cada plaza del parking. Para ello usé otro procesador \textbf{PutMongoRecord}
+para que fuese almacenando los mensajes en la colección \textbf{bays} a medida que iban llegando, con la diferencia de que antes de insertar, compruebe si el \textbf{bay\_id}
+ya existe en la colección, para hacer un upsert.
+\fig[1\textwidth]{NiFi/Screenshot_19.png}
+\begin{center}
+  {\small(Anexo: \nameref{anexo:nifi})}.
+\end{center}
+
+El flujo final acabaría siendo este:
+\fig[1\textwidth]{NiFi/Screenshot_20.png}
 
 \newpage
+
+Finalmente, con la base de datos vacía de nuevo, hice de nuevo la misma prueba que antes, con la diferencia de que esta vez, la colección \textbf{bays} se iba llenando
+con los mensajes que llegaban en tiempo real, mientras que la colección \textbf{events} se iba llenando como se ha visto anteriormente, de 50 en 50 mensajes. Por lo que,
+al inicio la colección events está vacía mientras que la de bays empieza a recibir JSONs:
+\fig[1\textwidth]{NiFi/Screenshot_23.png}
+
+Con esto terminé la parte principal del proyecto, así que continué con la parte de mostrar los datos almacenados, primero las plazas en tiempo real y posteriormente la parte
+de mostrar información a partir de los datos históricos.
 
 \subsection{Parking en tiempo real con Flask}
 Con el componente principal del sistema funcionando, me encargué de la parte relacionada con \textbf{representar los datos}, primero con Flask para mostrar las plazas de parking
@@ -317,9 +402,19 @@ Este apartado se divide en dos partes:
   \item El \textbf{frontend} que recibe los datos del backend y representa un mapa del parking en tiempo real.
 \end{enumerate}
 
-\subsubsection{Backend}
+El backend se conecta con la colección bays de la base de datos almacenada en MongoDB y extrae los datos. Posteriormente crea un 
+endpoint para acceder a los datos, parseando algunos campos como el bay\_id para facilitar el trabajo del front. Finalmente crea el
+endpoint para acceder a la web e inicia un servidor web en el puerto 5000.
+{\small(Anexo: \nameref{anexo:flask-backend})}.
 
-\subsubsection{Frontend}
+El frontend recoge los datos del backend y hace un mapa que se actualiza cada cierto tiempo, a elección del usuario entre 1, 3 o 5 segundos,
+con la posibilidad de forzar una actualización. El mapa ordena las plazas por su bay\_id, dividiendolas por niveles y mostrandolas en orden 
+según el número de la plaza. El color de la misma indica si está libre (verde) u ocupada (rojo), además de mostrar la fecha y hora de
+última actualización de la misma. También muestra información sobre algunos datos relevantes sacados a partir de operaciones previas
+hechas en el backend, como indicar el número de plazas totales y las que están libres y ocupadas:
+
+El resultado final de la web fue el siguiente:
+\fig[1\textwidth]{flask/Screenshot_1.png}
 
 \newpage
 
@@ -332,8 +427,6 @@ podamos \textbf{analizar y sacar conclusiones} de los mismos, como patrones que 
 \subsubsection{Configuración específica}
 
 \subsubsection{Consultas de ejemplo}
-
-\newpage
 \section{Fase de pruebas}
 // TODO: Describir las pruebas realizadas y los resultados obtenidos aquí.
 
@@ -404,7 +497,6 @@ y se han usado a modo orientativo.
     \item Investigación de Flask y desarrollo de la aplicación web.
     \item Integración de Dremio para análisis de datos y desarrollo de consultas descriptivas.
   \end{itemize}
-  \newpage
   \item Semana 4: Pruebas finales, desarrollo de la memoria y video demostrativo.
   \begin{itemize}
     \item Realización de pruebas de carga y rendimiento.
@@ -437,8 +529,6 @@ Instalación de Java 11:
 Se incluye la variable \texttt{JAVA\_HOME} en el archivo \texttt{.bashrc}:
 \fig[1\textwidth]{Preparación de la VM/Screenshot_5.png}
 
-\newpage
-
 Instalación de Java 21:
 \begin{lstlisting}
   $ sudo apt install -y openjdk-21-jdk
@@ -460,8 +550,6 @@ Descarga y ubicación de Apache Kafka:
 Adición de la variable de entorno \texttt{KAFKA\_HOME} al archivo \texttt{.bashrc}:
 \fig[1\textwidth]{Kafka/Screenshot_2.png}
 
-\newpage
-
 \subsubsection*{Explicación del archivo de configuración:}
 
 \fig[1\textwidth]{Kafka/Screenshot_4.png}
@@ -479,8 +567,6 @@ Formatear el almacenamiento:
 Verificar el \texttt{meta.properties} para ver que está todo correcto y arranco el servicio:
 \fig[1\textwidth]{Kafka/Screenshot_7.png}
 
-\newpage
-
 \subsubsection*{Explicación de la prueba final de Kafka:}
 
 Crear un \textbf{productor} que usado para enviar algunos mensajes de prueba, usando el topico creado para el proyecto:
@@ -493,12 +579,114 @@ llegan a través del canal:
 \subsection{MongoDB}
 \label{anexo:mongo}
 
-\textbf{Adición del repositorio de MongoDB}
+\subsubsection*{Adición del repositorio de MongoDB}
 
 \begin{lstlisting}
 $ wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
 $ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 $ sudo apt update
 \end{lstlisting}
+
+\subsubsection*{Probando MongoDB}
+
+Prueba de inserción:
+\fig[1\textwidth]{MongoDB/Screenshot_6.png}
+
+Prueba de consulta:
+\fig[1\textwidth]{MongoDB/Screenshot_7.png}
+
+Prueba de upsert:
+\fig[1\textwidth]{MongoDB/Screenshot_9.png}
+
+\subsection{Apache NiFi}
+\label{anexo:nifi}
+
+\subsubsection*{Instalación y configuración inicial de NiFi}
+
+Descarga y descompresión de NiFi:
+\fig[1\textwidth]{NiFi/Screenshot_1.png}
+
+Adición de la variable de entorno \texttt{NIFI\_HOME} al archivo \texttt{.bashrc}:
+\fig[1\textwidth]{NiFi/Screenshot_2.png}
+
+En el entorno de NiFi, especificar que use Java 21:
+\fig[1\textwidth]{NiFi/Screenshot_3.png}
+
+Configuración de las propiedades para cambiar el uso de \texttt{https} por \texttt{http} 
+y facilitar el acceso al servicio:
+\fig[1\textwidth]{NiFi/Screenshot_4.png}
+\fig[1\textwidth]{NiFi/Screenshot_5.png}
+\fig[1\textwidth]{NiFi/Screenshot_6.png}
+
+\subsubsection*{Explicación detallada de la configuración del flujo}
+
+El flujo comienza con un procesador ConsumeKafka:
+\fig[1\textwidth]{NiFi/Screenshot_7.png}
+
+Este flujo, recibe el servicio de conexión con Kafka y el tópico en el cual tiene leer, entre otros datos no tan relevantes:
+\fig[1\textwidth]{NiFi/Screenshot_8.png}
+
+Sobre el servicio de conexión con Kafka, es necesario crearlo y configurarlo. En su configuración se especifican los servidores de
+bootstrap:
+\fig[1\textwidth]{NiFi/Screenshot_9.png}
+
+Una vez hecho, es necesario habilitarlo para que funcione.
+
+El procesador ConsumeKafka va directamente conectado en la relación \textbf{success} a un procesador MergeRecord, que fusionara los mensajes recibidos
+en formato a JSON a un solo JSON, de 50 en 50.
+\fig[1\textwidth]{NiFi/Screenshot_24.png}
+
+La configuración de este procesador recibe dos servicios: uno de lectura y otro de escritura, ambos de JSON, ya que es el tipo de documento con el que
+estoy trabajando, además de especificar el límite inferior y superior de mensajes a fusionar.
+\fig[1\textwidth]{NiFi/Screenshot_22.png}
+
+Estos servicios también hay que crearlos, configurarlos y habilitarlos. Para ambos, su configuración se limita a especificar el formato de fecha, hora y
+zona horaria:
+\fig[1\textwidth]{NiFi/Screenshot_14.png}
+
+Este procesador anterior, va conectado a un procesador PutMongoRecord que se encargará de guardar en la colección que se le indique los mensajes que reciba:
+\fig[1\textwidth]{NiFi/Screenshot_11.png}
+
+En su configuración hay que especificar el servicio de conexión con MongoDB, la base de datos, la colección y el servicio de lectura de JSON (sirve el mismo
+que se ha creado anteriormente):
+\fig[1\textwidth]{NiFi/Screenshot_12.png}
+
+En el servicio de conexión con MongoDB solo hay que especificar la url de conexión con el mismo, para posteriormente habilitarlo:
+\fig[1\textwidth]{NiFi/Screenshot_13.png}
+
+Ahora, para la otra parte del flujo, he usado otro procesador PutMongoRecord, con la misma configuración que el anterior, pero cambiando la colección por
+la de bays. Además, como campo clave para actualizar he indicado el \textbf{bay\_id}, para que actualice o inserte el mensaje dependiendo de si ya existe
+o no un JSON con ese id. El modo de actualización sirve para indicar si solo actualizar uno o muchos en caso de que haya varios con el mismo valor del campo.
+En este caso es indiferente ya que en teoría no se debería repetir y siempre se va a actualizar uno solo, pero por si acaso lo dejé en uno.
+\fig[1\textwidth]{NiFi/Screenshot_19.png}
+
+El resultado final del flujo de NiFi funcional con todos los requerimientos es el siguiente:
+\fig[1\textwidth]{NiFi/Screenshot_20.png}
+
+\subsubsection*{Script de envío de mensajes}
+\label{anexo:script-sendMessages}
+\fig[1\textwidth]{python/sendMessages.png}
+{\tiny*Código generado por IA generativa}
+
+\subsection{Back-end de Flask}
+\label{anexo:flask-backend}
+\fig[0.9\textwidth]{python/app.png}
+{\tiny*Código generado por IA generativa}
+
+\subsection{Front-end de Flask}
+\label{anexo:flask-frontend}
+\subsubsection*{CSS}
+\fig[0.5\textwidth]{python/css.png}
+{\tiny*Código generado por IA generativa}
+
+sdasdasdas
+
+\subsubsection*{HTML}
+\fig[0.6\textwidth]{python/html.png}
+{\tiny*Código generado por IA generativa}
+
+\subsubsection*{JavaScript}
+\fig[0.55\textwidth]{python/javascript.png}
+{\tiny*Código generado por IA generativa}
 
 \end{document}

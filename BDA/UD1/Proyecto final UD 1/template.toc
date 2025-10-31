@@ -6,48 +6,49 @@
 \contentsline {subsubsection}{\numberline {1.3.1}Objetivo General}{3}{subsubsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.2}Objetivos Específicos}{4}{subsubsection.1.3.2}%
 \contentsline {subsection}{\numberline {1.4}Alcance del proyecto}{4}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Planificación}{4}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.5}Planificación}{5}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Marco teórico}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Big Data y su relevancia en la gestión urbana}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Internet de las Cosas (IoT) en la monitorización de aparcamientos}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Tecnologías Big Data utilizadas}{5}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Apache Kafka}{5}{subsubsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.2}Apache NiFi}{5}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2}Apache NiFi}{6}{subsubsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.3}MongoDB}{6}{subsubsection.2.3.3}%
 \contentsline {subsubsection}{\numberline {2.3.4}Flask}{6}{subsubsection.2.3.4}%
 \contentsline {subsubsection}{\numberline {2.3.5}Dremio}{6}{subsubsection.2.3.5}%
-\contentsline {section}{\numberline {3}Fase de análisis}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Requisitos Funcionales}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Requisitos No Funcionales}{6}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Fase de análisis}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Requisitos Funcionales}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Requisitos No Funcionales}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Análisis de tecnologías}{7}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Fase de diseño}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Arquitectura del sistema}{7}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diseño de la Base de Datos}{7}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Diseño de los documentos}{8}{subsubsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.3}Diseño del Flujo NiFi}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Diseño de la Interfaz Web}{9}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Fase de implementación}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Configuración del entorno}{9}{subsection.5.1}%
+\contentsline {section}{\numberline {4}Fase de diseño}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Arquitectura del sistema}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Arquitectura del sistema}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Diseño de la Base de Datos}{8}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Diseño de los documentos}{8}{subsubsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.4}Diseño del Flujo NiFi}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Diseño de la Interfaz Web}{9}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Fase de implementación}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Configuración del entorno}{10}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Apache Kafka}{10}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}MongoDB}{11}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Apache NiFi}{12}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Instalación y configuración}{12}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Flujo de Datos}{12}{subsubsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.5}Parking en tiempo real con Flask}{13}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}Backend}{13}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}Frontend}{13}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}Análisis y estádistica de los datos con Dremio}{14}{subsection.5.6}%
-\contentsline {subsubsection}{\numberline {5.6.1}Instalación y configuración general}{14}{subsubsection.5.6.1}%
-\contentsline {subsubsection}{\numberline {5.6.2}Configuración específica}{14}{subsubsection.5.6.2}%
-\contentsline {subsubsection}{\numberline {5.6.3}Consultas de ejemplo}{14}{subsubsection.5.6.3}%
-\contentsline {section}{\numberline {6}Fase de pruebas}{15}{section.6}%
-\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{15}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Conclusiones}{15}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Líneas futuras}{15}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Lecciones aprendidas}{15}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Bibliografía}{16}{section.8}%
-\contentsline {section}{\numberline {9}Diario de trabajo}{16}{section.9}%
-\contentsline {section}{\numberline {10}Anexo}{17}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Configuración del entorno}{17}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Apache Kafka}{18}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}MongoDB}{20}{subsection.10.3}%
+\contentsline {subsection}{\numberline {5.4}Apache NiFi}{13}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Flujo de Datos}{13}{subsubsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.5}Parking en tiempo real con Flask}{17}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Análisis y estádistica de los datos con Dremio}{19}{subsection.5.6}%
+\contentsline {subsubsection}{\numberline {5.6.1}Instalación y configuración general}{19}{subsubsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.2}Configuración específica}{19}{subsubsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.3}Consultas de ejemplo}{19}{subsubsection.5.6.3}%
+\contentsline {section}{\numberline {6}Fase de pruebas}{19}{section.6}%
+\contentsline {section}{\numberline {7}Conclusiones y líneas futuras}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Conclusiones}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Líneas futuras}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Lecciones aprendidas}{19}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Bibliografía}{20}{section.8}%
+\contentsline {section}{\numberline {9}Diario de trabajo}{20}{section.9}%
+\contentsline {section}{\numberline {10}Anexo}{21}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Configuración del entorno}{21}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Apache Kafka}{22}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}MongoDB}{24}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Apache NiFi}{25}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Back-end de Flask}{34}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Front-end de Flask}{35}{subsection.10.6}%

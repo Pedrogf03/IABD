@@ -1,49 +1,59 @@
-from kafka import KafkaProducer
-import json, random, time
+from flask import Flask, render_template, jsonify
+from pymongo import MongoClient
+import re
 
-producer = KafkaProducer(
-    bootstrap_servers='localhost:9092',
-    value_serializer=lambda v: json.dumps(v).encode('utf-8')
-)
+app = Flask(__name__)
 
-# Plantas y plazas por planta
-LEVELS = ["L1", "L2", "L3"]
-PLAZAS_POR_PLANTA = 30
+# Conexión MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+db = client.smartparking
 
-# Valores iniciales para simular variación suave
-temperatura_base = {level: random.uniform(20.0, 25.0) for level in LEVELS}
-bateria_base = {level: random.uniform(80.0, 100.0) for level in LEVELS}
+def parse_bay(bay_id: str):
+    """
+    Extrae planta (level) y número (int) del bay_id, ej: L2-A-14 → (2, 14)
+    """
+    if not bay_id:
+        return None, None
+    match = re.match(r"L(\d+)[-_]A[-_](\d+)", bay_id.upper())
+    if match:
+        level = int(match.group(1))
+        number = int(match.group(2))
+        return level, number
+    return None, None
 
-while True:
-    # Elegir planta y plaza aleatoriamente
-    level = random.choice(LEVELS)
-    plaza = random.randint(1, PLAZAS_POR_PLANTA)
-    bay_id = f"{level}-A-{plaza}"
+@app.route('/')
+def index():
+    return render_template('bays.html')
 
-    # Simular cambios realistas de temperatura (±0.5 °C)
-    temperatura_base[level] += random.uniform(-0.5, 0.5)
-    temperatura_base[level] = max(15, min(temperatura_base[level], 35))
+@app.route('/api/bays')
+def api_bays():
+    docs = list(db.bays.find({}, {'_id': 0}))
+    grouped = {}
 
-    # Simular drenaje de batería (disminuye lentamente con algo de ruido)
-    bateria_base[level] -= random.uniform(0.0, 0.3)
-    if bateria_base[level] < 10:  # recarga simulada
-        bateria_base[level] = 100.0
+    for d in docs:
+        level, number = parse_bay(d.get('bay_id', ''))
+        if level is None:
+            continue
+        d['level'] = level
+        d['number'] = number
+        grouped.setdefault(level, []).append(d)
 
-    # Generar mensaje
-    msg = {
-        "bay_id": bay_id,
-        "parking_id": "PK-CADIZ-01",
-        "level": level,
-        "occupied": random.choice([True, False]),
-        "last_event_ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "metrics": {
-            "temperature_c": round(temperatura_base[level], 1),
-            "battery_pct": round(bateria_base[level], 1)
-        },
-        "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    }
+    # ordenar internamente cada planta
+    for level in grouped:
+        grouped[level] = sorted(grouped[level], key=lambda x: x['number'])
 
-    # Enviar mensaje a Kafka
-    producer.send("smartparking.events", msg)
-    print(f"Enviado: {msg}")
-    time.sleep(1)
+    # ordenar las plantas
+    sorted_levels = dict(sorted(grouped.items(), key=lambda x: x[0]))
+
+    # contadores globales
+    all_bays = [b for bays in grouped.values() for b in bays]
+    occupied = sum(1 for b in all_bays if b.get('occupied'))
+    free = len(all_bays) - occupied
+
+    return jsonify({
+        "levels": sorted_levels,
+        "counts": {"occupied": occupied, "free": free, "total": len(all_bays)}
+    })
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
